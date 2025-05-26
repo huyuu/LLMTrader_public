@@ -1,0 +1,1 @@
+C'est un espace public aimé pour partager le necessaire donné creé par le project LLMTrader, par Jiang et Shaun.
