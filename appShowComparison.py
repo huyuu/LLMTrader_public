@@ -68,8 +68,8 @@ def get_hardcoded_data() -> pd.DataFrame:
             "Overall Critical Distribution",
             "Overall Performance",
             "Overall Performance Value",
-            "Overall Performance Using the Equally-Destributed-Always-Buy Strategy",
-            ""
+            # "Overall Performance Using the Equally-Destributed-Always-Buy Strategy",
+            # ""
             "Conclusion",
             "Overall Performance over a Year"
         ],
