@@ -365,6 +365,14 @@ selected_prompt = st.sidebar.radio(
     format_func=lambda x: x  # (keeps original header as label)
 )
 
+# Add toggle button for images
+st.sidebar.markdown("---")
+show_images = st.sidebar.checkbox(
+    "Show images", 
+    value=True,
+    help="Uncheck to hide images and focus on text data"
+)
+
 
 ###############################################################################
 # 4. MAIN PANEL – PRETTY PRINT ONE COLUMN
@@ -386,33 +394,41 @@ for metric, cell in col_data.items():
     ###########################################################################
     # ❶  If the CSV cell holds an explicit file name
     if isinstance(cell, str) and re.search(r"\.(png|jpe?g|gif)$", cell, re.I):
-        # First try the direct path in the prompt subdirectory
-        img_path_in_prompt = os.path.join(IMAGE_DIR, selected_prompt, cell)
-        if os.path.isfile(img_path_in_prompt):
-            st.image(img_path_in_prompt, use_container_width=True)
-        # Fallback to the old logic for absolute paths or direct IMAGE_DIR
-        elif os.path.isabs(cell):
-            if os.path.isfile(cell):
-                st.image(cell, use_container_width=True)
+        if show_images:
+            # First try the direct path in the prompt subdirectory
+            img_path_in_prompt = os.path.join(IMAGE_DIR, selected_prompt, cell)
+            if os.path.isfile(img_path_in_prompt):
+                st.image(img_path_in_prompt, use_container_width=True)
+            # Fallback to the old logic for absolute paths or direct IMAGE_DIR
+            elif os.path.isabs(cell):
+                if os.path.isfile(cell):
+                    st.image(cell, use_container_width=True)
+                else:
+                    st.warning(f"Image not found: `{cell}`")
             else:
-                st.warning(f"Image not found: `{cell}`")
+                img_path = os.path.join(IMAGE_DIR, cell)
+                if os.path.isfile(img_path):
+                    st.image(img_path, use_container_width=True)
+                else:
+                    st.warning(f"Image not found: `{img_path}` or `{img_path_in_prompt}`")
         else:
-            img_path = os.path.join(IMAGE_DIR, cell)
-            if os.path.isfile(img_path):
-                st.image(img_path, use_container_width=True)
-            else:
-                st.warning(f"Image not found: `{img_path}` or `{img_path_in_prompt}`")
+            # Show image path instead of the image
+            st.code(cell, language=None)
 
     # ❂  If Excel stored the word "Picture" instead of the file name
     elif isinstance(cell, str) and cell.strip().lower() == "picture":
-        # Attempt a best-guess file name: activeData/images/<prompt>/<metric>.png
-        safe_metric = re.sub(r"\W+", "_", metric).lower()
-        guess_path = os.path.join(IMAGE_DIR, selected_prompt, f"{safe_metric}.png")
-        if os.path.isfile(guess_path):
-            st.image(guess_path, use_container_width=True)
+        if show_images:
+            # Attempt a best-guess file name: activeData/images/<prompt>/<metric>.png
+            safe_metric = re.sub(r"\W+", "_", metric).lower()
+            guess_path = os.path.join(IMAGE_DIR, selected_prompt, f"{safe_metric}.png")
+            if os.path.isfile(guess_path):
+                st.image(guess_path, use_container_width=True)
+            else:
+                st.info("📷 *(an image goes here – place it at "
+                        f"`{guess_path}` and it will appear)*")
         else:
-            st.info("📷 *(an image goes here – place it at "
-                    f"`{guess_path}` and it will appear)*")
+            # Show placeholder text
+            st.write("📷 *[Image cachée]*")
 
     # ❸  Otherwise, show the raw value (number, text, NaN, …)
     else:
