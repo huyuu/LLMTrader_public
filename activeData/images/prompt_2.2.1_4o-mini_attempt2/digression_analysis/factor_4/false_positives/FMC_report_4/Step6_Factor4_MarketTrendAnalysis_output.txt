@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.7, 
+reason=FMC Corporation operates in the agricultural sector, which has shown overall resilience and growth amid operational changes. However, current market trends focus on sectors like Renewable Energy, Electric Vehicles, and AI, which are not directly aligned with FMC's agricultural business. As for volume trends, the stock has experienced significant trading volume spikes recently, particularly at critical price points, indicating increasing investor interest even during challenging periods. This suggests a 70% probability for stock price increase post-earnings amid positive fundamentals despite broader market headwinds.)

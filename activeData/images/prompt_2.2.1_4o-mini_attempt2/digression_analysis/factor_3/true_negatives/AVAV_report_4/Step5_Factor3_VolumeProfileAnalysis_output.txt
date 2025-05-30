@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.4, 
+reason=The stock price of AeroVironment Inc. (AVAV) is currently at 142.63, which is below the high-volume zones (e.g., 149.17-150.67 with 452,100 volume and 151.67-152.17 with 734,000 volume). This indicates that many holders are likely at a loss, suggesting potential selling pressure, thus creating overhead resistance. Additionally, the lowest volume concentration is significantly above the current price, implying structural weakness in support levels. Overall, these signals point toward a challenging upward movement, hence a lower probability of price increase.)

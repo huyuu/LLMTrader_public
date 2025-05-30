@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.75, 
+reason=The stock is currently in a strong uptrend with recent performance showing prices moving significantly higher, particularly with strong gains on October 30 and 31. Volume on these recent high days also increased, indicating strong buying interest. Short-term averages are above long-term averages, further supporting the uptrend. Candlesticks on the last few days display bullish tendencies, and while volatility is present, it's not at a detrimental level. As a result, there is a strong case for a positive price movement post-earnings.)

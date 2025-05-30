@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.0, 
+reason=The current stock price of Bloom Energy Corporation (BE) at approximately 9.90 is below the high-volume zone, specifically the Volume Area High (VAH) of the 10.32 to 10.82 range. This indicates many traders are in a loss position and may act as selling pressure as they attempt to break even. Furthermore, the highest volume occurring at prices above the current price suggests established resistance. Consequently, the stock is likely to face downward pressure rather than favoring an upward movement.)

@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.85, 
+reason=Sezzle Inc. shows a clear short-term uptrend, as the recent candlestick patterns illustrate a series of higher highs and higher lows, culminating in significant upward movement as reflected in the latest price increase from around 6.0 to nearly 11.0. The volume has been notably high in the recent trading sessions, particularly on bullish days, indicating strong market participation. Additionally, candlestick patterns such as bullish engulfing are prevalent towards the earnings report, suggesting bullish sentiment. The volatility has been relatively high, but the directional bias is strongly upward, bolstering the probability of price increase following the earnings release.)

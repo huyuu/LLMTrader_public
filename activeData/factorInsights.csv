@@ -1,0 +1,32 @@
+Prompt ,prompt_1.0.0_4o-mini,prompt_1.0.6_4o-mini_attempt1,prompt_1.0.6_4o-mini_attempt2,prompt_1.0.6_4.1-mini_attempt1,prompt_1.2.16_4o-mini_attempt1,prompt_2.2.1_4o-mini_attempt2
+Result Folder Name,largeScaleCloseLoopSim_gpt-4o-mini_attempt2,prompt1.0.6_gpt-4omini_attempt1,prompt1.0.6_gpt-4omini_attempt2,prompt1.0.6_gpt-4.1mini_attempt1,agent1.2.16_gpt-4omini,prompt2.2.1_gpt-4omini_attempt2
+Factor 1 Name,Historical Performance,Historical Performance,Historical Performance,Historical Performance,Historical Performance,Historical Performance
+Factor 1 Prediction Regression Coeff,0.12,0.08,0.06,0.15,0.14,
+Factor 1 Performance,"�� Good in [-15, +15]",X Double Pick,X Double Pick,"�� Usable in [-15, +15]",X Double Pick,"�Z Usable in [0, +1]"
+Factor 1 Scatter,Picture,Picture,Picture,Picture,Picture,Picture
+Factor 1 Critical Distribution,Picture,Picture,Picture,Picture,Picture,Picture
+Factor 2 Name,Candle,Candle,Candle,Candle,Candle,Candle
+Factor 2 Prediction Regression Coeff,0.08,0.05,0.02,-0.01,-0.01,
+Factor 2 Performance,X Double Pick,"�� Usable in [-10, +15]","�� Usable in [-10, +15] (barely",X Double Pick,X Double Pick,X Double Pick
+Factor 2 Scatter,Picture,Picture,Picture,Picture,Picture,Picture
+Factor 2 Critical Distribution,Picture,Picture,Picture,Picture,Picture,Picture
+Factor 3 Name,Volume Profile,Volume Profile,Volume Profile,Volume Profile,Guidance,Volume Profile
+Factor 3 Prediction Regression Coeff,-0.02,0.09,-0.08,-0.13,0.1,
+Factor 3 Performance,X Complete Flat,"X Complete Flat in [-5, +5]","X Complete Flat in [-5, +5]","X Minus Relation in [-3, +3]","�� Usable in [-7.5, +7.5]","X Complete Flat in [0, 1]"
+Factor 3 Scatter,Picture,Picture,Picture,Picture,Picture,Picture
+Factor 3 Critical Distribution,Picture,Picture,Picture,Picture,Picture,Picture
+Factor 4 Name,Market Trend,Market Trend,Market Trend,Market Trend,Market Trend,Market Trend
+Factor 4 Prediction Regression Coeff,0.03,0.02,0.02,-0.04,0.06,
+Factor 4 Performance,"�� Available in [-20, 20]","�� Usable in [-15, +20]","X Complete Flat in [-5, +5]",X Complete Flat,"�� Usable in [-7.5, +7.5]","X Complete Flat in [0, 1]"
+Factor 4 Scatter,Picture,Picture,Picture,Picture,Picture,Picture
+Factor 4 Critical Distribution,Picture,Picture,Picture,Picture,Picture,Picture
+Factor 5 Name,,,,,Macro Economy,
+Factor 5 Prediction Regression Coeff,,,,,-0.12,
+Factor 5 Performance,,,,,X Double Pick,
+Factor 5 Scatter,,,,,Picture,
+Factor 5 Prediction vs Actual,,,,,Picture,
+Overall Scatter,Picture,Picture,Picture,Picture,Picture,Picture
+Overall Critical Distribution,Picture,Picture,Picture,Picture,Picture,Picture
+Overall Performance,Picture,Picture,Picture,Picture,Picture,Picture
+Conclusion,"Usable in [-15, +20]","Usable in [-7.5, +12]",Not usable,"Flat, not usable","Usable in [-2.5, +5]","Unusable as overall, only as seperated factors"
+Overall Performance over a Year,x 2.3,x 1.4,x 1.3,x 1.2,x 1.2,x 1.3

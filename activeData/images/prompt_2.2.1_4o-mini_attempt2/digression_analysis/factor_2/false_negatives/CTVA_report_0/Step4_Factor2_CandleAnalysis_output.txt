@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.4, 
+reason=Corteva Inc. has been in a downtrend with decreasing prices leading up to the earnings announcement, as indicated by the short-term moving averages being below longer-term averages. The recent candlestick patterns show increased volatility with significant price drops, especially notable on November 30 with double the average volume, pointing to weakness. Volume combined with the price action suggests a lack of support and buyer confidence. The past few sessions have seen indecisive candlestick formations but primarily bearish closing. Thus, the likelihood of a price increase post-earnings is relatively low at around 40% given the overall bearish trend and market context.)

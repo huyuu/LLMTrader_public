@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.0, 
+reason=Crocs Inc. operates in the footwear industry but is negatively impacted by recent legal challenges related to misleading revenue disclosures, resulting in a significant drop in stock value. The company seems out of favor, as indicated by the negative sentiment surrounding its operational integrity. Additionally, while the trading volume has shown some spikes, they are accompanied by high volatility and significant downward pressure, suggesting waning investor confidence. Overall, the company's negative industry perception and concerning volume trends do not align with any prevailing market momentum, leading to a low probability of a stock price increase post-earnings.)

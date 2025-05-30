@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.75, 
+reason=The stock is currently in an uptrend, as indicated by the 5-day moving average being above the 60-day moving average. Additionally, the trading volume has increased over the short term compared to the longer-term average, suggesting higher market participation. Recent candlestick patterns show bullish behaviors, especially the strong upward close on higher volume. Although there’s some volatility in recent price movements, the overall indicators favor a higher probability of a price increase following the earnings report.)

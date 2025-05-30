@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.0, 
+reason=The current stock price of 139.87 is below the high-volume zone, with significant trading volume concentrated in the price bins between 140.1 and 145.6. This indicates many traders are likely at a loss, resulting in resistance at these levels. Additionally, as the stock is below the major volume zones, it faces downward pressure as sellers may act to break even. Thus, the stock is unlikely to rise after the earnings report.)

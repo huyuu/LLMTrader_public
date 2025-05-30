@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.9, 
+reason=The stock CleanSpark Inc. (CLSK) is currently in an uptrend, as evidenced by the short-term moving averages positioned above the long-term moving averages. Additionally, there is strong buying interest indicated by increasing volume particularly on the last few trading days compared to the longer averages. The candlestick patterns show bullish behavior, especially the recent bullish engulfing patterns that suggest potential upward momentum. The increase in trading volume, particularly on moves up, supports a high likelihood of price increases following the earnings announcement. Overall, these indicators combine to give a high probability of price appreciation post-earnings.)

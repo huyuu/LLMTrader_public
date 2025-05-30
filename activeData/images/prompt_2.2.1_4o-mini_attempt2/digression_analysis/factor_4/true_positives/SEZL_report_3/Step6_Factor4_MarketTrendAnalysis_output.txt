@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.8, 
+reason=Sezzle operates in the growing fintech sector, particularly within the Buy Now, Pay Later industry, which is currently aligned with increasing consumer interest and market trends favoring digital finance solutions. The stock's recent volume has seen significant increases, with recent trading volumes substantially exceeding 20-day moving averages, indicating heightened investor interest. This combination of favorable industry dynamics and increasing trading volume suggests a strong likelihood of positive price movement following the earnings report.)

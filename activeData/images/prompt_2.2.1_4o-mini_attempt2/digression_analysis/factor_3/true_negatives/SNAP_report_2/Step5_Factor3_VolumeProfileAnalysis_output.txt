@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.0, 
+reason=The current stock price of Snap Inc. (SNAP) at approximately 13.32 is below the high-volume zone (VAH) which spans from 12.83 to 13.33, indicating that many traders are currently at a loss. This generates selling pressure as these traders may attempt to recover losses, creating resistance. Additionally, with no traded volume above 15.33, there is limited support above the current price level, suggesting further downward movement is more likely than upward.)

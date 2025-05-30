@@ -1,0 +1,440 @@
+System Prompt:
+<Task Instructions>
+You are a financial expert responsible for evaluating how the broader market trend, particularly the trend of the industry in which the company operates, will influence the likelihood that the company’s stock price will rise following the upcoming earnings report. Your task is to analyze both the price trend and volume trend of the relevant market and estimate the probability that the stock will go up post-earnings.
+</Task Instructions>
+
+<Analysis Methodology>
+Use the data given in <context> and the following two key indicators to assess how the company’s stock may be influenced by broader market dynamics:
+
+1. Stock Market Trend Alignment
+   - Determine whether the company’s industry is aligned with the current mainstream market trend given by <market trends>.
+   - Mainstream trends refer to sectors or themes that have recently shown strong price momentum, institutional fund inflows, or high investor attention (e.g., AI, aerospace, clean energy).
+   - Companies in trend-aligned sectors may see strong upward reactions even on moderate fundamental improvements due to heightened market enthusiasm.
+   - Companies in sectors out of favor may experience muted reactions even on strong earnings.
+
+2. Volume Trend of the Stock or Sector
+   - Analyze the average daily trading volume of the stock over the past 1 to 3 months.
+   - A rising volume trend indicates increasing investor interest and market participation, supporting a higher probability of positive price movement.
+   - A declining volume trend may signal fading attention and weaker potential for a strong post-earnings reaction.
+
+Use these two indicators to assess whether the stock is likely to benefit from market momentum or face headwinds, and estimate the likelihood of a post-earnings price increase accordingly.
+Probability 0.5 means either you can't judge from the given <context>, or all the above signals are fully contradictory.
+Probability 1.0 means all the above signals show strong positive sign.
+Probability 0.0 means all the above signals show strong negative sign.
+</Analysis Methodology>
+
+<Output Instruction>
+Output the result in the following format:
+Factor(up_probability = ..., reason = "...")
+
+Where:
+- up_probability is a float between 0.0 and 1.0 (e.g. 0.75 means 75% chance of rising)
+- reason should explain how market trend and volume dynamics affect your probability estimate
+</Output Instruction>
+
+<Remarks>
+- Use only data provided in <context>
+- Do not make assumptions about the earnings results—focus solely on market and sector dynamics
+- Do not default to up_probability = 0.5 unless all indicators are neutral or contradictory
+- Be specific about whether the company is part of a strong market trend and if trading volume supports upside potential
+</Remarks>
+
+User Prompt:
+<context>
+The company name is Advance Auto Parts Inc..
+The company's symbol is AAP
+
+The company's overview is
+Advance Auto Parts Inc. operates within the automotive aftermarket sector, specializing in a wide range of auto parts and accessories. Recently, the company showcased its commitment to innovation and community engagement through several initiatives, such as launching the Modern Classikk automotive paint line in partnership with AkzoNobel, which enhances its product offerings. Additionally, its collaboration with the Gulf Shores Police Department for a roadway safety program highlights its focus on community relations, potentially bolstering brand reputation and customer loyalty. To improve operational efficiency, Advance Auto Parts is consolidating its distribution network into 14 large centers, which is expected to streamline operations and drive long-term growth. However, the company faces challenges, notably a data breach affecting the personal information of approximately 2.3 million individuals, which could lead to reputational damage and regulatory scrutiny. Leadership changes, with Bruce Starnes appointed as the new Executive Vice President and Chief Merchant, could introduce fresh strategies to navigate these issues. In terms of market competitiveness, Advance Auto Parts operates in a space with significant players, but their strategic partnerships and product diversification initiatives may provide a competitive edge. Overall, while the company is positioned as a key player in the automotive aftermarket, it must address the repercussions of the data breach to maintain customer trust and safeguard its market position.
+
+Current <market trends> are
+
+Title: Renewable Energy
+Description: Renewable Energy focuses on harnessing sources like solar, wind, and hydro to produce electricity sustainably.
+Is Long Term: True
+Reason for Long Term: Government policies globally are pushing toward sustainable energy solutions to combat climate change. Technological advancements in solar panels and wind turbines are reducing costs. Major oil companies are investing heavily in renewable transfer, indicating a long-term transition from fossil fuels.
+Evidence for Long Term: Increasing R&D investments, tax credits, and the rise in installed capacity for renewables recorded in financial reports of major companies demonstrate sustained growth.
+Confidence Score for Long Term: 90.0
+Is Short Term: False
+Reason for Short Term: Recently, short-term fears of economic downturns and fossil fuel industry pushback have led to temporary hesitations in market valuations.
+Evidence for Short Term: Temporary dips in solar and wind companies' stock prices during broader market corrections.
+Confidence Score for Short Term: 60.0
+Representative Stocks: ['NEE', 'ENPH', 'TSLA']
+
+
+Title: Electric Vehicles (EVs)
+Description: The EV industry involves manufacturing and development of electric-powered vehicles as an alternative to traditional internal combustion engines.
+Is Long Term: True
+Reason for Long Term: Increased environmental awareness and stricter emissions regulations are driving long-term demand for cleaner transportation options. Continuous innovations in battery technology are making EVs more affordable and accessible.
+Evidence for Long Term: Tesla's consistent market leadership, and significant commitments by traditional automakers like GM and Ford towards EV transition.
+Confidence Score for Long Term: 88.0
+Is Short Term: False
+Reason for Short Term: Short-term momentum is spurred by newly released models, government incentives, and infrastructure developments, leading to periodic spikes in EV stocks.
+Evidence for Short Term: Temporary stock surges following announcements of production increases or new model launches.
+Confidence Score for Short Term: 75.0
+Representative Stocks: ['TSLA', 'NIO', 'GM', 'F']
+
+
+Title: Semiconductors
+Description: The Semiconductor industry is pivotal for modern electronics, supporting sectors like computing, telecom, and other digital applications.
+Is Long Term: True
+Reason for Long Term: With ongoing digital transformation, demand for semiconductors remains robust, powered by trends like AI, IoT, and 5G. Their essential role in various industries ensures continued relevance.
+Evidence for Long Term: Continuous revenue growth as reported by industry leaders such as Intel and Nvidia.
+Confidence Score for Long Term: 92.0
+Is Short Term: True
+Reason for Short Term: Short-term growth is impacted by cyclicality of the industry, supply chain disruptions, and quick technological upgrades, affecting production and prices temporarily.
+Evidence for Short Term: Fluctuating stock prices in response to periodic supply shortages and trade policies.
+Confidence Score for Short Term: 70.0
+Representative Stocks: ['NVDA', 'AMD', 'INTC', 'TSM']
+
+
+Title: Artificial Intelligence
+Description: The AI sector is focused on developing technologies that allow machines to mimic human intelligence processes.
+Is Long Term: True
+Reason for Long Term: AI's vast potential across industries like healthcare, finance, and customer service ensures a prolonged investment interest. It's an integral part of digital transformation strategies globally.
+Evidence for Long Term: Reports indicating rising R&D expenditure and increased implementation of AI solutions in businesses.
+Confidence Score for Long Term: 89.0
+Is Short Term: False
+Reason for Short Term: Although heightened investor enthusiasm can spike short-term valuations, the technology's maturation phase can also bring volatility.
+Evidence for Short Term: Interim stock dips during phases of regulatory changes or tech overhauls.
+Confidence Score for Short Term: 65.0
+Representative Stocks: ['GOOG', 'META', 'BABA', 'IBM']
+
+
+Title: Quantum Computing
+Description: Quantum computing promises to revolutionize computing with enhanced problem-solving capabilities, especially for complex scientific calculations.
+Is Long Term: True
+Reason for Long Term: Given its transformational potential, significant investment and ongoing research is expected over the years. It's touted to solve problems beyond the capability of classical computers, promising a radical impact on industries like cryptography and pharmaceuticals.
+Evidence for Long Term: Increasing patents filed and partnerships aimed at advancing quantum research indicate long-term interest.
+Confidence Score for Long Term: 85.0
+Is Short Term: False
+Reason for Short Term: The complexity and nascent nature of the technology result in incremental developments rather than short-term hype.
+Evidence for Short Term: Occasional spurts in stock movements tied to research breakthroughs or funding announcements.
+Confidence Score for Short Term: 60.0
+Representative Stocks: ['IBM', 'GOOG', 'MSFT']
+
+
+Title: Cybersecurity
+Description: Cybersecurity encompasses solutions protecting devices, networks, and data from digital attacks.
+Is Long Term: True
+Reason for Long Term: With increasing reliance on digital solutions, the threat landscape is evolving, necessitating robust cybersecurity frameworks. Long-term growth is supported by rising global regulations and growing cloud adoption.
+Evidence for Long Term: Steady industry growth observed through rising demand and diverse service offerings as detailed in market reports.
+Confidence Score for Long Term: 88.0
+Is Short Term: True
+Reason for Short Term: Short bursts in spending and stock values are commonly linked to high-profile cyber threats or breaches.
+Evidence for Short Term: Stock price spikes following major cyber incidents forcing enterprises to upgrade defenses quickly.
+Confidence Score for Short Term: 80.0
+Representative Stocks: ['PANW', 'CRWD', 'FTNT', 'ZS']
+
+
+Title: E-commerce
+Description: The E-commerce sector focuses on buying and selling goods online, revolutionizing traditional retail models.
+Is Long Term: True
+Reason for Long Term: The convenience and flexibility of online shopping continue drawing consumers. Improvements in logistics and payment technologies foster growth, with emerging markets playing a significant role.
+Evidence for Long Term: Consistent revenue growth by major players like Amazon and Alibaba, which invest significantly in innovation and market expansion.
+Confidence Score for Long Term: 87.0
+Is Short Term: True
+Reason for Short Term: Promotional events, new policy changes, and technology integrations can create short-lived spikes in the market.
+Evidence for Short Term: Increased trading volumes during events like Black Friday or new feature rollouts.
+Confidence Score for Short Term: 77.0
+Representative Stocks: ['AMZN', 'BABA', 'SHOP']
+
+
+Title: 5G Technology
+Description: 5G technology drives the next generation of mobile networks, promising increased speed and connectivity for a digital world.
+Is Long Term: True
+Reason for Long Term: The massive upgrade from 4G to 5G encompasses more than speed; it's about enabling advancements in IoT and smart cities, indicating durable growth potential.
+Evidence for Long Term: Wide-ranging investments across telecom sectors aimed at infrastructure development and rollout confirm long-term interest.
+Confidence Score for Long Term: 86.0
+Is Short Term: True
+Reason for Short Term: Initial rollout phases and related announcements create temporary valuation surges, boosting market volatility.
+Evidence for Short Term: Stock price hikes when companies announce new infrastructure contracts or city rollouts.
+Confidence Score for Short Term: 75.0
+Representative Stocks: ['VZ', 'T', 'QCOM', 'NOK']
+
+
+Title: Fintech
+Description: Fintech merges finance and technology, offering new avenues such as digital banking, online payments, and blockchain solutions.
+Is Long Term: True
+Reason for Long Term: Rapid adoption of cashless transactions and digital finance tools fostered by convenience is expected to continue shaping the financial industry transformation.
+Evidence for Long Term: Market analysis shows persistent user growth in digital payment platforms and banking technologies.
+Confidence Score for Long Term: 90.0
+Is Short Term: True
+Reason for Short Term: Short-term spikes occur due to news around regulations, partnerships, and innovations like digital currencies.
+Evidence for Short Term: Trading volumes rise post-government policy news or cryptocurrency market movements.
+Confidence Score for Short Term: 78.0
+Representative Stocks: ['SQ', 'PYPL', 'V', 'MA']
+
+
+Title: Biotechnology
+Description: Biotechnology applies biological systems to develop technologies and products improving health care and agriculture.
+Is Long Term: True
+Reason for Long Term: Constant innovation and breakthrough research, especially around genetic engineering and personalized medicine, ensure ongoing relevance. Strong clinical trial pipelines bolster confidence.
+Evidence for Long Term: Increased funding and collaboration between pharma and biotech firms reflect long-term strategy changes.
+Confidence Score for Long Term: 83.0
+Is Short Term: True
+Reason for Short Term: Regulatory approvals, clinical trial updates, and mergers can cause quick gains in the sector.
+Evidence for Short Term: Dramatic price shifts post-successful trial results or FDA approvals.
+Confidence Score for Short Term: 75.0
+Representative Stocks: ['REGN', 'AMGN', 'VRTX']
+
+
+Title: Cloud Computing
+Description: Cloud Computing represents on-demand delivery of computing power, storage, and applications over the internet.
+Is Long Term: True
+Reason for Long Term: With the shift from on-premise to flexible, scalable cloud solutions, the demand for cloud services remains robust. Future trends like multi-cloud and edge computing further boost growth.
+Evidence for Long Term: Financial forecasts predict sustained growth in infrastructure spending and software services within the cloud domain.
+Confidence Score for Long Term: 90.0
+Is Short Term: False
+Reason for Short Term: While certain earnings announcements or analyst upgrades can trigger short-lived trading frenzies, cloud computing’s benefits favor long-term growth.
+Evidence for Short Term: Temporary peaks in trading driven by quarterly performance reviews of cloud giants.
+Confidence Score for Short Term: 65.0
+Representative Stocks: ['AMZN', 'MSFT', 'GOOG', 'CRM']
+
+
+Title: Healthcare Technology
+Description: Healthcare Technology integrates IT solutions in delivering healthcare services, enhancing efficiencies and patient outcomes.
+Is Long Term: True
+Reason for Long Term: Aging populations and increased focus on personalized medical solutions support sustained interest in innovation and integration of tech with healthcare services.
+Evidence for Long Term: Growth projected in telemedicine, electronic health records, and AI solutions for diagnostics in industry reports.
+Confidence Score for Long Term: 89.0
+Is Short Term: True
+Reason for Short Term: Policy changes and pandemic-driven demand can cause temporary stock price shifts in organizations providing these solutions.
+Evidence for Short Term: Short-term trading spikes during times of healthcare reform debates or health crises.
+Confidence Score for Short Term: 78.0
+Representative Stocks: ['TDOC', 'CERN', 'UNH', 'PFE']
+
+
+Title: Robotics
+Description: Robotics spans the development of technologies that build and automate machines capable of performing tasks traditionally done by humans.
+Is Long Term: True
+Reason for Long Term: Industry demand for robotic solutions has been growing in sectors like manufacturing, healthcare, and logistics due to efficiency and accuracy needs.
+Evidence for Long Term: Consistent advancements in technological capabilities and deployments in production environments affirm long acclaims.
+Confidence Score for Long Term: 90.0
+Is Short Term: True
+Reason for Short Term: Innovation announcements or strategic partnerships can temporarily instigate market excitement, impacting stock valuations.
+Evidence for Short Term: Certain periods mirror stock interest spikes within companies unveiling new automation products or collaborations.
+Confidence Score for Short Term: 73.0
+Representative Stocks: ['IRBT', 'ABB', 'FANUC']
+
+
+Title: Space Exploration
+Description: Space Exploration involves advancing efforts to explore celestial bodies and develop space-based technologies for potential economic benefits.
+Is Long Term: True
+Reason for Long Term: Growing interest from both governmental bodies and private enterprises toward space missions and satellite deployment ensures sustainability. The potential in harnessing extraterrestrial resources fuels extended sector commitment.
+Evidence for Long Term: Numerous government-funded initiatives and partnerships exemplify the progressive expansion in space efforts.
+Confidence Score for Long Term: 82.0
+Is Short Term: True
+Reason for Short Term: Announcements of successful missions or new contracts often translate into immediate market uplift for involved entities.
+Evidence for Short Term: Prompted upticks in stock exchanges as reporting unfolds around landmark space achievements.
+Confidence Score for Short Term: 70.0
+Representative Stocks: ['SPCE', 'MAXR', 'LMT']
+
+
+Title: Gaming
+Description: The Gaming industry involves developing and distributing interactive games for PCs, consoles, and mobile devices.
+Is Long Term: True
+Reason for Long Term: Increased accessibility to online platforms, cloud gaming solutions, and mobile gaming ensure enduring interest. Esport expansion and virtual reality adoption further solidify its potential.
+Evidence for Long Term: Reports highlight consistent audience growth and rising revenue streams, with expanding international markets playing a pivotal role.
+Confidence Score for Long Term: 87.0
+Is Short Term: True
+Reason for Short Term: New game releases, hardware updates, or competitive events can create short-term stock surges for companies involved.
+Evidence for Short Term: Trading volume hikes corresponding with major title launches or competition outcomes.
+Confidence Score for Short Term: 78.0
+Representative Stocks: ['ATVI', 'EA', 'TTWO', 'SONY']
+
+
+Title: Cryptocurrency
+Description: Cryptocurrency represents decentralized digital assets using cryptographic methods for secure transactions, exemplified by Bitcoin, Ethereum, and others.
+Is Long Term: True
+Reason for Long Term: Growing acceptance for cryptocurrencies as alternative investment assets aligns with broader financial integration strategies. Expanding infrastructure and legislative frameworks advocate long-term growth.
+Evidence for Long Term: Institutional adoption and regulatory clarity significantly bolster prospects for enduring growth.
+Confidence Score for Long Term: 85.0
+Is Short Term: True
+Reason for Short Term: Rapid market movements are common given high volatility, with news on regulations or technological updates often swaying values dramatically.
+Evidence for Short Term: Sudden price jumps during times of updates about major exchanges or government stances on cryptocurrencies.
+Confidence Score for Short Term: 80.0
+Representative Stocks: ['BTC-USD', 'ETH-USD', 'COIN']
+
+
+Title: Clean Water Solutions
+Description: This industry focuses on technologies ensuring sustainable and efficient use of water resources, addressing growing scarcity and quality concerns.
+Is Long Term: True
+Reason for Long Term: Water scarcity driven by population growth and climate changes has put clean water solutions center stage for policy and investment. Innovations in desalination and purification technologies reflect ongoing commitment.
+Evidence for Long Term: Reports tracking increases in government and private sector investments towards water infrastructure improvements.
+Confidence Score for Long Term: 86.0
+Is Short Term: False
+Reason for Short Term: Environmental policies or incidents can cause abrupt interest spikes, reflected in temporary valuation adjustments.
+Evidence for Short Term: Short-lived trading peaks related to drought events or legislative news.
+Confidence Score for Short Term: 70.0
+Representative Stocks: ['AQUA', 'WTRG', 'XYL']
+
+
+Title: Augmented Reality/Virtual Reality (AR/VR)
+Description: AR/VR technologies create immersive experiences, adding digital elements to the physical world or entirely new environments.
+Is Long Term: True
+Reason for Long Term: Adoption spans multiple domains like retail, education, and entertainment, promising long-term integration. Continuous upgrades in hardware and software capabilities make the sales expansion plausible over the next decade.
+Evidence for Long Term: Surveys indicating rising consumer interest in metaverse experiences further guide future growth potential.
+Confidence Score for Long Term: 85.0
+Is Short Term: True
+Reason for Short Term: Technical advancements or product launches can generate immediate buzz, driving short-term stock interest.
+Evidence for Short Term: Noticeable trading spikes accompany significant announcements from major tech players introducing new AR/VR solutions.
+Confidence Score for Short Term: 75.0
+Representative Stocks: ['FB', 'AAPL', 'MSFT', 'DASH']
+
+
+Title: Agricultural Technology
+Description: AgriTech involves implementing technology-enhanced solutions to improve agricultural productivity, efficiency, and sustainability.
+Is Long Term: True
+Reason for Long Term: Global food security concerns augmented by environmental challenges prompt a steady drive towards smart agriculture practices. Drones, IoT sensors, and genetic enhancements are trailblazing the sector innovations.
+Evidence for Long Term: Investment trends highlight collaborative efforts fortifying research and tech adoption across the agriculture industry.
+Confidence Score for Long Term: 88.0
+Is Short Term: False
+Reason for Short Term: Short-term volumes spike around crop yield reports, policy changes, or climate event news affecting agricultural outputs.
+Evidence for Short Term: Market agility seen with sudden trading volumes responding to unpredictable weather patterns or regional yield forecasts.
+Confidence Score for Short Term: 72.0
+Representative Stocks: ['DE', 'AGCO', 'TSCO']
+
+
+Title: Renewable Energy Storage
+Description: This segment addresses solutions for storing renewable energy, ensuring stable supply even when production dips.
+Is Long Term: True
+Reason for Long Term: With the rise of renewables, efficient storage solutions become crucial. Battery technology advancements continue driving scalability and reliability, encouraging long-term investments.
+Evidence for Long Term: Data insights predict notable growth in storage systems as the transition to renewable gains momentum.
+Confidence Score for Long Term: 90.0
+Is Short Term: False
+Reason for Short Term: Short-term trading volume variances often align with supply chain narratives or technology breakthroughs within battery capacities.
+Evidence for Short Term: Tender developments or legislative shifts influencing quick market engagements.
+Confidence Score for Short Term: 68.0
+Representative Stocks: ['TSLA', 'ENPH', 'AES']
+
+
+
+The company's candlestick chart including the volume is
+          date       open        low       high      close   volume  daily_volatility_percentage  20_days_moving_average_of_close_price  60_days_moving_average_of_close_price  20_days_moving_average_of_volume  60_days_moving_average_of_volume  pe_ratio_transition
+0   2024-02-23  60.320000  60.320000  62.049999  61.099998  1679800                     2.831423                              64.901000                              61.596167                         1384195.0                      1.609990e+06            82.567566
+1   2024-02-26  60.880001  60.189999  63.040001  60.340000  2037600                     4.723239                              64.605500                              61.741167                         1446985.0                      1.620225e+06            81.540541
+2   2024-02-27  62.029999  61.560001  64.809998  64.750000  2981400                     5.019299                              64.495000                              61.960667                         1531505.0                      1.645397e+06            87.500000
+3   2024-02-28  65.730003  63.830002  69.470001  66.419998  7516500                     8.491418                              64.453500                              62.221167                         1863570.0                      1.743330e+06            89.756754
+4   2024-02-29  69.120003  65.709999  69.919998  67.540001  2658600                     6.233342                              64.488000                              62.445333                         1907740.0                      1.750780e+06            91.270272
+5   2024-03-01  67.559998  66.080002  69.519997  69.260002  1937300                     4.966784                              64.489000                              62.672500                         1946340.0                      1.750890e+06            93.594597
+6   2024-03-04  68.279999  68.110001  69.940002  69.660004  2570200                     2.627048                              64.582500                              62.947500                         2007540.0                      1.767385e+06            94.135140
+7   2024-03-05  69.540001  69.519997  72.720001  72.660004  2275100                     4.404080                              64.959000                              63.239167                         2044120.0                      1.777218e+06            98.189194
+8   2024-03-06  73.250000  70.300003  73.360001  71.900002  1613900                     4.255908                              65.235500                              63.500000                         2086865.0                      1.764718e+06            97.162164
+9   2024-03-07  72.040001  72.040001  73.989998  73.680000  1821900                     2.646576                              65.615001                              63.790167                         2123580.0                      1.724523e+06            99.567568
+10  2024-03-08  73.910004  72.629997  75.139999  73.080002  1671100                     3.434595                              66.062001                              64.056834                         2146440.0                      1.695730e+06            98.756759
+11  2024-03-11  72.769997  70.449997  76.010002  75.769997  3797700                     7.338004                              66.685501                              64.382167                         2241385.0                      1.727890e+06           102.391887
+12  2024-03-12  77.500000  77.000000  80.250000  78.480003  4521700                     4.141182                              67.307001                              64.676334                         2403845.0                      1.756492e+06           106.054059
+13  2024-03-13  78.410004  77.870003  80.949997  79.910004  3537600                     3.854329                              68.081001                              64.942000                         2500260.0                      1.757668e+06           107.986491
+14  2024-03-14  80.010002  77.809998  80.139999  79.529999  2579700                     2.929714                              68.844501                              65.222167                         2573195.0                      1.760528e+06           107.472971
+15  2024-03-15  78.919998  78.919998  81.889999  81.769997  5298900                     3.632141                              69.700500                              65.574000                         2776010.0                      1.821482e+06           110.499995
+16  2024-03-18  82.070000  81.000000  84.459999  84.190002  2178600                     4.109751                              70.685501                              65.962834                         2796790.0                      1.826643e+06           113.770274
+17  2024-03-19  84.199997  82.970001  85.349998  83.830002  2761200                     2.839076                              71.786501                              66.369167                         2839135.0                      1.845230e+06           113.283786
+18  2024-03-20  85.169998  83.750000  85.349998  84.839996  1522100                     1.885901                              72.970000                              66.771667                         2843500.0                      1.854338e+06           114.648644
+19  2024-03-21  86.080002  85.370003  88.559998  86.449997  2671400                     3.689988                              74.258000                              67.191667                         2881615.0                      1.879283e+06           116.824320
+20  2024-03-22  86.080002  85.019997  86.559998  85.760002  1579500                     1.795710                              75.491001                              67.605667                         2876600.0                      1.887737e+06           115.891895
+21  2024-03-25  86.709999  83.870003  87.360001  84.250000  2194600                     4.142431                              76.686501                              67.983834                         2884450.0                      1.902848e+06           113.851351
+22  2024-03-26  84.349998  83.870003  85.110001  84.250000  1698100                     1.471808                              77.661501                              68.363167                         2820285.0                      1.916223e+06           113.851351
+23  2024-03-27  84.879997  84.769997  85.930000  85.320000  2264200                     1.359592                              78.606501                              68.768000                         2557670.0                      1.930732e+06           115.297297
+24  2024-03-28  85.540001  85.029999  86.309998  85.089996  1459800                     1.504288                              79.484000                              69.153667                         2497730.0                      1.931467e+06           114.986482
+25  2024-04-01  86.370003  84.900002  86.470001  85.430000  1186600                     1.837762                              80.292500                              69.560833                         2460195.0                      1.921678e+06           123.811595
+26  2024-04-02  84.459999  83.400002  85.580002  83.919998  1316300                     2.597713                              81.005500                              69.951333                         2397500.0                      1.909520e+06           121.623186
+27  2024-04-03  83.660004  83.430000  84.639999  84.160004  1383500                     1.437736                              81.580500                              70.328667                         2352920.0                      1.909535e+06           121.971020
+28  2024-04-04  84.849998  79.169998  85.300003  79.260002  2142600                     7.734046                              81.948500                              70.617833                         2379355.0                      1.922077e+06           114.869568
+29  2024-04-05  79.110001  76.779999  79.959999  77.339996  1638700                     4.111715                              82.131500                              70.883667                         2370195.0                      1.932853e+06           112.086951
+30  2024-04-08  77.500000  77.379997  78.879997  78.129997  1226400                     1.919877                              82.384000                              71.169500                         2347960.0                      1.932457e+06           113.231880
+31  2024-04-09  78.209999  78.019997  79.849998  78.459999  1208700                     2.332401                              82.518500                              71.436667                         2218510.0                      1.932662e+06           113.710144
+32  2024-04-10  76.500000  75.570000  78.199997  77.949997  1202300                     3.373954                              82.491999                              71.714167                         2052540.0                      1.932053e+06           112.971010
+33  2024-04-11  77.989998  73.669998  77.989998  74.349998  1836100                     5.810356                              82.213999                              71.930000                         1967465.0                      1.941518e+06           107.753621
+34  2024-04-12  74.110001  70.379997  74.750000  70.500000  1580400                     6.198585                              81.762499                              72.087667                         1917500.0                      1.950550e+06           102.173913
+35  2024-04-15  72.099998  69.970001  72.489998  70.080002  1402500                     3.595886                              81.177999                              72.219500                         1722680.0                      1.947770e+06           101.565220
+36  2024-04-16  69.300003  68.820000  71.930000  71.610001  1593500                     4.342970                              80.548999                              72.350500                         1693425.0                      1.949763e+06           103.782610
+37  2024-04-17  72.779999  72.250000  74.500000  74.050003  1773800                     3.038487                              80.059999                              72.494000                         1644055.0                      1.950142e+06           107.318845
+38  2024-04-18  75.040001  74.459999  77.339996  77.199997  2123200                     3.730567                              79.677999                              72.679333                         1674110.0                      1.947655e+06           111.884054
+39  2024-04-19  77.110001  76.540001  78.790001  78.690002  1732200                     2.859321                              79.290000                              72.900167                         1627150.0                      1.951653e+06           114.043482
+40  2024-04-22  79.209999  76.559998  79.410004  77.220001  2041600                     3.690762                              78.863000                              73.085000                         1650255.0                      1.970350e+06           111.913045
+41  2024-04-23  77.440002  75.870003  78.080002  78.000000  1267500                     2.833332                              78.550500                              73.280833                         1603900.0                      1.978445e+06           113.043478
+42  2024-04-24  77.370003  75.820000  77.599998  76.529999   895100                     2.325884                              78.164500                              73.440333                         1563750.0                      1.971847e+06           110.913042
+43  2024-04-25  74.739998  71.820000  74.860001  74.709999  1434300                     4.069068                              77.634000                              73.564667                         1522255.0                      1.981165e+06           108.275361
+44  2024-04-26  74.820000  74.150002  75.949997  75.139999   721700                     2.395522                              77.136500                              73.702833                         1485350.0                      1.963607e+06           108.898550
+45  2024-04-29  75.269997  73.940002  76.139999  75.419998  1221800                     2.916994                              76.636000                              73.805833                         1487110.0                      1.964548e+06           109.304345
+46  2024-04-30  74.739998  72.769997  75.959999  72.980003  1749500                     4.371064                              76.089000                              73.892333                         1508770.0                      1.971270e+06           105.768121
+47  2024-05-01  72.779999  72.739998  74.209999  73.029999  1293000                     2.012873                              75.532500                              74.024000                         1504245.0                      1.967095e+06           105.840578
+48  2024-05-02  73.949997  73.000000  75.010002  74.919998   610400                     2.682865                              75.315499                              74.166500                         1427635.0                      1.964618e+06           108.579707
+49  2024-05-03  75.849998  75.709999  77.389999  76.309998   790100                     2.201547                              75.264000                              74.336833                         1385205.0                      1.959660e+06           110.594199
+50  2024-05-06  76.830002  73.690002  77.089996  73.860001  1361100                     4.603295                              75.050500                              74.498833                         1391940.0                      1.962113e+06           107.043479
+51  2024-05-07  74.300003  73.839996  75.540001  74.510002   725100                     2.281579                              74.853000                              74.685667                         1367760.0                      1.942552e+06           107.985510
+52  2024-05-08  73.589996  73.300003  75.320000  74.779999   584200                     2.701253                              74.694500                              74.831167                         1336855.0                      1.931080e+06           108.376810
+53  2024-05-09  74.540001  74.000000  75.820000  75.639999   766600                     2.406134                              74.759000                              75.018000                         1283380.0                      1.917035e+06           109.623188
+54  2024-05-10  76.150002  74.510002  76.400002  75.029999   607300                     2.518992                              74.985500                              75.197500                         1234725.0                      1.908473e+06           108.739129
+55  2024-05-13  75.570000  75.209999  77.489998  75.300003  1400200                     3.027887                              75.246500                              75.375000                         1234610.0                      1.911100e+06           109.130439
+56  2024-05-14  76.379997  74.839996  76.900002  75.639999  1127500                     2.723434                              75.448000                              75.560833                         1211310.0                      1.900508e+06           109.623188
+57  2024-05-15  76.370003  75.449997  77.129997  75.860001  1274600                     2.214606                              75.538500                              75.795000                         1186350.0                      1.889847e+06           109.942030
+58  2024-05-16  74.120003  73.339996  75.889999  73.949997  1715100                     3.448280                              75.376000                              76.008000                         1165945.0                      1.894518e+06           107.173909
+59  2024-05-17  73.440002  73.040001  74.720001  74.550003  1041600                     2.253521                              75.169000                              76.239000                         1131415.0                      1.880060e+06           108.043483
+60  2024-05-20  74.470001  72.330002  74.589996  72.650002  1442800                     3.110798                              74.940500                              76.431500                         1101475.0                      1.876110e+06           105.289857
+61  2024-05-21  72.650002  69.930000  73.160004  70.720001  1952500                     4.567312                              74.576500                              76.604500                         1135725.0                      1.874692e+06           102.492755
+62  2024-05-22  70.519997  69.860001  71.320000  70.239998  1003500                     2.078586                              74.262000                              76.696000                         1141145.0                      1.841727e+06           101.797098
+63  2024-05-23  70.120003  68.720001  70.120003  69.419998  1650300                     2.016712                              73.997500                              76.746000                         1151945.0                      1.743957e+06           100.608693
+64  2024-05-24  69.900002  69.349998  70.589996  69.570000  1245000                     1.782374                              73.719000                              76.779833                         1178110.0                      1.720397e+06           100.826087
+65  2024-05-28  69.889999  69.750000  71.620003  70.180000  2559600                     2.664581                              73.457000                              76.795167                         1245000.0                      1.730768e+06           101.710145
+66  2024-05-29  64.320000  60.610001  67.860001  62.480000  7799400                    11.603713                              72.932000                              76.675500                         1547495.0                      1.817922e+06            90.550724
+67  2024-05-30  62.509998  62.500000  67.510002  66.959999  3675800                     7.482082                              72.628500                              76.580500                         1666635.0                      1.841267e+06            97.043477
+68  2024-05-31  67.889999  67.629997  70.669998  70.639999  2808000                     4.303512                              72.414500                              76.559500                         1776515.0                      1.861168e+06           102.376811
+69  2024-06-03  70.379997  66.279999  71.089996  67.419998  1654800                     7.134378                              71.970000                              76.455166                         1819750.0                      1.858383e+06            97.710142
+70  2024-06-04  67.000000  64.510002  67.000000  65.209999  1264900                     3.818430                              71.537500                              76.324000                         1814940.0                      1.851613e+06            94.507245
+71  2024-06-05  65.750000  63.810001  66.180000  65.269997  1579600                     3.631069                              71.075500                              76.149000                         1857665.0                      1.814645e+06            94.594198
+72  2024-06-06  65.680000  64.129997  65.870003  64.559998  1031300                     2.695176                              70.564499                              75.917000                         1880020.0                      1.756472e+06            93.565214
+73  2024-06-07  63.799999  63.549999  64.959999  64.580002  1071900                     2.183338                              70.011500                              75.661500                         1895285.0                      1.715377e+06            93.594206
+74  2024-06-10  64.180000  62.930000  64.320000  63.189999  1816500                     2.199714                              69.419500                              75.389166                         1955745.0                      1.702657e+06            91.579708
+75  2024-06-11  63.240002  62.439999  63.919998  63.740002  1070400                     2.321932                              68.841500                              75.088666                         1939255.0                      1.632182e+06            92.376814
+76  2024-06-12  64.779999  64.529999  66.400002  64.930000  1158700                     2.880029                              68.306000                              74.767666                         1940815.0                      1.615183e+06            94.101450
+77  2024-06-13  64.550003  62.849998  65.470001  63.930000  1647800                     4.098237                              67.709500                              74.436000                         1959475.0                      1.596627e+06            92.652174
+78  2024-06-14  63.270000  60.799999  63.619999  63.419998  1885700                     4.446546                              67.183000                              74.079000                         1968005.0                      1.602687e+06            91.913041
+79  2024-06-17  63.099998  62.570000  65.150002  64.169998  1661300                     4.020573                              66.663999                              73.707666                         1998990.0                      1.585852e+06            92.999997
+80  2024-06-18  64.089996  64.089996  65.160004  64.279999  1018600                     1.664604                              66.245499                              73.349666                         1977780.0                      1.576503e+06            93.159419
+81  2024-06-20  63.910000  63.830002  66.389999  66.139999  1454700                     3.870574                              66.016499                              73.047833                         1952890.0                      1.564172e+06            95.855072
+82  2024-06-21  66.120003  65.150002  67.029999  65.760002  2079600                     2.858877                              65.792499                              72.739666                         2006695.0                      1.570530e+06            95.304351
+83  2024-06-24  65.669998  64.980003  66.080002  65.300003  1482800                     1.684531                              65.586500                              72.406000                         1998320.0                      1.557507e+06            94.637686
+84  2024-06-25  65.050003  63.400002  65.190002  63.689999  1212200                     2.810490                              65.292500                              72.049333                         1996680.0                      1.553380e+06            92.304346
+85  2024-06-26  63.080002  61.720001  63.500000  61.790001   977200                     2.880723                              64.873000                              71.655333                         1917560.0                      1.549890e+06            89.550726
+86  2024-06-27  61.820000  61.270000  63.369999  62.700001  1116600                     3.349280                              64.884000                              71.301666                         1583420.0                      1.546562e+06            90.869566
+87  2024-06-28  62.860001  61.970001  63.459999  63.330002  1351100                     2.352752                              64.702500                              70.954500                         1467185.0                      1.546022e+06            91.782611
+88  2024-07-01  62.580002  59.450001  62.820000  59.709999  1767600                     5.643944                              64.156000                              70.628666                         1415165.0                      1.539772e+06          5970.999908
+89  2024-07-02  59.259998  58.980000  60.730000  60.599998  1650800                     2.887789                              63.815000                              70.349666                         1414965.0                      1.539973e+06          6059.999847
+90  2024-07-03  60.790001  59.660000  61.130001  59.860001   843700                     2.455732                              63.547500                              70.045166                         1393905.0                      1.533595e+06          5986.000061
+91  2024-07-05  59.720001  58.009998  59.919998  58.720001  1753200                     3.252724                              63.220000                              69.716166                         1402585.0                      1.542670e+06          5872.000122
+92  2024-07-08  59.330002  58.400002  59.990002  59.299999  1335700                     2.681282                              62.957000                              69.405333                         1417805.0                      1.544893e+06          5929.999924
+93  2024-07-09  59.040001  57.830002  59.130001  57.910000  1222400                     2.244861                              62.623500                              69.131333                         1425330.0                      1.534665e+06          5790.999985
+94  2024-07-10  58.849998  58.169998  58.880001  58.740002   916200                     1.208721                              62.401000                              68.935333                         1380315.0                      1.523595e+06          5874.000168
+95  2024-07-11  59.919998  59.419998  62.119999  61.730000  1501600                     4.373888                              62.300500                              68.796167                         1401875.0                      1.525247e+06          6172.999954
+96  2024-07-12  61.919998  61.549999  63.980000  62.919998  1594800                     3.862048                              62.200000                              68.651333                         1423680.0                      1.525268e+06          6291.999817
+97  2024-07-15  62.599998  61.799999  63.619999  62.419998  1110200                     2.915732                              62.124500                              68.457500                         1396800.0                      1.514208e+06          6241.999817
+98  2024-07-16  62.860001  62.299999  64.110001  63.660000  1028500                     2.843232                              62.136500                              68.231833                         1353940.0                      1.495963e+06          6365.999985
+99  2024-07-17  63.029999  62.209999  64.919998  64.440002  1410000                     4.205461                              62.150000                              67.994333                         1341375.0                      1.490593e+06          6444.000244
+100 2024-07-18  63.930000  61.209999  64.839996  61.259998  1301800                     5.925559                              61.999000                              67.728333                         1355535.0                      1.478263e+06          6125.999832
+101 2024-07-19  61.200001  59.349998  61.349998  59.619999  1269400                     3.354579                              61.673000                              67.422000                         1346270.0                      1.478295e+06          5961.999893
+102 2024-07-22  59.680000  58.770000  60.040001  59.750000  1191400                     2.125524                              61.372500                              67.142333                         1301860.0                      1.483233e+06          5975.000000
+103 2024-07-23  58.660000  58.330002  59.840000  59.639999  1239100                     2.531855                              61.089500                              66.891166                         1289675.0                      1.479980e+06          5963.999939
+104 2024-07-24  59.500000  58.450001  60.220001  58.939999  1294800                     3.003055                              60.852000                              66.621166                         1293805.0                      1.489532e+06          5893.999863
+105 2024-07-25  58.840000  58.840000  61.439999  60.169998  1651500                     4.321088                              60.771000                              66.367000                         1327520.0                      1.496693e+06          6016.999817
+106 2024-07-26  60.779999  60.330002  61.709999  60.759998  1412400                     2.271227                              60.674000                              66.163333                         1342310.0                      1.491075e+06          6075.999832
+107 2024-07-29  61.000000  60.599998  61.720001  60.990002  1405600                     1.836371                              60.557000                              65.962666                         1345035.0                      1.492952e+06          6099.000168
+108 2024-07-30  61.060001  60.779999  63.299999  63.090000  1342900                     3.994295                              60.726000                              65.765500                         1323800.0                      1.505160e+06          6309.000015
+109 2024-07-31  63.139999  62.810001  64.580002  63.330002  1077600                     2.794885                              60.862500                              65.549166                         1295140.0                      1.509952e+06          6333.000183
+110 2024-08-01  63.630001  60.790001  63.680000  62.130001   932800                     4.651536                              60.976000                              65.353666                         1299595.0                      1.502813e+06          6213.000107
+111 2024-08-02  61.080002  58.849998  61.529999  61.049999  1211500                     4.389845                              61.092500                              65.129333                         1272510.0                      1.510920e+06          6104.999924
+112 2024-08-05  58.349998  57.020000  59.580002  58.860001  1453200                     4.349306                              61.070500                              64.864000                         1278385.0                      1.525403e+06          5886.000061
+113 2024-08-06  58.360001  57.480000  59.529999  58.220001  1052200                     3.521125                              61.086000                              64.573667                         1269875.0                      1.530163e+06          5822.000122
+114 2024-08-07  59.139999  58.590000  60.580002  58.990002  1296000                     3.373456                              61.098500                              64.306333                         1288865.0                      1.541642e+06          5899.000168
+115 2024-08-08  59.099998  59.000000  61.099998  60.919998  1251700                     3.447141                              61.058000                              64.066666                         1276370.0                      1.539167e+06          6091.999817
+116 2024-08-09  61.330002  59.919998  61.330002  60.209999   867500                     2.341810                              60.922500                              63.809500                         1240005.0                      1.534833e+06          6020.999908
+117 2024-08-12  60.570000  57.810001  60.570000  58.060001  1271800                     4.753700                              60.704500                              63.512833                         1248085.0                      1.534787e+06          5806.000137
+118 2024-08-13  58.349998  58.119999  60.459999  60.189999   885400                     3.887689                              60.531000                              63.283500                         1240930.0                      1.520958e+06          6018.999863
+119 2024-08-14  60.650002  60.000000  61.369999  60.500000   828200                     2.264461                              60.334000                              63.049333                         1211840.0                      1.517402e+06          6050.000000
+120 2024-08-15  62.119999  61.430000  63.119999  62.389999  1253000                     2.708765                              60.390500                              62.878333                         1209400.0                      1.514238e+06          6238.999939
+121 2024-08-16  62.270000  61.740002  62.799999  62.189999   995700                     1.704450                              60.519000                              62.736166                         1195715.0                      1.498292e+06          6218.999863
+122 2024-08-19  62.189999  60.520000  62.220001  60.900002  1295000                     2.791463                              60.576500                              62.580500                         1200895.0                      1.503150e+06          6090.000153
+123 2024-08-20  60.849998  60.279999  61.180000  60.810001   967400                     1.480022                              60.635000                              62.437000                         1187310.0                      1.491768e+06          6081.000137
+124 2024-08-21  61.480000  60.810001  61.970001  61.919998  1875800                     1.873385                              60.784000                              62.309500                         1216360.0                      1.502282e+06          6191.999817
+</context>

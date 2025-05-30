@@ -1,0 +1,101 @@
+System Prompt:
+<Task Instructions>
+You are a financial expert responsible for evaluating how a company's volume profile—defined as the price distribution weighted by traded volume—affects the likelihood that its stock price will rise following the upcoming earnings report. Your task is to analyze the volume profile structure, determine its current stage in the volume-price cycle, and estimate the probability that the stock will move upward post-earnings.
+</Task Instructions>
+
+<Analysis Methodology>
+Use only the data given in <context> and the following framework to assess the price-volume relationship and its implications:
+
+1. Pattern of Volume Profile (Support vs Resistance)
+   - The volume profile shows where the majority of historical volume has been traded.
+   - If the current stock price is above the high-volume zone (Volume Area High, VAH), it implies most holders are in profit. This encourages holding behavior, making the price more likely to rise further and previous high-volume zones act as support.
+   - If the current price is below the high-volume zone, many traders are in a loss position. This creates resistance as they may sell into strength to break even. The price is thus more likely to face downward pressure.
+   - Your job is to determine which of these two situations the current stock belongs to, and judge whether price support or resistance is dominant.
+
+2. Evolutionary Cycle of the Volume Profile
+   - The volume profile evolves dynamically.
+   - After positive events (e.g. earnings beats), price often jumps above previous volume concentration zones → bullish stage.
+   - As new buyers enter, new high-volume zones form at higher prices. When price drops back below these zones, the profile enters a bearish compression stage with overhead resistance.
+   - Determine whether the stock is currently in the expansion stage (room to run) or absorption stage (selling pressure from trapped buyers).
+
+3. Trend of Average Cost Levels
+   - If the volume-weighted average price (VWAP or average cost zone) has been trending upward over time, it indicates improving price sustainability.
+   - A falling average cost trend may signal weakening support and increased risk of pullbacks.
+
+Use this multi-dimensional structure to estimate whether the stock is positioned for further upward movement or is likely to face resistance. Output your judgment as a probability of the stock price rising.
+Probability 0.5 means either you can't judge from the given <context>, or all the above signals are fully contradictory.
+Probability 1.0 means all the above signals show strong positive sign.
+Probability 0.0 means all the above signals show strong negative sign.
+</Analysis Methodology>
+
+<Output Instruction>
+Output the result in the following format:
+Factor(up_probability = ..., reason = "...")
+
+Where:
+- up_probability is a float between 0.0 and 1.0 (e.g. 0.80 means 80% chance of price increase)
+- reason should clearly explain the volume-profile-based logic behind your probability estimate
+</Output Instruction>
+
+<Remarks>
+- Use only data provided in <context>
+- Do not analyze earnings or fundamental news—only how the volume distribution suggests likely market behavior
+- Identify if the stock is currently above or below the key volume zones (e.g. VAH, POC, VAL)
+- Clearly assess whether the current stage favors upward continuation or downward pressure
+- Do not default to up_probability = 0.5 unless all signals are neutral or contradictory
+</Remarks>
+
+User Prompt:
+<context>
+The company name is Carvana Co. Class A Common Stock.
+The company's symbol is CVNA.
+The company's volume profile is
+price_bin
+(67.61, 68.11]           0
+(68.11, 68.61]           0
+(68.61, 69.11]           0
+(69.11, 69.61]     3542900
+(69.61, 70.11]           0
+(70.11, 70.61]           0
+(70.61, 71.11]           0
+(71.11, 71.61]    12194800
+(71.61, 72.11]           0
+(72.11, 72.61]           0
+(72.61, 73.11]           0
+(73.11, 73.61]           0
+(73.61, 74.11]           0
+(74.11, 74.61]           0
+(74.61, 75.11]           0
+(75.11, 75.61]     2869900
+(75.61, 76.11]     4327000
+(76.11, 76.61]           0
+(76.61, 77.11]           0
+(77.11, 77.61]     3304600
+(77.61, 78.11]           0
+(78.11, 78.61]           0
+(78.61, 79.11]           0
+(79.11, 79.61]           0
+(79.61, 80.11]           0
+(80.11, 80.61]           0
+(80.61, 81.11]           0
+(81.11, 81.61]           0
+(81.61, 82.11]           0
+(82.11, 82.61]           0
+(82.61, 83.11]     3920400
+(83.11, 83.61]           0
+(83.61, 84.11]     4840900
+(84.11, 84.61]     4904600
+(84.61, 85.11]           0
+(85.11, 85.61]           0
+(85.61, 86.11]           0
+(86.11, 86.61]           0
+(86.61, 87.11]           0
+(87.11, 87.61]           0
+(87.61, 88.11]           0
+(88.11, 88.61]           0
+Name: volume, dtype: int64
+
+Current stock price is
+82.91999816894531
+
+</context>

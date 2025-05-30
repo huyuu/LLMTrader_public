@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.7, 
+reason=Informatica Inc. (INFA) is currently exhibiting an uptrend as the short-term moving averages are positioned above the long-term averages. Specifically, the 20-day moving average is consistently above the 60-day moving average, indicating a bullish momentum. Recent trading volume aligns with this positive trend; particularly, the last few sessions have experienced spikes in volume, indicating increased market participation which suggests robust investor interest. The candlestick patterns have shown bullish activity as well, with multiple sessions closing near the highs of their respective ranges. Altogether, these indicators suggest a high probability of an upward movement post-earnings announcement.)

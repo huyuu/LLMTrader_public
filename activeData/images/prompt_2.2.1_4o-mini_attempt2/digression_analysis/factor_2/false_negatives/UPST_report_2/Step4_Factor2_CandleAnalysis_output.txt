@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.45, 
+reason=The stock UPST is currently in a downtrend, as indicated by short-term moving averages being below longer-term ones. Recent candlestick patterns suggest volatility, with daily price movements showing significant fluctuations, especially on high volume days, but the overall trend is downward. Volume analysis indicates a recent increase in participation, but the volatility suggests uncertainty about directionality. The last candlestick indicates indecision with a bullish attempt but lacks consistency to strongly confirm upward momentum. Based on this analysis, the probability of the stock rising post-earnings is estimated to be 45%.)

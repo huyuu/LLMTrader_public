@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.75, 
+reason=The current stock price of QDEL at 69.54 is above the high-volume zone of (68.01, 68.51], suggesting that most holders are in profit, which typically encourages holding behavior. This creates a supportive environment for price appreciation. Additionally, the volume profile shows a tapering off of trading volume at higher price levels, indicating a possible expansion stage, where new buyers may be entering the market. Together, these factors point to a favorable setting for potential upward movement post-earnings.)

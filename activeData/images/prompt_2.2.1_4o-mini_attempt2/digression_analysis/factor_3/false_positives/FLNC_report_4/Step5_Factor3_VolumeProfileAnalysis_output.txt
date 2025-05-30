@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.8, 
+reason=The current stock price of $12.53 is situated above the high-volume zone, which is delineated by the Volume Area High (VAH) of $12.39 and the upper limit of the next volume bin at $12.89. This indicates that the majority of traders are in profit, which typically encourages holding behavior rather than selling. Furthermore, with the stock price above the key volume levels, there is potential for upward movement. The absence of trading volume from $14.39 to $15.39 suggests limited overhead resistance immediately ahead, aligning with an expansion stage as opposed to a bearish compression stage. Overall, these factors contribute to a strong likelihood of further upward movement.)

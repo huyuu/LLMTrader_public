@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.8, 
+reason=The current stock price of $82.92 is above the high-volume zone (VAH), which is around $76.11—$85.11. Since most holders are likely in profit, this encourages them to hold onto their positions, increasing the likelihood of price appreciation. The volume profile shows significant historical volume in several high-volume areas above the current price, indicating potential support levels that will help prevent downward pressure. Additionally, the price being above these levels suggests it could maintain upward momentum following the earnings report.)

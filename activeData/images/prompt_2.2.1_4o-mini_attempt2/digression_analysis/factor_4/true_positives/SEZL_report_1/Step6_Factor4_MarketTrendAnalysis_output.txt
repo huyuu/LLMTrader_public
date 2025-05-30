@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.8, 
+reason=Sezzle Inc. operates in the growing buy now, pay later (BNPL) sector, which has shown significant popularity and growth, particularly in Canada. While the broader market trends currently favor sectors like renewable energy and electric vehicles, the BNPL sector remains strong due to its positive consumer sentiment and innovative offerings that cater to financial empowerment. Additionally, the stock's trading volume data indicates a rising interest, with some recent days showing significant volume spikes, particularly around critical trading sessions. Overall, these market dynamics suggest a high likelihood of price increase post-earnings.)

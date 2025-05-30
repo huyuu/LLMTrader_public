@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.8, 
+reason=The stock CVNA is currently in a short-term uptrend as the recent 5-day moving average is above the 60-day moving average, indicating bullish momentum. The recent candlesticks show two bullish patterns, as indicated by the significant upswings in price, which reflect positive market sentiment ahead of the earnings report. Additionally, the volume has surged significantly in the context of recent price moves, particularly on the days leading up to the report, indicating strong market participation. This suggests that investor interest is likely heightened, which may lead to further price appreciation post-earnings.)

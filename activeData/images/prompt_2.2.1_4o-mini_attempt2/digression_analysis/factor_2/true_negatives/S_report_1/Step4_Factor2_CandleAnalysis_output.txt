@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.35, 
+reason=The stock is currently in a downtrend with short-term moving averages below longer-term averages. Recent candlestick patterns show volatility and market indecision, particularly the large trading volumes leading up to the earnings report. The significant swings in price (high volatility) suggest uncertainty, decreasing the likelihood of a clear upward move after earnings.)

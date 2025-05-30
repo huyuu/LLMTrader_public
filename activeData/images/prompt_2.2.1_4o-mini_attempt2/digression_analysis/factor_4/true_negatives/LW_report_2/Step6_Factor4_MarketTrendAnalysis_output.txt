@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.4, 
+reason=Lamb Weston Holdings Inc. operates in the food processing industry, which is not currently aligned with mainstream market trends focused on renewable energy and electric vehicles. Furthermore, recent developments, including operational challenges related to an ERP system transition and a class-action lawsuit, have likely reduced investor confidence. While there was an increase in trading volume preceding the earnings report, the overall sentiment around its challenges may limit the stock's upside potential.)

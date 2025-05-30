@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.2, 
+reason=The current stock price of $102.98 is below the high-volume zone (VAH) at $103.35, which creates resistance since many traders are likely to be in loss positions and may sell to break even. The volume profile structure shows limited support below the current price, with the next significant volume nodes at $105.35 and $107.35, suggesting a bearish environment. Additionally, the price is below the volume-weighted average cost, indicating potential selling pressure. These dynamics suggest a low probability of upward movement post-earnings.)

@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.0, 
+reason=Powell Industries Inc. operates in the industrial valve sector, which currently does not align with the leading market trends focused on renewable energy and electric vehicles. The industrial valve market lacks the enthusiasm and momentum observed in these high-growth sectors. Additionally, the volume trend indicates declining average trading volumes over recent weeks, which suggests waning investor interest. This combination of factors points to a negative outlook for significant stock price movement following the upcoming earnings report.)

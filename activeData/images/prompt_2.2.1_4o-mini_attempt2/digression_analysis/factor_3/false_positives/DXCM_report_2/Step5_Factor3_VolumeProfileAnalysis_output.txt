@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.7, 
+reason=The current stock price of $111.94 is below the highest volume zone (VAH) which is at $112.0 and $112.5, indicating that many traders may be in a loss position. This creates resistance as they may sell into strength. However, the stock price is supported by substantial trading volume at the price levels immediately above it, particularly the $112.0-$112.5 range where significant volume exists (7.61M at $112.0 and 2.37M at $112.5). While the price struggles to break through resistance, the high volume in these zones implies potential upward movement if bullish sentiment arises post-earnings. Thus, the likelihood of a price rise post-earnings is estimated at 70%.)

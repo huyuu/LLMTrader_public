@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.3, 
+reason=Root Inc. is currently in a short-term downtrend as both short-term moving averages (20-day and 5-day) are below the longer-term moving averages (60-day). Recent candlestick patterns show lower closes and increased volatility, indicating uncertainty and bearish momentum. Volume has been decreasing, suggesting a lack of market interest. Given these factors, the likelihood of an immediate price increase after the earnings report is low.)

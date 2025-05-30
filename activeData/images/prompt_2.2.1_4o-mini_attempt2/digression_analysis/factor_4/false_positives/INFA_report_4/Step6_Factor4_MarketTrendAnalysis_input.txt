@@ -1,0 +1,438 @@
+System Prompt:
+<Task Instructions>
+You are a financial expert responsible for evaluating how the broader market trend, particularly the trend of the industry in which the company operates, will influence the likelihood that the company’s stock price will rise following the upcoming earnings report. Your task is to analyze both the price trend and volume trend of the relevant market and estimate the probability that the stock will go up post-earnings.
+</Task Instructions>
+
+<Analysis Methodology>
+Use the data given in <context> and the following two key indicators to assess how the company’s stock may be influenced by broader market dynamics:
+
+1. Stock Market Trend Alignment
+   - Determine whether the company’s industry is aligned with the current mainstream market trend given by <market trends>.
+   - Mainstream trends refer to sectors or themes that have recently shown strong price momentum, institutional fund inflows, or high investor attention (e.g., AI, aerospace, clean energy).
+   - Companies in trend-aligned sectors may see strong upward reactions even on moderate fundamental improvements due to heightened market enthusiasm.
+   - Companies in sectors out of favor may experience muted reactions even on strong earnings.
+
+2. Volume Trend of the Stock or Sector
+   - Analyze the average daily trading volume of the stock over the past 1 to 3 months.
+   - A rising volume trend indicates increasing investor interest and market participation, supporting a higher probability of positive price movement.
+   - A declining volume trend may signal fading attention and weaker potential for a strong post-earnings reaction.
+
+Use these two indicators to assess whether the stock is likely to benefit from market momentum or face headwinds, and estimate the likelihood of a post-earnings price increase accordingly.
+Probability 0.5 means either you can't judge from the given <context>, or all the above signals are fully contradictory.
+Probability 1.0 means all the above signals show strong positive sign.
+Probability 0.0 means all the above signals show strong negative sign.
+</Analysis Methodology>
+
+<Output Instruction>
+Output the result in the following format:
+Factor(up_probability = ..., reason = "...")
+
+Where:
+- up_probability is a float between 0.0 and 1.0 (e.g. 0.75 means 75% chance of rising)
+- reason should explain how market trend and volume dynamics affect your probability estimate
+</Output Instruction>
+
+<Remarks>
+- Use only data provided in <context>
+- Do not make assumptions about the earnings results—focus solely on market and sector dynamics
+- Do not default to up_probability = 0.5 unless all indicators are neutral or contradictory
+- Be specific about whether the company is part of a strong market trend and if trading volume supports upside potential
+</Remarks>
+
+User Prompt:
+<context>
+The company name is Informatica Inc. Class A Common Stock.
+The company's symbol is INFA
+
+The company's overview is
+Informatica Inc. operates in the data management sector, particularly focusing on intelligent data management and integration, a rapidly growing domain essential for organizations transitioning towards AI and advanced analytics. The company has recently updated its Intelligent Data Management Cloud to support AI-ready data, enhancing its capabilities in AI-driven application integration and master data management. This strategic move positions Informatica favorably in an evolving market that is increasingly leaning towards AI and data intelligence solutions. Major competitors in this space include companies like Databricks; however, Informatica's enhancements in partnerships, particularly with Databricks, suggest a strengthening competitive edge, enabling the development of enterprise-grade generative AI applications. The partnership focuses on providing high-quality data, which is crucial for the data intelligence sector. Informatica has also received board approval to undertake open market stock repurchases, signaling strong confidence in its financial fundamentals and commitment to shareholder value. Notably, Informatica's collaboration with Yamaha Corporation to implement AI-powered Master Data Management shows its capability to drive innovation and customer success, highlighting its potential for market expansion. The company’s recognition at the TSIA 2024 Star Awards for leveraging AI in its products further enhances its reputation, positively influencing market perception and possibly investor interest.
+
+Current <market trends> are
+
+Title: Renewable Energy
+Description: Renewable Energy focuses on harnessing sources like solar, wind, and hydro to produce electricity sustainably.
+Is Long Term: True
+Reason for Long Term: Government policies globally are pushing toward sustainable energy solutions to combat climate change. Technological advancements in solar panels and wind turbines are reducing costs. Major oil companies are investing heavily in renewable transfer, indicating a long-term transition from fossil fuels.
+Evidence for Long Term: Increasing R&D investments, tax credits, and the rise in installed capacity for renewables recorded in financial reports of major companies demonstrate sustained growth.
+Confidence Score for Long Term: 90.0
+Is Short Term: False
+Reason for Short Term: Recently, short-term fears of economic downturns and fossil fuel industry pushback have led to temporary hesitations in market valuations.
+Evidence for Short Term: Temporary dips in solar and wind companies' stock prices during broader market corrections.
+Confidence Score for Short Term: 60.0
+Representative Stocks: ['NEE', 'ENPH', 'TSLA']
+
+
+Title: Electric Vehicles (EVs)
+Description: The EV industry involves manufacturing and development of electric-powered vehicles as an alternative to traditional internal combustion engines.
+Is Long Term: True
+Reason for Long Term: Increased environmental awareness and stricter emissions regulations are driving long-term demand for cleaner transportation options. Continuous innovations in battery technology are making EVs more affordable and accessible.
+Evidence for Long Term: Tesla's consistent market leadership, and significant commitments by traditional automakers like GM and Ford towards EV transition.
+Confidence Score for Long Term: 88.0
+Is Short Term: False
+Reason for Short Term: Short-term momentum is spurred by newly released models, government incentives, and infrastructure developments, leading to periodic spikes in EV stocks.
+Evidence for Short Term: Temporary stock surges following announcements of production increases or new model launches.
+Confidence Score for Short Term: 75.0
+Representative Stocks: ['TSLA', 'NIO', 'GM', 'F']
+
+
+Title: Semiconductors
+Description: The Semiconductor industry is pivotal for modern electronics, supporting sectors like computing, telecom, and other digital applications.
+Is Long Term: True
+Reason for Long Term: With ongoing digital transformation, demand for semiconductors remains robust, powered by trends like AI, IoT, and 5G. Their essential role in various industries ensures continued relevance.
+Evidence for Long Term: Continuous revenue growth as reported by industry leaders such as Intel and Nvidia.
+Confidence Score for Long Term: 92.0
+Is Short Term: True
+Reason for Short Term: Short-term growth is impacted by cyclicality of the industry, supply chain disruptions, and quick technological upgrades, affecting production and prices temporarily.
+Evidence for Short Term: Fluctuating stock prices in response to periodic supply shortages and trade policies.
+Confidence Score for Short Term: 70.0
+Representative Stocks: ['NVDA', 'AMD', 'INTC', 'TSM']
+
+
+Title: Artificial Intelligence
+Description: The AI sector is focused on developing technologies that allow machines to mimic human intelligence processes.
+Is Long Term: True
+Reason for Long Term: AI's vast potential across industries like healthcare, finance, and customer service ensures a prolonged investment interest. It's an integral part of digital transformation strategies globally.
+Evidence for Long Term: Reports indicating rising R&D expenditure and increased implementation of AI solutions in businesses.
+Confidence Score for Long Term: 89.0
+Is Short Term: False
+Reason for Short Term: Although heightened investor enthusiasm can spike short-term valuations, the technology's maturation phase can also bring volatility.
+Evidence for Short Term: Interim stock dips during phases of regulatory changes or tech overhauls.
+Confidence Score for Short Term: 65.0
+Representative Stocks: ['GOOG', 'META', 'BABA', 'IBM']
+
+
+Title: Quantum Computing
+Description: Quantum computing promises to revolutionize computing with enhanced problem-solving capabilities, especially for complex scientific calculations.
+Is Long Term: True
+Reason for Long Term: Given its transformational potential, significant investment and ongoing research is expected over the years. It's touted to solve problems beyond the capability of classical computers, promising a radical impact on industries like cryptography and pharmaceuticals.
+Evidence for Long Term: Increasing patents filed and partnerships aimed at advancing quantum research indicate long-term interest.
+Confidence Score for Long Term: 85.0
+Is Short Term: False
+Reason for Short Term: The complexity and nascent nature of the technology result in incremental developments rather than short-term hype.
+Evidence for Short Term: Occasional spurts in stock movements tied to research breakthroughs or funding announcements.
+Confidence Score for Short Term: 60.0
+Representative Stocks: ['IBM', 'GOOG', 'MSFT']
+
+
+Title: Cybersecurity
+Description: Cybersecurity encompasses solutions protecting devices, networks, and data from digital attacks.
+Is Long Term: True
+Reason for Long Term: With increasing reliance on digital solutions, the threat landscape is evolving, necessitating robust cybersecurity frameworks. Long-term growth is supported by rising global regulations and growing cloud adoption.
+Evidence for Long Term: Steady industry growth observed through rising demand and diverse service offerings as detailed in market reports.
+Confidence Score for Long Term: 88.0
+Is Short Term: True
+Reason for Short Term: Short bursts in spending and stock values are commonly linked to high-profile cyber threats or breaches.
+Evidence for Short Term: Stock price spikes following major cyber incidents forcing enterprises to upgrade defenses quickly.
+Confidence Score for Short Term: 80.0
+Representative Stocks: ['PANW', 'CRWD', 'FTNT', 'ZS']
+
+
+Title: E-commerce
+Description: The E-commerce sector focuses on buying and selling goods online, revolutionizing traditional retail models.
+Is Long Term: True
+Reason for Long Term: The convenience and flexibility of online shopping continue drawing consumers. Improvements in logistics and payment technologies foster growth, with emerging markets playing a significant role.
+Evidence for Long Term: Consistent revenue growth by major players like Amazon and Alibaba, which invest significantly in innovation and market expansion.
+Confidence Score for Long Term: 87.0
+Is Short Term: True
+Reason for Short Term: Promotional events, new policy changes, and technology integrations can create short-lived spikes in the market.
+Evidence for Short Term: Increased trading volumes during events like Black Friday or new feature rollouts.
+Confidence Score for Short Term: 77.0
+Representative Stocks: ['AMZN', 'BABA', 'SHOP']
+
+
+Title: 5G Technology
+Description: 5G technology drives the next generation of mobile networks, promising increased speed and connectivity for a digital world.
+Is Long Term: True
+Reason for Long Term: The massive upgrade from 4G to 5G encompasses more than speed; it's about enabling advancements in IoT and smart cities, indicating durable growth potential.
+Evidence for Long Term: Wide-ranging investments across telecom sectors aimed at infrastructure development and rollout confirm long-term interest.
+Confidence Score for Long Term: 86.0
+Is Short Term: True
+Reason for Short Term: Initial rollout phases and related announcements create temporary valuation surges, boosting market volatility.
+Evidence for Short Term: Stock price hikes when companies announce new infrastructure contracts or city rollouts.
+Confidence Score for Short Term: 75.0
+Representative Stocks: ['VZ', 'T', 'QCOM', 'NOK']
+
+
+Title: Fintech
+Description: Fintech merges finance and technology, offering new avenues such as digital banking, online payments, and blockchain solutions.
+Is Long Term: True
+Reason for Long Term: Rapid adoption of cashless transactions and digital finance tools fostered by convenience is expected to continue shaping the financial industry transformation.
+Evidence for Long Term: Market analysis shows persistent user growth in digital payment platforms and banking technologies.
+Confidence Score for Long Term: 90.0
+Is Short Term: True
+Reason for Short Term: Short-term spikes occur due to news around regulations, partnerships, and innovations like digital currencies.
+Evidence for Short Term: Trading volumes rise post-government policy news or cryptocurrency market movements.
+Confidence Score for Short Term: 78.0
+Representative Stocks: ['SQ', 'PYPL', 'V', 'MA']
+
+
+Title: Biotechnology
+Description: Biotechnology applies biological systems to develop technologies and products improving health care and agriculture.
+Is Long Term: True
+Reason for Long Term: Constant innovation and breakthrough research, especially around genetic engineering and personalized medicine, ensure ongoing relevance. Strong clinical trial pipelines bolster confidence.
+Evidence for Long Term: Increased funding and collaboration between pharma and biotech firms reflect long-term strategy changes.
+Confidence Score for Long Term: 83.0
+Is Short Term: True
+Reason for Short Term: Regulatory approvals, clinical trial updates, and mergers can cause quick gains in the sector.
+Evidence for Short Term: Dramatic price shifts post-successful trial results or FDA approvals.
+Confidence Score for Short Term: 75.0
+Representative Stocks: ['REGN', 'AMGN', 'VRTX']
+
+
+Title: Cloud Computing
+Description: Cloud Computing represents on-demand delivery of computing power, storage, and applications over the internet.
+Is Long Term: True
+Reason for Long Term: With the shift from on-premise to flexible, scalable cloud solutions, the demand for cloud services remains robust. Future trends like multi-cloud and edge computing further boost growth.
+Evidence for Long Term: Financial forecasts predict sustained growth in infrastructure spending and software services within the cloud domain.
+Confidence Score for Long Term: 90.0
+Is Short Term: False
+Reason for Short Term: While certain earnings announcements or analyst upgrades can trigger short-lived trading frenzies, cloud computing’s benefits favor long-term growth.
+Evidence for Short Term: Temporary peaks in trading driven by quarterly performance reviews of cloud giants.
+Confidence Score for Short Term: 65.0
+Representative Stocks: ['AMZN', 'MSFT', 'GOOG', 'CRM']
+
+
+Title: Healthcare Technology
+Description: Healthcare Technology integrates IT solutions in delivering healthcare services, enhancing efficiencies and patient outcomes.
+Is Long Term: True
+Reason for Long Term: Aging populations and increased focus on personalized medical solutions support sustained interest in innovation and integration of tech with healthcare services.
+Evidence for Long Term: Growth projected in telemedicine, electronic health records, and AI solutions for diagnostics in industry reports.
+Confidence Score for Long Term: 89.0
+Is Short Term: True
+Reason for Short Term: Policy changes and pandemic-driven demand can cause temporary stock price shifts in organizations providing these solutions.
+Evidence for Short Term: Short-term trading spikes during times of healthcare reform debates or health crises.
+Confidence Score for Short Term: 78.0
+Representative Stocks: ['TDOC', 'CERN', 'UNH', 'PFE']
+
+
+Title: Robotics
+Description: Robotics spans the development of technologies that build and automate machines capable of performing tasks traditionally done by humans.
+Is Long Term: True
+Reason for Long Term: Industry demand for robotic solutions has been growing in sectors like manufacturing, healthcare, and logistics due to efficiency and accuracy needs.
+Evidence for Long Term: Consistent advancements in technological capabilities and deployments in production environments affirm long acclaims.
+Confidence Score for Long Term: 90.0
+Is Short Term: True
+Reason for Short Term: Innovation announcements or strategic partnerships can temporarily instigate market excitement, impacting stock valuations.
+Evidence for Short Term: Certain periods mirror stock interest spikes within companies unveiling new automation products or collaborations.
+Confidence Score for Short Term: 73.0
+Representative Stocks: ['IRBT', 'ABB', 'FANUC']
+
+
+Title: Space Exploration
+Description: Space Exploration involves advancing efforts to explore celestial bodies and develop space-based technologies for potential economic benefits.
+Is Long Term: True
+Reason for Long Term: Growing interest from both governmental bodies and private enterprises toward space missions and satellite deployment ensures sustainability. The potential in harnessing extraterrestrial resources fuels extended sector commitment.
+Evidence for Long Term: Numerous government-funded initiatives and partnerships exemplify the progressive expansion in space efforts.
+Confidence Score for Long Term: 82.0
+Is Short Term: True
+Reason for Short Term: Announcements of successful missions or new contracts often translate into immediate market uplift for involved entities.
+Evidence for Short Term: Prompted upticks in stock exchanges as reporting unfolds around landmark space achievements.
+Confidence Score for Short Term: 70.0
+Representative Stocks: ['SPCE', 'MAXR', 'LMT']
+
+
+Title: Gaming
+Description: The Gaming industry involves developing and distributing interactive games for PCs, consoles, and mobile devices.
+Is Long Term: True
+Reason for Long Term: Increased accessibility to online platforms, cloud gaming solutions, and mobile gaming ensure enduring interest. Esport expansion and virtual reality adoption further solidify its potential.
+Evidence for Long Term: Reports highlight consistent audience growth and rising revenue streams, with expanding international markets playing a pivotal role.
+Confidence Score for Long Term: 87.0
+Is Short Term: True
+Reason for Short Term: New game releases, hardware updates, or competitive events can create short-term stock surges for companies involved.
+Evidence for Short Term: Trading volume hikes corresponding with major title launches or competition outcomes.
+Confidence Score for Short Term: 78.0
+Representative Stocks: ['ATVI', 'EA', 'TTWO', 'SONY']
+
+
+Title: Cryptocurrency
+Description: Cryptocurrency represents decentralized digital assets using cryptographic methods for secure transactions, exemplified by Bitcoin, Ethereum, and others.
+Is Long Term: True
+Reason for Long Term: Growing acceptance for cryptocurrencies as alternative investment assets aligns with broader financial integration strategies. Expanding infrastructure and legislative frameworks advocate long-term growth.
+Evidence for Long Term: Institutional adoption and regulatory clarity significantly bolster prospects for enduring growth.
+Confidence Score for Long Term: 85.0
+Is Short Term: True
+Reason for Short Term: Rapid market movements are common given high volatility, with news on regulations or technological updates often swaying values dramatically.
+Evidence for Short Term: Sudden price jumps during times of updates about major exchanges or government stances on cryptocurrencies.
+Confidence Score for Short Term: 80.0
+Representative Stocks: ['BTC-USD', 'ETH-USD', 'COIN']
+
+
+Title: Clean Water Solutions
+Description: This industry focuses on technologies ensuring sustainable and efficient use of water resources, addressing growing scarcity and quality concerns.
+Is Long Term: True
+Reason for Long Term: Water scarcity driven by population growth and climate changes has put clean water solutions center stage for policy and investment. Innovations in desalination and purification technologies reflect ongoing commitment.
+Evidence for Long Term: Reports tracking increases in government and private sector investments towards water infrastructure improvements.
+Confidence Score for Long Term: 86.0
+Is Short Term: False
+Reason for Short Term: Environmental policies or incidents can cause abrupt interest spikes, reflected in temporary valuation adjustments.
+Evidence for Short Term: Short-lived trading peaks related to drought events or legislative news.
+Confidence Score for Short Term: 70.0
+Representative Stocks: ['AQUA', 'WTRG', 'XYL']
+
+
+Title: Augmented Reality/Virtual Reality (AR/VR)
+Description: AR/VR technologies create immersive experiences, adding digital elements to the physical world or entirely new environments.
+Is Long Term: True
+Reason for Long Term: Adoption spans multiple domains like retail, education, and entertainment, promising long-term integration. Continuous upgrades in hardware and software capabilities make the sales expansion plausible over the next decade.
+Evidence for Long Term: Surveys indicating rising consumer interest in metaverse experiences further guide future growth potential.
+Confidence Score for Long Term: 85.0
+Is Short Term: True
+Reason for Short Term: Technical advancements or product launches can generate immediate buzz, driving short-term stock interest.
+Evidence for Short Term: Noticeable trading spikes accompany significant announcements from major tech players introducing new AR/VR solutions.
+Confidence Score for Short Term: 75.0
+Representative Stocks: ['FB', 'AAPL', 'MSFT', 'DASH']
+
+
+Title: Agricultural Technology
+Description: AgriTech involves implementing technology-enhanced solutions to improve agricultural productivity, efficiency, and sustainability.
+Is Long Term: True
+Reason for Long Term: Global food security concerns augmented by environmental challenges prompt a steady drive towards smart agriculture practices. Drones, IoT sensors, and genetic enhancements are trailblazing the sector innovations.
+Evidence for Long Term: Investment trends highlight collaborative efforts fortifying research and tech adoption across the agriculture industry.
+Confidence Score for Long Term: 88.0
+Is Short Term: False
+Reason for Short Term: Short-term volumes spike around crop yield reports, policy changes, or climate event news affecting agricultural outputs.
+Evidence for Short Term: Market agility seen with sudden trading volumes responding to unpredictable weather patterns or regional yield forecasts.
+Confidence Score for Short Term: 72.0
+Representative Stocks: ['DE', 'AGCO', 'TSCO']
+
+
+Title: Renewable Energy Storage
+Description: This segment addresses solutions for storing renewable energy, ensuring stable supply even when production dips.
+Is Long Term: True
+Reason for Long Term: With the rise of renewables, efficient storage solutions become crucial. Battery technology advancements continue driving scalability and reliability, encouraging long-term investments.
+Evidence for Long Term: Data insights predict notable growth in storage systems as the transition to renewable gains momentum.
+Confidence Score for Long Term: 90.0
+Is Short Term: False
+Reason for Short Term: Short-term trading volume variances often align with supply chain narratives or technology breakthroughs within battery capacities.
+Evidence for Short Term: Tender developments or legislative shifts influencing quick market engagements.
+Confidence Score for Short Term: 68.0
+Representative Stocks: ['TSLA', 'ENPH', 'AES']
+
+
+
+The company's candlestick chart including the volume is
+          date       open        low       high      close    volume  daily_volatility_percentage  20_days_moving_average_of_close_price  60_days_moving_average_of_close_price  20_days_moving_average_of_volume  60_days_moving_average_of_volume  pe_ratio_transition
+0   2024-08-16  23.790001  23.570000  24.020000  24.010000   1071200                     1.874222                                23.9195                              27.356833                         1951845.0                      1.719020e+06            23.086539
+1   2024-08-19  24.059999  23.799999  24.219999  24.219999    809800                     1.734104                                23.8835                              27.251000                         1904270.0                      1.711730e+06            23.288461
+2   2024-08-20  24.150000  23.820000  24.280001  24.270000    852700                     1.895348                                23.8515                              27.157667                         1830985.0                      1.710252e+06            23.336539
+3   2024-08-21  24.280001  24.180000  24.620001  24.580000    919400                     1.790075                                23.8810                              27.069000                         1782510.0                      1.707203e+06            23.634615
+4   2024-08-22  24.590000  24.340000  24.610001  24.370001    991200                     1.107921                                23.9000                              26.980167                         1740410.0                      1.710268e+06            23.432693
+5   2024-08-23  24.540001  24.260000  24.780001  24.559999    988700                     2.117266                                23.9145                              26.901500                         1716495.0                      1.717423e+06            23.615384
+6   2024-08-26  24.629999  24.570000  25.490000  24.820000   2869200                     3.706689                                23.9370                              26.835333                         1757995.0                      1.743408e+06            23.865384
+7   2024-08-27  24.690001  24.690001  25.940001  25.000000   3387400                     5.000000                                23.9835                              26.771167                         1833950.0                      1.770585e+06            24.038462
+8   2024-08-28  24.879999  24.200001  24.879999  24.469999   1224600                     2.778906                                24.0100                              26.707833                         1686210.0                      1.773718e+06            23.528845
+9   2024-08-29  24.730000  24.250000  25.430000  25.110001   4818500                     4.699324                                24.0385                              26.662333                         1778115.0                      1.839355e+06            24.144231
+10  2024-08-30  25.170000  24.670000  25.290001  24.910000   1111800                     2.488964                                24.0940                              26.595667                         1710325.0                      1.830008e+06            23.951923
+11  2024-09-03  24.900000  24.275000  25.040001  24.410000   1141200                     3.133967                                24.1570                              26.523167                         1660640.0                      1.838513e+06            23.471154
+12  2024-09-04  24.070000  23.709999  24.510000  24.320000   1657700                     3.289478                                24.2100                              26.451667                         1640340.0                      1.855112e+06            23.384615
+13  2024-09-05  24.070000  24.070000  24.620001  24.410000   1066800                     2.253180                                24.2750                              26.381833                         1625455.0                      1.852478e+06            23.471154
+14  2024-09-06  24.500000  23.959999  24.660000  24.180000   1648500                     2.894958                                24.3005                              26.307167                         1652180.0                      1.851543e+06            23.250000
+15  2024-09-09  24.469999  24.370001  24.990000  24.719999   1432400                     2.508086                                24.3610                              26.221500                         1640460.0                      1.850433e+06            23.769230
+16  2024-09-10  24.680000  24.190001  24.969999  24.389999   1145000                     3.198027                                24.3990                              26.135333                         1641285.0                      1.853257e+06            23.451922
+17  2024-09-11  24.559999  24.330000  25.620001  25.500000   2500300                     5.058827                                24.4850                              26.066000                         1704905.0                      1.873487e+06            24.519231
+18  2024-09-12  25.570000  25.209999  25.799999  25.559999   1741900                     2.308295                                24.5840                              25.993500                         1660815.0                      1.878070e+06            24.576923
+19  2024-09-13  25.600000  25.434999  25.780001  25.549999   1365100                     1.350298                                24.6680                              25.918500                         1637170.0                      1.852498e+06            24.567307
+20  2024-09-16  25.590000  25.420000  26.030001  25.650000   1604400                     2.378170                                24.7500                              25.845500                         1663830.0                      1.848953e+06            24.663461
+21  2024-09-17  25.719999  25.410000  25.799999  25.480000   1458400                     1.530610                                24.8130                              25.760167                         1696260.0                      1.831220e+06            24.500000
+22  2024-09-18  25.500000  24.750000  25.500000  25.049999   1258400                     2.994012                                24.8520                              25.673833                         1716545.0                      1.835048e+06            24.086538
+23  2024-09-19  25.530001  25.434999  26.129999  25.510000   1747000                     2.724421                                24.8985                              25.602000                         1757925.0                      1.843825e+06            24.528846
+24  2024-09-20  25.410000  25.120001  25.600000  25.480000   3142200                     1.883829                                24.9540                              25.530000                         1865475.0                      1.878163e+06            24.500000
+25  2024-09-23  25.490000  25.125000  25.525000  25.450001    880500                     1.571708                                24.9985                              25.437500                         1860065.0                      1.860918e+06            24.471155
+26  2024-09-24  25.500000  25.160000  25.760000  25.660000   1110700                     2.338271                                25.0405                              25.350500                         1772140.0                      1.846543e+06            24.673077
+27  2024-09-25  25.540001  24.980000  25.700001  25.090000   1035700                     2.869674                                25.0450                              25.261167                         1654555.0                      1.844872e+06            24.125000
+28  2024-09-26  25.420000  24.915001  25.559999  25.370001   1556100                     2.542367                                25.0900                              25.175500                         1671130.0                      1.852402e+06            24.394232
+29  2024-09-27  25.459999  25.032000  25.459999  25.230000    590600                     1.696391                                25.0960                              25.088667                         1459735.0                      1.843430e+06            24.259615
+30  2024-09-30  25.100000  25.000000  25.459999  25.280001    645600                     1.819617                                25.1145                              24.990000                         1436425.0                      1.842895e+06            24.076191
+31  2024-10-01  25.280001  23.959999  25.340000  23.980000    993300                     5.754800                                25.0930                              24.879667                         1429030.0                      1.845135e+06            22.838095
+32  2024-10-02  23.930000  23.879999  24.540001  24.059999   2040300                     2.743149                                25.0800                              24.798000                         1448160.0                      1.863837e+06            22.914285
+33  2024-10-03  23.900000  23.815001  24.280001  23.959999   1485500                     1.940735                                25.0575                              24.725667                         1469095.0                      1.869710e+06            22.819047
+34  2024-10-04  24.250000  24.070000  25.485001  25.400000   1495400                     5.570870                                25.1185                              24.681167                         1461440.0                      1.869827e+06            24.190476
+35  2024-10-07  25.309999  24.770000  25.350000  25.129999   2170300                     2.307998                                25.1390                              24.633667                         1498335.0                      1.881225e+06            23.933333
+36  2024-10-08  25.170000  25.049999  25.584999  25.459999   1299400                     2.101335                                25.1925                              24.604500                         1506055.0                      1.852118e+06            24.247618
+37  2024-10-09  25.430000  25.410000  26.070000  25.790001    918700                     2.559131                                25.2070                              24.594167                         1426975.0                      1.752792e+06            24.561906
+38  2024-10-10  25.530001  25.424999  26.209999  25.940001    826500                     3.026214                                25.2260                              24.604500                         1381205.0                      1.721055e+06            24.704762
+39  2024-10-11  25.950001  25.895000  26.530001  26.400000   1607000                     2.405304                                25.2685                              24.627667                         1393300.0                      1.674798e+06            25.142857
+40  2024-10-14  26.620001  26.305000  26.870001  26.750000    886800                     2.112152                                25.3235                              24.664333                         1357420.0                      1.657698e+06            25.476190
+41  2024-10-15  26.690001  26.500000  26.840000  26.780001   1333800                     1.269605                                25.3885                              24.695000                         1351190.0                      1.650573e+06            25.504763
+42  2024-10-16  26.760000  26.299999  27.010000  26.870001   2282300                     2.642356                                25.4795                              24.727667                         1402385.0                      1.649972e+06            25.590477
+43  2024-10-17  27.000000  26.840000  27.059999  27.000000    918100                     0.814812                                25.5540                              24.777833                         1360940.0                      1.633792e+06            25.714286
+44  2024-10-18  27.080000  26.799999  27.230000  26.830000    804300                     1.602685                                25.6215                              24.825167                         1244045.0                      1.616643e+06            25.552381
+45  2024-10-21  26.900000  26.475000  27.049999  26.820000   1480600                     2.143918                                25.6900                              24.867667                         1274050.0                      1.616870e+06            25.542857
+46  2024-10-22  26.799999  26.540001  26.920000  26.850000    686900                     1.415267                                25.7495                              24.909000                         1252860.0                      1.594332e+06            25.571429
+47  2024-10-23  26.889999  26.250000  26.980000  26.559999   1883700                     2.748492                                25.8230                              24.950500                         1295260.0                      1.594588e+06            25.295238
+48  2024-10-24  26.610001  26.570000  27.139999  26.650000   1010500                     2.138836                                25.8870                              24.995667                         1267980.0                      1.541773e+06            25.380952
+49  2024-10-25  26.719999  26.650000  27.230000  26.719999   1164000                     2.170658                                25.9615                              25.032000                         1296650.0                      1.511500e+06            25.447618
+50  2024-10-28  26.870001  26.309999  26.940001  26.400000   1199700                     2.386368                                26.0175                              25.075333                         1324355.0                      1.490368e+06            25.142857
+51  2024-10-29  26.500000  26.260000  26.889999  26.780001    968900                     2.352499                                26.1575                              25.135833                         1323135.0                      1.470935e+06            25.504763
+52  2024-10-30  26.770000  26.580000  27.010000  26.680000   1296700                     1.611695                                26.2885                              25.192833                         1285955.0                      1.458152e+06            25.409524
+53  2024-10-31  27.290001  27.000000  28.139999  27.299999   2405000                     4.175822                                26.4555                              25.262667                         1331930.0                      1.475493e+06            25.999999
+54  2024-11-01  27.350000  26.190001  27.459999  26.209999   1830600                     4.845473                                26.4960                              25.305000                         1348690.0                      1.487437e+06            24.961904
+55  2024-11-04  26.260000  25.469999  26.420000  25.610001   5610800                     3.709491                                26.5200                              25.340000                         1520715.0                      1.553170e+06            24.390477
+56  2024-11-05  25.540001  25.219999  26.030001  25.559999   2729900                     3.169020                                26.5250                              25.372167                         1592240.0                      1.579860e+06            24.342857
+57  2024-11-06  26.330000  25.790001  26.870001  26.450001   2261000                     4.083175                                26.5580                              25.416667                         1659355.0                      1.597078e+06            25.190477
+58  2024-11-07  26.700001  26.459999  27.309999  27.100000   1003500                     3.136533                                26.6160                              25.475333                         1668205.0                      1.570075e+06            25.809524
+59  2024-11-08  25.780001  24.639999  25.990000  25.000000  10081300                     5.400002                                26.5460                              25.494167                         2091920.0                      1.707463e+06            23.809524
+60  2024-11-11  25.190001  24.330000  25.280001  24.490000   3909600                     3.879137                                26.4330                              25.502167                         2243060.0                      1.754770e+06            23.323809
+61  2024-11-12  24.469999  24.080000  24.900000  24.110001   2427600                     3.401077                                26.2995                              25.500333                         2297750.0                      1.781733e+06            22.961905
+62  2024-11-13  24.100000  24.059999  25.590000  25.469999   3315500                     6.007070                                26.2295                              25.520333                         2349410.0                      1.822780e+06            24.257142
+63  2024-11-14  25.459999  25.049999  25.750000  25.260000   1547500                     2.771183                                26.1425                              25.531667                         2380880.0                      1.833248e+06            24.057143
+64  2024-11-15  24.860001  24.500000  25.090000  24.790001   2182500                     2.379992                                26.0405                              25.538667                         2449790.0                      1.853103e+06            23.609525
+65  2024-11-18  25.059999  24.809999  25.760000  25.500000   2653400                     3.725493                                25.9745                              25.554333                         2508430.0                      1.880848e+06            24.285714
+66  2024-11-19  25.260000  25.070000  25.790001  25.740000   1428200                     2.797208                                25.9190                              25.569667                         2545495.0                      1.856832e+06            24.514285
+67  2024-11-20  25.790001  25.430000  25.990000  25.860001    864500                     2.165504                                25.8840                              25.584000                         2494535.0                      1.814783e+06            24.628572
+68  2024-11-21  26.000000  25.930000  26.830000  26.450001   1603100                     3.402645                                25.8740                              25.617000                         2524165.0                      1.821092e+06            25.190477
+69  2024-11-22  26.559999  26.250000  26.809999  26.360001   1497500                     2.124429                                25.8560                              25.637833                         2540840.0                      1.765742e+06            25.104762
+70  2024-11-25  26.600000  26.350000  27.240000  26.370001   2364500                     3.375045                                25.8545                              25.662167                         2599080.0                      1.786620e+06            25.114287
+71  2024-11-26  26.299999  26.299999  26.768999  26.600000   3034000                     1.763157                                25.8455                              25.698667                         2702335.0                      1.818167e+06            25.333334
+72  2024-11-27  26.780001  26.090000  26.950001  26.389999    880600                     3.258813                                25.8310                              25.733167                         2681530.0                      1.805215e+06            25.133333
+73  2024-11-29  26.410000  26.330000  26.760000  26.520000    971700                     1.621419                                25.7920                              25.768333                         2609865.0                      1.803630e+06            25.257143
+74  2024-12-02  26.400000  26.350000  26.719999  26.430000   1980600                     1.399920                                25.8030                              25.805833                         2617365.0                      1.809165e+06            25.171429
+75  2024-12-03  26.379999  26.160999  27.129999  26.910000   2273100                     3.600891                                25.8680                              25.842333                         2450480.0                      1.823177e+06            25.628571
+76  2024-12-04  27.170000  26.875000  27.639999  27.389999   3014700                     2.792988                                25.9595                              25.892333                         2464720.0                      1.854338e+06            26.085714
+77  2024-12-05  27.230000  26.780001  27.459999  27.100000   2416000                     2.509219                                25.9920                              25.919000                         2472470.0                      1.852933e+06            25.809524
+78  2024-12-06  27.139999  26.725000  27.350000  27.129999   2514300                     2.303723                                25.9935                              25.945167                         2548010.0                      1.865807e+06            25.838094
+79  2024-12-09  27.000000  25.430000  27.434999  25.570000   2695700                     7.841217                                26.0220                              25.945500                         2178730.0                      1.887983e+06            24.352381
+80  2024-12-10  25.590000  25.570000  26.850000  26.370001   2462500                     4.854003                                26.1160                              25.957500                         2106375.0                      1.902285e+06            25.114287
+81  2024-12-11  26.370001  26.110001  26.809999  26.700001   1898100                     2.621718                                26.2455                              25.977833                         2079900.0                      1.909613e+06            25.428572
+82  2024-12-12  27.400000  27.000000  27.879999  27.070000   2279000                     3.250828                                26.3255                              26.011500                         2028075.0                      1.926623e+06            25.780952
+83  2024-12-13  26.940001  26.780001  27.600000  26.820000   3001800                     3.057419                                26.4035                              26.033333                         2100790.0                      1.947537e+06            25.542857
+84  2024-12-16  26.730000  26.500000  27.309999  27.219999   3444900                     2.975751                                26.5250                              26.062333                         2163910.0                      1.952582e+06            25.923809
+85  2024-12-17  27.290001  26.850000  27.340000  27.040001   2104300                     1.812129                                26.6020                              26.088833                         2136455.0                      1.972978e+06            25.752382
+86  2024-12-18  26.980000  25.834999  27.160000  26.070000   2602700                     5.082473                                26.6185                              26.095667                         2195180.0                      1.997845e+06            24.828571
+87  2024-12-19  26.600000  25.840000  26.805000  26.129999   2113500                     3.693074                                26.6320                              26.113000                         2257630.0                      2.015808e+06            24.885713
+88  2024-12-20  26.000000  25.915001  27.040001  26.860001   2578000                     4.188384                                26.6525                              26.137833                         2306375.0                      2.032840e+06            25.580953
+89  2024-12-23  26.719999  26.280001  27.049999  26.600000   1351700                     2.894731                                26.6645                              26.160667                         2299085.0                      2.045525e+06            25.333334
+90  2024-12-24  26.620001  26.500000  26.930000  26.930000    374400                     1.596733                                26.6925                              26.188167                         2199580.0                      2.041005e+06            25.647619
+91  2024-12-26  26.740000  26.650000  27.160000  26.980000   1407400                     1.890290                                26.7115                              26.238167                         2118250.0                      2.047907e+06            25.695238
+92  2024-12-27  26.889999  25.959999  26.905001  26.219999    796300                     3.604125                                26.7030                              26.274167                         2114035.0                      2.027173e+06            24.971428
+93  2024-12-30  25.889999  25.620001  26.080000  25.940001    962400                     1.773319                                26.6740                              26.307167                         2113570.0                      2.018455e+06            24.704762
+94  2024-12-31  26.100000  25.860001  26.430000  25.930000   1285500                     2.198225                                26.6490                              26.316000                         2078815.0                      2.014957e+06            22.745614
+95  2025-01-02  26.299999  25.270000  26.400000  25.459999   1124900                     4.438332                                26.5765                              26.321500                         2021405.0                      1.997533e+06            22.333333
+96  2025-01-03  25.530001  25.290001  26.600000  26.500000   1453000                     4.943394                                26.5320                              26.338833                         1943320.0                      2.000093e+06            23.245614
+97  2025-01-06  26.580000  26.105000  27.000000  26.240000   1537900                     3.410825                                26.4890                              26.346333                         1899415.0                      2.010413e+06            23.017544
+98  2025-01-07  26.430000  25.730000  26.740000  25.940001   1068100                     3.893601                                26.4295                              26.346333                         1827105.0                      2.014440e+06            22.754386
+99  2025-01-08  25.809999  25.431000  26.160000  25.610001    700600                     2.846545                                26.4315                              26.333167                         1727350.0                      1.999333e+06            22.464913
+100 2025-01-10  25.250000  25.000000  25.719999  25.020000   1156100                     2.877695                                26.3640                              26.304333                         1662030.0                      2.003822e+06            21.947369
+101 2025-01-13  25.000000  24.120001  25.209999  24.160000   1900000                     4.511582                                26.2370                              26.260667                         1662125.0                      2.013258e+06            21.192982
+102 2025-01-14  24.240000  24.110001  24.750000  24.690001   1584400                     2.592140                                26.1180                              26.224333                         1627395.0                      2.001627e+06            21.657895
+103 2025-01-15  25.139999  24.400000  25.450001  24.420000    873100                     4.299759                                25.9980                              26.181333                         1520960.0                      2.000877e+06            21.421053
+104 2025-01-16  24.400000  24.344999  24.670000  24.530001   1184400                     1.324911                                25.8635                              26.143000                         1407935.0                      2.007212e+06            21.517544
+105 2025-01-17  24.730000  24.370001  24.879999  24.379999   1197500                     2.091872                                25.7305                              26.102333                         1362595.0                      2.002493e+06            21.385964
+106 2025-01-21  24.590000  24.490000  25.040001  24.860001    927200                     2.212394                                25.6700                              26.069167                         1278820.0                      2.006498e+06            21.807018
+107 2025-01-22  25.020000  24.840000  25.230000  24.930000    841500                     1.564378                                25.6100                              26.042000                         1215220.0                      1.989128e+06            21.868421
+108 2025-01-23  24.750000  24.480000  25.059999  24.719999   1022300                     2.346278                                25.5030                              26.009833                         1137435.0                      1.989325e+06            21.684210
+109 2025-01-24  24.830000  24.729000  25.299999  24.760000    656200                     2.306135                                25.4110                              25.977167                         1102660.0                      1.980862e+06            21.719298
+110 2025-01-27  24.209999  24.200001  25.440001  24.959999   1270600                     4.967948                                25.3125                              25.953167                         1147470.0                      1.982043e+06            21.894736
+111 2025-01-28  25.080000  24.920000  26.250000  25.770000   1539700                     5.161040                                25.2520                              25.936333                         1154085.0                      1.991557e+06            22.605264
+112 2025-01-29  25.639999  25.200001  25.754999  25.650000    814600                     2.163736                                25.2235                              25.919167                         1155000.0                      1.983522e+06            22.500000
+113 2025-01-30  25.530001  25.250000  25.945000  25.639999    870200                     2.710607                                25.2085                              25.891500                         1150390.0                      1.957942e+06            22.491228
+114 2025-01-31  25.799999  25.570000  26.230000  25.680000    889700                     2.570093                                25.1960                              25.882667                         1130600.0                      1.942260e+06            22.526316
+115 2025-02-03  24.950001  24.690001  25.840000  25.580000   1384400                     4.495698                                25.2020                              25.882167                         1143575.0                      1.871820e+06            22.438596
+116 2025-02-04  25.799999  25.570000  26.080000  25.920000    768300                     1.967593                                25.1730                              25.888167                         1109340.0                      1.839127e+06            22.736842
+117 2025-02-05  25.850000  25.520000  26.230000  26.040001    967500                     2.726571                                25.1630                              25.881333                         1080820.0                      1.817568e+06            22.842106
+118 2025-02-06  26.059999  25.590000  26.195000  25.809999    929500                     2.344051                                25.1565                              25.859833                         1073890.0                      1.816335e+06            22.640350
+119 2025-02-07  25.850000  25.430000  26.250000  25.450001    867800                     3.222003                                25.1485                              25.867333                         1082250.0                      1.662777e+06            22.324562
+120 2025-02-10  25.650000  25.410000  26.250000  25.950001   1042400                     3.236995                                25.1950                              25.891667                         1076565.0                      1.614990e+06            22.763159
+121 2025-02-11  25.980000  25.455000  26.219999  25.709999   1179000                     2.975494                                25.2725                              25.918333                         1040515.0                      1.594180e+06            22.552631
+122 2025-02-12  25.290001  24.780001  26.159000  26.100000   2129800                     5.283524                                25.3430                              25.928833                         1067785.0                      1.574418e+06            22.894737
+</context>

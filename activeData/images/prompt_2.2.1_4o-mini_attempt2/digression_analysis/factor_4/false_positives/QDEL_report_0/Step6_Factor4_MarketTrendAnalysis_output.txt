@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.8, 
+reason=QuidelOrtho Corporation (QDEL) operates within the highly promising healthcare technology sector, specifically in diagnostics, which is experiencing long-term growth. Recent FDA clearance for its Savanna® platform enhances its market position. Although the current market trends are focused on industries like renewable energy, electric vehicles, and cybersecurity, which are separate from healthcare, QDEL is still aligned with positive healthcare technology momentum. The trading volume over the past month has been robust, showing heightened investor interest, especially with spikes in volume correlating with key market events. This indicates a likelihood of upward price movement following the earnings report.)

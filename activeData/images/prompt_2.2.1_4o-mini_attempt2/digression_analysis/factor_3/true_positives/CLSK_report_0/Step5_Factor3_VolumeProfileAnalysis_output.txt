@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.85, 
+reason=The current stock price of CleanSpark (CLSK) at $9.31 is above the high-volume zone (Volume Area High, VAH) of $8.95, where the majority of trading volume has occurred. This suggests that most traders holding positions are likely in profit, creating an environment supportive of further price increases. Furthermore, since the stock price is above significant volume concentrations, previous volume zones should act as support moving forward. There is a strong upward momentum indicated by the presence of profit holders and the expanded priced movement above the previous volume levels, which tends to signal bullish conditions post-earnings.)

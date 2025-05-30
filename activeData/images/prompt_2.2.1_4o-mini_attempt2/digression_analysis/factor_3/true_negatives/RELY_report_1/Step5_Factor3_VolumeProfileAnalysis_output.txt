@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.0, 
+reason=The current stock price of 17.83 is below the high-volume zone which is at 18.1 (VAH). This indicates that many traders are likely in a loss position, creating resistance around this level. Additionally, the lack of volume above this area suggests limited buyer interest and potential downward pressure. Therefore, the stock is more likely to face resistance rather than upward movement following the earnings report.)

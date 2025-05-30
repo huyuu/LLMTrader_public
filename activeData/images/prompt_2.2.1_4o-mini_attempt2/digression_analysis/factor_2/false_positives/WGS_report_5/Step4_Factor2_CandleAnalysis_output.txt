@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.7, 
+reason=The stock is exhibiting an overall bullish setup as it has bounced off from a recent low, demonstrating support at around $69.00. Moreover, the recent trading volume has spiked above its long-term averages, implying increased market participation which often precedes a price increase. The price structure indicates a short-term uptrend, supported by a series of higher highs and higher lows. Although recent volatility is present, it was concentrated in higher volumes indicating buying interest. Given these factors, there is strong reasoning to believe in a probability of 70% for a price rise following the earnings announcement.)

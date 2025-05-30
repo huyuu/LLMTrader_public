@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.75, 
+reason=Carvana operates within the e-commerce sector, which currently aligns with strong long-term market trends, as evidenced by consistent revenue growth among major e-commerce players. Furthermore, the stock has recently seen significant trading volume surges, indicating increasing investor interest. Despite some operational challenges, the positive momentum in both market dynamics and stock volume trends suggests a heightened likelihood of price appreciation following the upcoming earnings report.)

@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.4, 
+reason=Carvana Co. operates in the online auto retail sector, which, while part of the e-commerce industry that is long-term in favor, is not in direct alignment with the current mainstream market trends such as Renewable Energy or Electric Vehicles. The recent trading volume data exhibits a declining average daily volume, which could signal decreasing investor interest and lower potential for a strong price increase following the earnings report. These factors contribute to a moderate probability of a post-earnings rise.)

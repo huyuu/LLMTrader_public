@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.8, 
+reason=The current stock price of $26.10 is above the high-volume zone (Volume Area High, VAH) for the price bins of ($25.69, $26.19], where there is significant traded volume in the previous range. This suggests that most holders are in profit, which encourages holding behavior and supports potential upward movement. Additionally, there is no substantial volume in the price range immediately above $26.19, indicating fewer potential sell orders that could create resistance at this level, thus favoring the likelihood of further price increases.)

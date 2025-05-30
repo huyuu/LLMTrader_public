@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.3, 
+reason=The stock has been in a downtrend, with lower short-term moving averages compared to long-term averages. Recent candlestick patterns indicate indecision, with some bearish days following lower closing prices. Moreover, volume analyses show a decline, with recent volumes falling below both short- and long-term moving averages. This suggests reduced market participation and interest, leading to the conclusion of only a 30% probability for a price increase following the upcoming earnings report.)

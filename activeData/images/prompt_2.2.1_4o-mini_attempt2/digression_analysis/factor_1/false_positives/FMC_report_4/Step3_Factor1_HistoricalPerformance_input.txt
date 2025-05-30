@@ -1,0 +1,480 @@
+System Prompt:
+<Task Instructions>
+You are a financial expert responsible for evaluating how a company's recent financial performance will affect the likelihood that its stock price will rise following the upcoming earnings report. Your task is to assess the financial indicators from the most recent two quarters and estimate the probability that the stock will go up in the short term after the release of its new earnings report. Please base your prediction solely on the information provided under the <context> tag.
+</Task Instructions>
+
+<Analysis Methodology>
+Analyze the following elements from the company’s most recent two quarters given in <historical performance metrics>:
+1. Revenue / EPS / EBITDA performance vs. market expectations
+   - If these indicators consistently exceed analysts' expectations, the stock price is more likely to rise.
+   - If they fall short of expectations, the stock price is more likely to decline.
+
+2. Growth trend and acceleration
+   - If these indicators show positive growth, this indicates strong company performance, and the stock price may rise. 
+   - Conversely, negative growth suggests weak performance, potentially leading to a drop in stock price.
+
+3. Valuation trend (<PE Ratio Transition>, <PS Ratio Transition>)
+   - Evaluate whether the company's valuation is reasonable by examining its Price-to-Earnings ratio transition given by <PE Ratio Transition>, and Price-to-Sales (P/S) ratio transition given by <PS Ratio Transition> over the past six months. A higher-than-average <PE Ratio Transition> or <PS Ratio Transition> may suggest overvaluation. 
+   - However, if these ratios have been steadily increasing—indicating that the current price is much higher than the historical average—it could still be justified if the industry or the stock itself is experiencing major positive shifts or tailwinds.
+
+4. Guidance strength expectation
+   - If the company is likely to guide above consensus expectations (based on recent performance and sector signals), the probability of a price increase improves.
+   - If guidance may fall short, downside risks increase.
+
+Use these signals to infer how the market is likely to react to the next earnings event. Predict the probability that the stock price will go up immediately after the report.
+Probability 0.5 means either you can't judge from the given <context>, or all the above signals are fully contradictory.
+Probability 1.0 means all the above signals show strong positive sign.
+Probability 0.0 means all the above signals show strong negative sign.
+</Analysis Methodology>
+
+<Output Instruction>
+Output the result in the following format:
+Factor(up_probability = ..., reason = "...")
+
+Where:
+- up_probability is a float between 0.0 and 1.0 (e.g. 0.75 means 75% chance of rising)
+- reason should clearly explain the logic and evidence leading to your prediction
+</Output Instruction>
+
+<Remarks>
+- Use only the data provided in <context>.
+- Do not speculate about actual earnings results.
+- Your role is to anticipate how investors will react based on expectations.
+- If signals conflict, make a balanced judgment based on strength and reliability.
+- If all signals are inconclusive, set up_probability to 0.5
+- Use the relative strength of bullish vs. bearish signals to determine your probability value.
+- Clearly explain which signals you weighted most and why.
+</Remarks>
+
+User Prompt:
+<context>
+
+The company name is FMC Corporation Common Stock.
+The company's symbol is FMC.
+The company's overview is
+FMC Corporation is a prominent player in the agricultural sector, specifically focusing on crop protection products and services. Recent strategic shifts include the sale of its Global Specialty Solutions business to Envu, which allows FMC to concentrate more intensively on its core agricultural offerings. This decision is designed to enhance market effectiveness and potentially improve stock value. In Q3 2024, FMC reported a 9% revenue increase, reflective of robust sales in North and Latin America, although it continues to face pricing pressures in a competitive landscape marked by innovation demands. Major competitors in this space remain, and the sale to Envu may enhance FMC's product offerings, particularly for greenhouse growers. However, the recent disbanding of its venture capital arm, FMC Ventures, signals both operational changes and potential investor concerns regarding innovation pace in the agtech domain. Despite these challenges, the company's overall growth trajectory appears strong, positioning it favorably within the agricultural market while also indicating resilience against pressures affecting the industry..
+
+The company's <historical performance metrics> are
+                                                               2024-09-30     2024-12-31
+Tax Effect Of Unusual Items                                    -1875800.0      2835000.0
+Tax Rate For Calcs                                                  0.083           0.21
+Normalized EBITDA                                             197000000.0    258900000.0
+Total Unusual Items                                           -22600000.0     13500000.0
+Total Unusual Items Excluding Goodwill                        -22600000.0     13500000.0
+Net Income From Continuing Operation Net Minority Interest     65900000.0     29300000.0
+Reconciled Depreciation                                        43200000.0     43100000.0
+Reconciled Cost Of Revenue                                    679000000.0    699600000.0
+EBITDA                                                        174400000.0    272400000.0
+EBIT                                                          131200000.0    229300000.0
+Net Interest Income                                           -58700000.0    -51800000.0
+Interest Expense                                               58700000.0     51800000.0
+Normalized Income                                              86624200.0     18635000.0
+Net Income From Continuing And Discontinued Operation          65000000.0    -16300000.0
+Total Expenses                                                907200000.0   1003200000.0
+Diluted Average Shares                                        125500000.0    125500000.0
+Basic Average Shares                                          125000000.0    125000000.0
+Diluted EPS                                                          0.52          -0.13
+Basic EPS                                                            2.75           3.47
+Diluted NI Availto Com Stockholders                            64800000.0    -16800000.0
+Net Income Common Stockholders                                 64800000.0    -16800000.0
+Otherunder Preferred Stock Dividend                              200000.0       500000.0
+Net Income                                                     65000000.0    -16300000.0
+Minority Interests                                              -600000.0      -200000.0
+Net Income Including Noncontrolling Interests                  65600000.0    -16100000.0
+Net Income Discontinuous Operations                             -900000.0    -45600000.0
+Net Income Continuous Operations                               66500000.0     29500000.0
+Tax Provision                                                   6000000.0    148000000.0
+Pretax Income                                                  72500000.0    177500000.0
+Other Income Expense                                          -27000000.0      8200000.0
+Other Non Operating Income Expenses                            -4400000.0     -5300000.0
+Special Income Charges                                        -22600000.0     13500000.0
+Other Special Charges                                           6900000.0     -8900000.0
+Restructuring And Mergern Acquisition                          15700000.0    169800000.0
+Net Non Operating Interest Income Expense                     -58700000.0    -51800000.0
+Interest Expense Non Operating                                 58700000.0     51800000.0
+Operating Income                                              158200000.0    221100000.0
+Operating Expense                                             228200000.0    303600000.0
+Other Operating Expenses                                              NaN            NaN
+Research And Development                                       69000000.0     72200000.0
+Selling General And Administration                            159200000.0    156700000.0
+General And Administrative Expense                            159200000.0            NaN
+Other Gand A                                                  159200000.0            NaN
+Salaries And Wages                                                    NaN            NaN
+Gross Profit                                                  386400000.0    524700000.0
+Cost Of Revenue                                               679000000.0    699600000.0
+Total Revenue                                                1065400000.0   1224300000.0
+Operating Revenue                                            1055600000.0   1255400000.0
+Treasury Shares Number                                         61148210.0     61142890.0
+Ordinary Shares Number                                        124835582.0    124840902.0
+Share Issued                                                  185983792.0    185983792.0
+Net Debt                                                     3653300000.0   3008000000.0
+Total Debt                                                   4070000000.0   3495900000.0
+Tangible Book Value                                           668300000.0    507700000.0
+Invested Capital                                             8677800000.0   7852800000.0
+Working Capital                                              1727100000.0   1939100000.0
+Net Tangible Assets                                           668300000.0    507700000.0
+Capital Lease Obligations                                             NaN    130600000.0
+Common Stock Equity                                          4607800000.0   4487500000.0
+Total Capitalization                                         7634600000.0   7515400000.0
+Total Equity Gross Minority Interest                         4630100000.0   4508800000.0
+Minority Interest                                              22300000.0     21300000.0
+Stockholders Equity                                          4607800000.0   4487500000.0
+Gains Losses Not Affecting Retained Earnings                 -373400000.0   -410600000.0
+Other Equity Adjustments                                     -373400000.0   -410600000.0
+Treasury Stock                                               2724700000.0   2724500000.0
+Retained Earnings                                            6726400000.0   6637500000.0
+Additional Paid In Capital                                    960900000.0    966500000.0
+Capital Stock                                                  18600000.0     18600000.0
+Common Stock                                                   18600000.0     18600000.0
+Preferred Stock                                                       0.0            0.0
+Total Liabilities Net Minority Interest                      7588600000.0   7144500000.0
+Total Non Current Liabilities Net Minority Interest          4000200000.0   4125300000.0
+Other Non Current Liabilities                                 386400000.0     82800000.0
+Employee Benefits                                              23700000.0     22000000.0
+Non Current Pension And Other Postretirement Benefit Plans     23700000.0     19400000.0
+Tradeand Other Payables Non Current                                   NaN            0.0
+Non Current Deferred Liabilities                              104200000.0    114700000.0
+Non Current Deferred Revenue                                          NaN      5500000.0
+Non Current Deferred Taxes Liabilities                        104200000.0     86000000.0
+Long Term Debt And Capital Lease Obligation                  3026800000.0   3134000000.0
+Long Term Capital Lease Obligation                                    NaN    106100000.0
+Long Term Debt                                               3026800000.0   3027900000.0
+Long Term Provisions                                          459100000.0    771800000.0
+Current Liabilities                                          3588400000.0   3019200000.0
+Other Current Liabilities                                      77900000.0    102400000.0
+Current Deferred Liabilities                                     400000.0    453800000.0
+Current Deferred Revenue                                         400000.0    453800000.0
+Current Debt And Capital Lease Obligation                    1043200000.0    361900000.0
+Current Capital Lease Obligation                                      NaN     24500000.0
+Current Debt                                                 1043200000.0    337400000.0
+Other Current Borrowings                                      187000000.0    211800000.0
+Commercial Paper                                              856200000.0    125600000.0
+Pensionand Other Post Retirement Benefit Plans Current          6400000.0      6400000.0
+Current Provisions                                                    NaN    150100000.0
+Payables And Accrued Expenses                                2460500000.0   1944600000.0
+Current Accrued Expenses                                     1574400000.0    981000000.0
+Payables                                                      886100000.0    963600000.0
+Dividends Payable                                                     NaN     72600000.0
+Total Tax Payable                                              83200000.0    122500000.0
+Income Tax Payable                                             83200000.0    122500000.0
+Accounts Payable                                              802900000.0    768500000.0
+Total Assets                                                12218700000.0  11653300000.0
+Total Non Current Assets                                     6903200000.0   6695000000.0
+Other Non Current Assets                                      447900000.0     59400000.0
+Defined Pension Benefit                                               NaN     31700000.0
+Non Current Prepaid Assets                                            NaN     17400000.0
+Non Current Deferred Assets                                  1621100000.0   1546100000.0
+Non Current Deferred Taxes Assets                            1621100000.0   1523800000.0
+Non Current Accounts Receivable                                       NaN     74900000.0
+Investments And Advances                                       25300000.0     25600000.0
+Goodwill And Other Intangible Assets                         3939500000.0   3979800000.0
+Other Intangible Assets                                      2421700000.0   2472800000.0
+Goodwill                                                     1517800000.0   1507000000.0
+Net PPE                                                       869400000.0    960100000.0
+Accumulated Depreciation                                     -746900000.0   -748200000.0
+Gross PPE                                                    1616300000.0   1708300000.0
+Construction In Progress                                              NaN    206700000.0
+Other Properties                                                      NaN    110400000.0
+Machinery Furniture Equipment                                         NaN    757700000.0
+Buildings And Improvements                                            NaN    537200000.0
+Land And Improvements                                                 NaN     96300000.0
+Properties                                                            NaN            0.0
+Current Assets                                               5315500000.0   4958300000.0
+Other Current Assets                                          616200000.0    174200000.0
+Hedging Assets Current                                                NaN     47000000.0
+Prepaid Assets                                                        NaN     12700000.0
+Inventory                                                    1392100000.0   1201600000.0
+Finished Goods                                                472600000.0    433500000.0
+Work In Process                                               701300000.0    548600000.0
+Raw Materials                                                 218200000.0    219500000.0
+Receivables                                                  2890500000.0   3165500000.0
+Taxes Receivable                                                      NaN    262300000.0
+Accounts Receivable                                          2890500000.0   2903200000.0
+Allowance For Doubtful Accounts Receivable                    -41500000.0    -39400000.0
+Gross Accounts Receivable                                    2932000000.0   2942600000.0
+Cash Cash Equivalents And Short Term Investments              416700000.0    357300000.0
+Cash And Cash Equivalents                                     416700000.0    357300000.0
+Free Cash Flow                                                125500000.0    377900000.0
+Repurchase Of Capital Stock                                     -400000.0      -100000.0
+Repayment Of Debt                                                     0.0            0.0
+Issuance Of Debt                                                      0.0            0.0
+Issuance Of Capital Stock                                             0.0            0.0
+Capital Expenditure                                           -15700000.0    -21600000.0
+Interest Paid Supplemental Data                                24400000.0     82600000.0
+Income Tax Paid Supplemental Data                              29200000.0     19200000.0
+End Cash Position                                             416700000.0    357300000.0
+Beginning Cash Position                                       471500000.0    416700000.0
+Effect Of Exchange Rate Changes                                 6500000.0     -9800000.0
+Changes In Cash                                               -61300000.0    -49600000.0
+Financing Cash Flow                                          -186200000.0   -768600000.0
+Cash Flow From Continuing Financing Activities               -186200000.0   -768600000.0
+Net Other Financing Charges                                           NaN            0.0
+Cash Dividends Paid                                           -72700000.0    -72700000.0
+Common Stock Dividend Paid                                            NaN            NaN
+Net Common Stock Issuance                                       -400000.0      -100000.0
+Common Stock Payments                                           -400000.0      -100000.0
+Common Stock Issuance                                                 0.0            0.0
+Net Issuance Payments Of Debt                                -112400000.0   -695800000.0
+Net Short Term Debt Issuance                                 -112400000.0   -695800000.0
+Net Long Term Debt Issuance                                           0.0            0.0
+Long Term Debt Payments                                               0.0            0.0
+Long Term Debt Issuance                                               0.0            0.0
+Investing Cash Flow                                           -16300000.0    319500000.0
+Cash Flow From Continuing Investing Activities                -16300000.0    319500000.0
+Net Other Investing Changes                                     2000000.0      1500000.0
+Net Business Purchase And Sale                                 -2600000.0    339600000.0
+Purchase Of Business                                           -2600000.0      -400000.0
+Net PPE Purchase And Sale                                             0.0            0.0
+Sale Of PPE                                                           0.0            0.0
+Capital Expenditure Reported                                  -15700000.0    -21600000.0
+Operating Cash Flow                                           141200000.0    399500000.0
+Cash From Discontinued Operating Activities                   -18300000.0    -28400000.0
+Cash Flow From Continuing Operating Activities                159500000.0    427900000.0
+Change In Working Capital                                      15500000.0    290600000.0
+Change In Other Working Capital                               -34000000.0    554500000.0
+Change In Other Current Liabilities                            14000000.0      7600000.0
+Change In Payables And Accrued Expense                        153400000.0   -367100000.0
+Change In Accrued Expense                                      56200000.0   -332800000.0
+Change In Payable                                              97200000.0    -34300000.0
+Change In Account Payable                                      97200000.0    -34300000.0
+Change In Inventory                                            57200000.0    174500000.0
+Change In Receivables                                        -175100000.0    -78900000.0
+Changes In Account Receivables                               -175100000.0    -78900000.0
+Other Non Cash Items                                          -21000000.0     17400000.0
+Stock Based Compensation                                        5700000.0      5700000.0
+Deferred Tax                                                   45200000.0     36100000.0
+Deferred Income Tax                                            45200000.0     36100000.0
+Depreciation Amortization Depletion                            43200000.0     43100000.0
+Depreciation And Amortization                                  43200000.0     43100000.0
+Operating Gains Losses                                          4400000.0      5500000.0
+Pension And Employee Benefit Expense                            4400000.0      5500000.0
+Net Income From Continuing Operations                          66500000.0     29500000.0
+Gross Margin                                                     0.362681       0.428571
+ROE                                                              0.014107      -0.003632
+Revenue YOY Growth                                                    NaN            NaN
+EBITDA YOY Growth                                                     NaN            NaN
+
+The company's <PE Ratio Transition> is
+            pe_ratio_transition
+date                           
+2024-08-07            24.500000
+2024-08-08            24.575999
+2024-08-09            24.460001
+2024-08-12            23.860001
+2024-08-13            24.516000
+2024-08-14            24.567999
+2024-08-15            24.952000
+2024-08-16            25.280000
+2024-08-19            26.079999
+2024-08-20            25.324001
+2024-08-21            25.588000
+2024-08-22            25.564000
+2024-08-23            26.151999
+2024-08-26            26.076001
+2024-08-27            26.032001
+2024-08-28            26.044000
+2024-08-29            26.160001
+2024-08-30            25.832001
+2024-09-03            25.056000
+2024-09-04            25.228000
+2024-09-05            25.064000
+2024-09-06            24.112000
+2024-09-09            24.428000
+2024-09-10            24.464000
+2024-09-11            24.616000
+2024-09-12            24.800000
+2024-09-13            25.403999
+2024-09-16            25.344000
+2024-09-17            25.336000
+2024-09-18            25.400000
+2024-09-19            25.695999
+2024-09-20            24.816000
+2024-09-23            25.424001
+2024-09-24            25.860001
+2024-09-25            25.588000
+2024-09-26            26.388000
+2024-09-27            26.432001
+2024-09-30            23.978183
+2024-10-01            23.879999
+2024-10-02            23.792727
+2024-10-03            23.276364
+2024-10-04            23.265454
+2024-10-07            22.938182
+2024-10-08            22.538182
+2024-10-09            22.349091
+2024-10-10            21.956364
+2024-10-11            22.058182
+2024-10-14            22.810909
+2024-10-15            22.458181
+2024-10-16            22.810909
+2024-10-17            22.734546
+2024-10-18            22.796363
+2024-10-21            22.665455
+2024-10-22            22.683637
+2024-10-23            22.585455
+2024-10-24            22.363636
+2024-10-25            22.545455
+2024-10-28            22.378182
+2024-10-29            21.883636
+2024-10-30            24.225456
+2024-10-31            23.632726
+2024-11-01            22.963637
+2024-11-04            23.072728
+2024-11-05            23.134545
+2024-11-06            22.156364
+2024-11-07            22.123636
+2024-11-08            21.709091
+2024-11-11            21.487273
+2024-11-12            20.341818
+2024-11-13            20.265454
+2024-11-14            20.174545
+2024-11-15            19.778182
+2024-11-18            20.083636
+2024-11-19            20.221818
+2024-11-20            20.800000
+2024-11-21            21.210910
+2024-11-22            21.360001
+2024-11-25            22.043636
+2024-11-26            21.807273
+2024-11-27            21.636364
+2024-11-29            21.487273
+2024-12-02            21.592728
+2024-12-03            21.647272
+2024-12-04            21.458181
+2024-12-05            20.796363
+2024-12-06            20.574546
+2024-12-09            21.156364
+2024-12-10            20.818182
+2024-12-11            20.527273
+2024-12-12            19.818182
+2024-12-13            19.454545
+2024-12-16            18.876364
+2024-12-17            18.800000
+2024-12-18            17.858182
+2024-12-19            17.403637
+2024-12-20            18.236364
+2024-12-23            18.087273
+2024-12-24            18.087273
+2024-12-26            17.865455
+2024-12-27            17.821818
+2024-12-30            17.618182
+2024-12-31            14.008646
+2025-01-02            14.046110
+2025-01-03            13.985590
+2025-01-06            14.314121
+2025-01-07            14.734871
+2025-01-08            14.498559
+2025-01-10            14.291066
+2025-01-13            14.997118
+2025-01-14            15.420749
+2025-01-15            15.406340
+2025-01-16            15.426513
+2025-01-17            15.397695
+2025-01-21            15.711816
+2025-01-22            15.688760
+2025-01-23            16.034582
+2025-01-24            16.011528
+2025-01-27            16.112392
+2025-01-28            16.210375
+2025-01-29            16.233430
+2025-01-30            16.247839
+2025-01-31            16.074928
+2025-02-03            15.827089
+
+The company's <PS Ratio Transition> is
+               close
+date                
+2024-09-30  7.726355
+2024-10-01  7.694718
+2024-10-02  7.666597
+2024-10-03  7.500212
+2024-10-04  7.496697
+2024-10-07  7.391242
+2024-10-08  7.262352
+2024-10-09  7.201422
+2024-10-10  7.074876
+2024-10-11  7.107684
+2024-10-14  7.350231
+2024-10-15  7.236573
+2024-10-16  7.350231
+2024-10-17  7.325625
+2024-10-18  7.345544
+2024-10-21  7.303362
+2024-10-22  7.309221
+2024-10-23  7.277584
+2024-10-24  7.206109
+2024-10-25  7.264695
+2024-10-28  7.210796
+2024-10-29  7.051441
+2024-10-30  7.806032
+2024-10-31  7.615041
+2024-11-01  7.399444
+2024-11-04  7.434595
+2024-11-05  7.454514
+2024-11-06  7.139320
+2024-11-07  7.128775
+2024-11-08  6.995198
+2024-11-11  6.923723
+2024-11-12  6.554630
+2024-11-13  6.530023
+2024-11-14  6.500730
+2024-11-15  6.373012
+2024-11-18  6.471437
+2024-11-19  6.515963
+2024-11-20  6.702267
+2024-11-21  6.834672
+2024-11-22  6.882713
+2024-11-25  7.102997
+2024-11-26  7.026835
+2024-11-27  6.971764
+2024-11-29  6.923723
+2024-12-02  6.957703
+2024-12-03  6.975279
+2024-12-04  6.914349
+2024-12-05  6.701095
+2024-12-06  6.629620
+2024-12-09  6.817096
+2024-12-10  6.708126
+2024-12-11  6.614388
+2024-12-12  6.385901
+2024-12-13  6.268729
+2024-12-16  6.082424
+2024-12-17  6.057818
+2024-12-18  5.754342
+2024-12-19  5.607876
+2024-12-20  5.876201
+2024-12-23  5.828160
+2024-12-24  5.828160
+2024-12-26  5.756685
+2024-12-27  5.742624
+2024-12-30  5.677008
+2024-12-31  4.956723
+2025-01-02  4.969979
+2025-01-03  4.948566
+2025-01-06  5.064810
+2025-01-07  5.213686
+2025-01-08  5.130071
+2025-01-10  5.056653
+2025-01-13  5.306478
+2025-01-14  5.456372
+2025-01-15  5.451274
+2025-01-16  5.458412
+2025-01-17  5.448215
+2025-01-21  5.559361
+2025-01-22  5.551204
+2025-01-23  5.673567
+2025-01-24  5.665409
+2025-01-27  5.701098
+2025-01-28  5.735768
+2025-01-29  5.743926
+2025-01-30  5.749024
+2025-01-31  5.687842
+2025-02-03  5.600149
+
+The company's Revenue year-over-year(YOY) growth is
++nan
+
+The company's EBITDA year-over-year(YOY) growth is
++nan
+
+</context>

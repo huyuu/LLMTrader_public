@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.2, 
+reason=The most recent two quarters show a consistent decline in net income, with significant losses reported in both periods (-$55.46 million and -$80.59 million), indicative of a deteriorating financial performance. Additionally, EBITDA has decreased, indicating worsening profitability. Revenue has also slightly declined, which is a negative growth signal. Furthermore, the P/E and P/S ratios show high values suggesting overvaluation, and recent improvements in cash flow are not enough to offset these losses. Without strong guidance or positive growth trends, the likelihood of a stock price increase post-earnings report is low.)

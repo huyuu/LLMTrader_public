@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.85, 
+reason=Informatica Inc. operates within the data management sector, which aligns closely with the current trends in artificial intelligence, a market showing strong long-term growth and enthusiasm. Moreover, the recent enhancements in Informatica's product offerings, as well as its strategic partnerships, signal a bullish market sentiment. Additionally, the trading volume over the past two months indicates increasing investor interest, particularly evidenced by several days with much higher volumes than the 20-day average. This rising volume trend suggests a greater likelihood of positive price movement following the earnings report.)

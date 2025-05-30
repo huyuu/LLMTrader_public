@@ -1,0 +1,3 @@
+Output:
+Factor(up_probability=0.7, 
+reason=DexCom Inc. operates in the healthcare technology sector, which shows strong long-term growth driven by an aging population and increased focus on personalized medical solutions. Although the stock briefly fell due to layoffs, generally the sector is buoyed by positive trends. The recent trading volume has shown some volatility but includes higher spikes, suggesting renewed investor interest, especially after the announcement of new products like the G7 CGM and Stelo. Overall, the alignment with healthcare growth trends and increasing volume support a moderate probability of price increase post-earnings.)
