@@ -68,10 +68,9 @@ def get_hardcoded_data() -> pd.DataFrame:
             "Overall Critical Distribution",
             "Overall Performance",
             "Overall Performance Value",
-            # "Overall Performance Using the Equally-Destributed-Always-Buy Strategy",
-            # ""
+            "Overall Performance Using the Equally-Destributed-Always-Buy Strategy",
+            "Overall Performance Using the Equally-Destributed-Always-Buy Strategy Value",
             "Conclusion",
-            "Overall Performance over a Year"
         ],
         folders_name[0]: [
             "largeScaleCloseLoopSim_gpt-4o-mini_attempt2",
@@ -114,8 +113,9 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[0]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[0]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
             2.18,
-            "Usable in [-15, +20]",
-            "x 2.2"
+            f"{folders_name[0]}/portfolio_value_over_time_using_kelly_fraction_equal_distributed_all_period.png",
+            1.38,
+            "Usable in [-15, +20]"
         ],
         "prompt_1.0.6_4o-mini_attempt1": [
             "prompt1.0.6_gpt-4omini_attempt1",
@@ -158,8 +158,9 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[1]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[1]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
             1.40,
-            "Usable in [-7.5, +12]",
-            "x 1.4"
+            f"{folders_name[1]}/portfolio_value_over_time_using_kelly_fraction_equal_distributed_all_period.png",
+            1.39,
+            "Usable in [-7.5, +12]"
         ],
         "prompt_1.0.6_4o-mini_attempt2": [
             "prompt1.0.6_gpt-4omini_attempt2",
@@ -202,8 +203,9 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[2]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[2]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
             1.33,
-            "Not usable",
-            "x 1.3"
+            f"{folders_name[2]}/portfolio_value_over_time_using_kelly_fraction_equal_distributed_all_period.png",
+            1.54,
+            "Not usable"
         ],
         "prompt_1.0.6_4.1-mini_attempt1": [
             "prompt1.0.6_gpt-4.1mini_attempt1",
@@ -246,8 +248,9 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[3]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[3]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
             1.25,
-            "Flat, not usable",
-            "x 1.2"
+            f"{folders_name[3]}/portfolio_value_over_time_using_kelly_fraction_equal_distributed_all_period.png",
+            1.38,
+            "Flat, not usable"
         ],
         "prompt_1.2.16_4o-mini_attempt1": [
             "agent1.2.16_gpt-4omini",
@@ -290,8 +293,9 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[4]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[4]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
             1.13,
-            "Usable in [-2.5, +5]",
-            "x 1.2"
+            f"{folders_name[4]}/portfolio_value_over_time_using_kelly_fraction_equal_distributed_all_period.png",
+            1.20,
+            "Usable in [-2.5, +5]"
         ],
         "prompt_2.2.1_4o-mini_attempt2": [
             "prompt2.2.1_gpt-4omini_attempt2",
@@ -334,8 +338,9 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[5]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[5]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
             1.32,
-            "Unusable as overall, only as seperated factors",
-            "x 1.3"
+            f"{folders_name[5]}/portfolio_value_over_time_using_kelly_fraction_equal_distributed_all_period.png",
+            1.38,
+            "Unusable as overall, only as seperated factors"
         ]
     }
     
