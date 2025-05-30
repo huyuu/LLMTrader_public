@@ -8,38 +8,265 @@ import streamlit as st
 ###############################################################################
 # 1. CONFIG
 ###############################################################################
-CSV_PATH   = "activeData/factorInsights.csv"     # rename if your file is different
 IMAGE_DIR  = "activeData/images"             # updated path to match new hierarchy
-ENCODING   = "latin1"                        # handles the weird bullets in file
 
 
 ###############################################################################
-# 2. LOAD  &  CLEAN  DATA
+# 2. DATA HARDCODED IN APPLICATION
 ###############################################################################
 @st.cache_data
-def load_data(path: str, encoding: str = "utf-8") -> pd.DataFrame:
+def get_hardcoded_data() -> pd.DataFrame:
     """
-    Reads the CSV, strips extra whitespace,
-    sets the first column as the row-index ('Metric').
+    Returns the factor insights data as a pandas DataFrame,
+    with data hardcoded directly in the application.
     """
-    df = pd.read_csv(path, encoding=encoding)
-    # Excel added a trailing space to the header; normalise everything
-    first_col_original = df.columns[0]  # Keep original name with space
-    first_col_stripped = first_col_original.strip()  # Get stripped version
-    df = df.rename(columns={first_col_original: "Metric"})  # Rename using original name
-    df["Metric"] = df["Metric"].astype(str).str.strip()
+    folders_name = ["prompt_1.0.0_4o-mini",
+                    "prompt_1.0.6_4o-mini_attempt1",
+                    "prompt_1.0.6_4o-mini_attempt2",
+                    "prompt_1.0.6_4.1-mini_attempt1",
+                    "prompt_1.2.16_4o-mini_attempt1",
+                    "prompt_2.2.1_4o-mini_attempt2"]
+    data = {
+        "Metric": [
+            "Result Folder Name",
+            "Factor 1 Name",
+            "Factor 1 Prediction Regression Coeff",
+            "Factor 1 Performance",
+            "Factor 1 Scatter",
+            "Factor 1 Critical Distribution",
+            "Factor 2 Name",
+            "Factor 2 Prediction Regression Coeff",
+            "Factor 2 Performance",
+            "Factor 2 Scatter",
+            "Factor 2 Critical Distribution",
+            "Factor 3 Name",
+            "Factor 3 Prediction Regression Coeff",
+            "Factor 3 Performance",
+            "Factor 3 Scatter",
+            "Factor 3 Critical Distribution",
+            "Factor 4 Name",
+            "Factor 4 Prediction Regression Coeff",
+            "Factor 4 Performance",
+            "Factor 4 Scatter",
+            "Factor 4 Critical Distribution",
+            "Factor 5 Name",
+            "Factor 5 Prediction Regression Coeff",
+            "Factor 5 Performance",
+            "Factor 5 Scatter",
+            "Factor 5 Prediction vs Actual",
+            "Overall Scatter",
+            "Overall Critical Distribution",
+            "Overall Performance",
+            "Conclusion",
+            "Overall Performance over a Year"
+        ],
+        folders_name[0]: [
+            "largeScaleCloseLoopSim_gpt-4o-mini_attempt2",
+            "Historical Performance",
+            0.12,
+            "🟢 Good in [-15, +15]",
+            f"{folders_name[0]}/factor_1_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[0]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_1_largeScaleCloseLoopSim.png.png",
+            "Candle",
+            0.08,
+            "X Double Pick",
+            f"{folders_name[0]}/factor_2_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[0]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_2_largeScaleCloseLoopSim.png.png",
+            "Volume Profile",
+            -0.02,
+            "X Complete Flat",
+            f"{folders_name[0]}/factor_3_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[0]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_3_largeScaleCloseLoopSim.png.png",
+            "Market Trend",
+            0.03,
+            "🟢 Available in [-20, 20]",
+            f"{folders_name[0]}/factor_4_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[0]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_4_largeScaleCloseLoopSim.png.png",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Picture",
+            "Picture",
+            "Picture",
+            "Usable in [-15, +20]",
+            "x 2.3"
+        ],
+        "prompt_1.0.6_4o-mini_attempt1": [
+            "prompt1.0.6_gpt-4omini_attempt1",
+            "Historical Performance",
+            0.08,
+            "X Double Pick",
+            f"{folders_name[1]}/factor_1_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[1]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_1_largeScaleCloseLoopSim.png.png",
+            "Candle",
+            0.05,
+            "🟢 Usable in [-10, +15]",
+            f"{folders_name[1]}/factor_2_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[1]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_2_largeScaleCloseLoopSim.png.png",
+            "Volume Profile",
+            0.09,
+            "X Complete Flat in [-5, +5]",
+            f"{folders_name[1]}/factor_3_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[1]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_3_largeScaleCloseLoopSim.png.png",
+            "Market Trend",
+            0.02,
+            "🟢 Usable in [-15, +20]",
+            f"{folders_name[1]}/factor_4_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[1]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_4_largeScaleCloseLoopSim.png.png",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Picture",
+            "Picture",
+            "Picture",
+            "Usable in [-7.5, +12]",
+            "x 1.4"
+        ],
+        "prompt_1.0.6_4o-mini_attempt2": [
+            "prompt1.0.6_gpt-4omini_attempt2",
+            "Historical Performance",
+            0.06,
+            "X Double Pick",
+            f"{folders_name[2]}/factor_1_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[2]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_1_largeScaleCloseLoopSim.png.png",
+            "Candle",
+            0.02,
+            "🟢 Usable in [-10, +15] (barely",
+            f"{folders_name[2]}/factor_2_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[2]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_2_largeScaleCloseLoopSim.png.png",
+            "Volume Profile",
+            -0.08,
+            "X Complete Flat in [-5, +5]",
+            f"{folders_name[2]}/factor_3_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[2]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_3_largeScaleCloseLoopSim.png.png",
+            "Market Trend",
+            0.02,
+            "X Complete Flat in [-5, +5]",
+            f"{folders_name[2]}/factor_4_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[2]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_4_largeScaleCloseLoopSim.png.png",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Picture",
+            "Picture",
+            "Picture",
+            "Not usable",
+            "x 1.3"
+        ],
+        "prompt_1.0.6_4.1-mini_attempt1": [
+            "prompt1.0.6_gpt-4.1mini_attempt1",
+            "Historical Performance",
+            0.15,
+            "🟢 Usable in [-15, +15]",
+            f"{folders_name[3]}/factor_1_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[3]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_1_largeScaleCloseLoopSim.png.png",
+            "Candle",
+            -0.01,
+            "X Double Pick",
+            f"{folders_name[3]}/factor_2_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[3]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_2_largeScaleCloseLoopSim.png.png",
+            "Volume Profile",
+            -0.13,
+            "X Minus Relation in [-3, +3]",
+            f"{folders_name[3]}/factor_3_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[3]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_3_largeScaleCloseLoopSim.png.png",
+            "Market Trend",
+            -0.04,
+            "X Complete Flat",
+            f"{folders_name[3]}/factor_4_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[3]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_4_largeScaleCloseLoopSim.png.png",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Picture",
+            "Picture",
+            "Picture",
+            "Flat, not usable",
+            "x 1.2"
+        ],
+        "prompt_1.2.16_4o-mini_attempt1": [
+            "agent1.2.16_gpt-4omini",
+            "Historical Performance",
+            0.14,
+            "X Double Pick",
+            f"{folders_name[4]}/factor_1_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[4]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_1_largeScaleCloseLoopSim.png.png",
+            "Candle",
+            -0.01,
+            "X Double Pick",
+            f"{folders_name[4]}/factor_2_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[4]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_2_largeScaleCloseLoopSim.png.png",
+            "Guidance",
+            0.1,
+            "🟢 Usable in [-7.5, +7.5]",
+            f"{folders_name[4]}/factor_3_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[4]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_3_largeScaleCloseLoopSim.png.png",
+            "Market Trend",
+            0.06,
+            "🟢 Usable in [-7.5, +7.5]",
+            f"{folders_name[4]}/factor_4_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[4]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_4_largeScaleCloseLoopSim.png.png",
+            "Macro Economy",
+            -0.12,
+            "X Double Pick",
+            f"{folders_name[4]}/factor_5_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[4]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_5_largeScaleCloseLoopSim.png.png",
+            "Picture",
+            "Picture",
+            "Picture",
+            "Usable in [-2.5, +5]",
+            "x 1.2"
+        ],
+        "prompt_2.2.1_4o-mini_attempt2": [
+            "prompt2.2.1_gpt-4omini_attempt2",
+            "Historical Performance",
+            "",
+            "🟡 Usable in [0, +1]",
+            f"{folders_name[5]}/factor_1_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[5]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_1_largeScaleCloseLoopSim.png.png",
+            "Candle",
+            "",
+            "X Double Pick",
+            f"{folders_name[5]}/factor_2_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[5]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_2_largeScaleCloseLoopSim.png.png",
+            "Volume Profile",
+            "",
+            "X Complete Flat in [0, 1]",
+            f"{folders_name[5]}/factor_3_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[5]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_3_largeScaleCloseLoopSim.png.png",
+            "Market Trend",
+            "",
+            "X Complete Flat in [0, 1]",
+            f"{folders_name[5]}/factor_4_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[5]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_4_largeScaleCloseLoopSim.png.png",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "Picture",
+            "Picture",
+            "Picture",
+            "Unusable as overall, only as seperated factors",
+            "x 1.3"
+        ]
+    }
+    
+    df = pd.DataFrame(data)
     df = df.set_index("Metric")
-    # strip whitespace from column headers too
-    df.columns = [c.strip() for c in df.columns]
     return df
 
 
-try:
-    df = load_data(CSV_PATH, ENCODING)
-except FileNotFoundError:
-    st.error(f"⚠️  Could not find {CSV_PATH}.  "
-             "Place the file in the same folder or edit `CSV_PATH`.")
-    st.stop()
+# Load the hardcoded data
+df = get_hardcoded_data()
 
 
 ###############################################################################
