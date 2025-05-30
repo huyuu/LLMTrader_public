@@ -67,6 +67,9 @@ def get_hardcoded_data() -> pd.DataFrame:
             "Overall Scatter",
             "Overall Critical Distribution",
             "Overall Performance",
+            "Overall Performance Value",
+            "Overall Performance Using the Equally-Destributed-Always-Buy Strategy",
+            ""
             "Conclusion",
             "Overall Performance over a Year"
         ],
@@ -110,8 +113,9 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[0]}/win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim_average_actual_price_change_scatter.png",
             f"{folders_name[0]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[0]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
+            2.18,
             "Usable in [-15, +20]",
-            "x 2.3"
+            "x 2.2"
         ],
         "prompt_1.0.6_4o-mini_attempt1": [
             "prompt1.0.6_gpt-4omini_attempt1",
@@ -153,6 +157,7 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[1]}/win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim_average_actual_price_change_scatter.png",
             f"{folders_name[1]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[1]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
+            1.40,
             "Usable in [-7.5, +12]",
             "x 1.4"
         ],
@@ -196,6 +201,7 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[2]}/win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim_average_actual_price_change_scatter.png",
             f"{folders_name[2]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[2]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
+            1.33,
             "Not usable",
             "x 1.3"
         ],
@@ -239,6 +245,7 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[3]}/win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim_average_actual_price_change_scatter.png",
             f"{folders_name[3]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[3]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
+            1.25,
             "Flat, not usable",
             "x 1.2"
         ],
@@ -282,6 +289,7 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[4]}/win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim_average_actual_price_change_scatter.png",
             f"{folders_name[4]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[4]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
+            1.13,
             "Usable in [-2.5, +5]",
             "x 1.2"
         ],
@@ -325,6 +333,7 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[5]}/win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim_average_actual_price_change_scatter.png",
             f"{folders_name[5]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png.png",
             f"{folders_name[5]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
+            1.32,
             "Unusable as overall, only as seperated factors",
             "x 1.3"
         ]
