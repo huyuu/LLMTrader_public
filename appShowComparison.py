@@ -488,53 +488,87 @@ elif view_mode == "💰 Costs":
             
             # Display the main cost table
             st.dataframe(
-                cost_df.style.format({'openai': '${:.2f}'}),
+                cost_df.style.format({
+                    'openai': '${:.2f}',
+                    'ib_wall_street_horizon': '${:.2f}',
+                    'miscellaneous_expenses': '${:.2f}'
+                }),
                 use_container_width=True
             )
             
+            # Calculate total cost column
+            cost_df_with_total = cost_df.copy()
+            cost_df_with_total['total'] = cost_df_with_total.fillna(0).sum(axis=1)
+            
             # Summary statistics
-            col1, col2, col3, col4 = st.columns(4)
+            st.markdown("### 💰 Cost Summary")
+            
+            # First row - Main totals
+            col1, col2, col3 = st.columns(3)
             
             with col1:
                 st.metric(
                     label="Total Cost", 
-                    value=f"${cost_df['openai'].sum():.2f}"
+                    value=f"${cost_df_with_total['total'].sum():.2f}"
                 )
             
             with col2:
                 st.metric(
                     label="Average Monthly", 
-                    value=f"${cost_df['openai'].mean():.2f}"
+                    value=f"${cost_df_with_total['total'].mean():.2f}"
                 )
             
             with col3:
                 st.metric(
                     label="Highest Month", 
-                    value=f"${cost_df['openai'].max():.2f}"
+                    value=f"${cost_df_with_total['total'].max():.2f}"
                 )
+            
+            # Second row - Breakdown by service
+            st.markdown("#### By Service:")
+            col4, col5, col6 = st.columns(3)
             
             with col4:
                 st.metric(
-                    label="Lowest Month", 
-                    value=f"${cost_df['openai'].min():.2f}"
+                    label="OpenAI", 
+                    value=f"${cost_df['openai'].fillna(0).sum():.2f}"
+                )
+            
+            with col5:
+                st.metric(
+                    label="IB Wall Street", 
+                    value=f"${cost_df['ib_wall_street_horizon'].fillna(0).sum():.2f}"
+                )
+            
+            with col6:
+                st.metric(
+                    label="Miscellaneous", 
+                    value=f"${cost_df['miscellaneous_expenses'].fillna(0).sum():.2f}"
                 )
             
             # Cost trend chart
             st.markdown("### 📈 Cost Trend Over Time")
-            st.line_chart(cost_df['openai'])
+            chart_df = cost_df.fillna(0)
+            chart_df['Total'] = chart_df.sum(axis=1)
+            st.line_chart(chart_df)
             
             # Monthly breakdown
             st.markdown("### 📅 Detailed Monthly Breakdown")
             
             # Create a more detailed breakdown
-            detailed_df = cost_df.copy()
+            detailed_df = cost_df_with_total.copy()
             detailed_df['Month Name'] = pd.to_datetime(detailed_df.index + '-01').strftime('%B %Y')
             detailed_df = detailed_df.reset_index()
-            detailed_df = detailed_df[['month', 'Month Name', 'openai']]
-            detailed_df.columns = ['Month (YYYY-MM)', 'Month Name', 'OpenAI Cost']
+            detailed_df = detailed_df[['month', 'Month Name', 'openai', 'ib_wall_street_horizon', 'miscellaneous_expenses', 'total']]
+            detailed_df.columns = ['Month (YYYY-MM)', 'Month Name', 'OpenAI Cost', 'IB Wall Street Horizon', 'Miscellaneous Expenses', 'Total Cost']
             
             st.dataframe(
-                detailed_df.style.format({'OpenAI Cost': '${:.2f}'}),
+                detailed_df.style.format({
+                    'OpenAI Cost': '${:.2f}',
+                    'IB Wall Street Horizon': '${:.2f}',
+                    'Miscellaneous Expenses': '${:.2f}',
+                    'Total Cost': '${:.2f}'
+                }),
                 use_container_width=True,
                 hide_index=True
             )

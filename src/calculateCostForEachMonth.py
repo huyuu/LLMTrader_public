@@ -13,7 +13,16 @@ class CostCalculator:
         Returns:
             pd.DataFrame: DataFrame with monthly costs, indexed by month, with 'openai' column
         """
-        return self._calculate_openai_cost_for_each_month()
+        openai_df = self._calculate_openai_cost_for_each_month()
+        ib_df = self._calculate_ib_wall_street_horizon_cost_for_each_month()
+        misc_df = self._calculate_miscellaneous_expenses_for_each_month()
+
+        # Combine the datasets
+        combined_df = pd.merge(openai_df.reset_index(), ib_df, on='month', how='outer')
+        combined_df = pd.merge(combined_df, misc_df, on='month', how='outer')
+        combined_df = combined_df.set_index('month')
+        
+        return combined_df
 
 
 # MARK: - Protected Methods
@@ -72,3 +81,47 @@ class CostCalculator:
             # Return empty DataFrame if no data found
             return pd.DataFrame(columns=['openai'])
         
+
+    def _calculate_ib_wall_street_horizon_cost_for_each_month(self) -> pd.DataFrame:
+        data = pd.DataFrame(
+            [
+                {
+                    'month': '2025-02',
+                    'ib_wall_street_horizon': 50.0
+                },
+                {
+                    'month': '2025-03',
+                    'ib_wall_street_horizon': 50.0
+                },
+                {
+                    'month': '2025-04',
+                    'ib_wall_street_horizon': 50.0
+                },
+                {
+                    'month': '2025-05',
+                    'ib_wall_street_horizon': 50.0
+                }
+            ]
+        )
+        return data
+
+    def _calculate_miscellaneous_expenses_for_each_month(self) -> pd.DataFrame:
+        """
+        Calculate miscellaneous expenses for each month.
+        
+        Returns:
+            pd.DataFrame: DataFrame with monthly miscellaneous expenses, with 'month' and 'miscellaneous_expenses' columns
+        """
+        data = pd.DataFrame(
+            [
+                {
+                    'month': '2025-02',
+                    'miscellaneous_expenses': 30.0
+                },
+                {
+                    'month': '2025-03',
+                    'miscellaneous_expenses': 50.0
+                }
+            ]
+        )
+        return data
