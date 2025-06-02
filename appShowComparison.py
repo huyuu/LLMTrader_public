@@ -3,7 +3,11 @@ import os
 import re
 import pandas as pd
 import streamlit as st
+import sys
 
+# Add the src directory to the path to import our cost calculator
+sys.path.append('src')
+from calculateCostForEachMonth import CostCalculator
 
 ###############################################################################
 # 1. CONFIG
@@ -349,98 +353,195 @@ def get_hardcoded_data() -> pd.DataFrame:
     return df
 
 
+@st.cache_data
+def get_cost_data() -> pd.DataFrame:
+    """
+    Returns the monthly cost data as a pandas DataFrame.
+    """
+    calculator = CostCalculator()
+    return calculator.calculate_costs_for_each_month()
+
+
 # Load the hardcoded data
 df = get_hardcoded_data()
 
 
 ###############################################################################
-# 3. SIDEBAR – PROMPT PICKER
+# 3. SIDEBAR – VIEW SELECTOR AND OPTIONS
 ###############################################################################
-st.sidebar.title("📌 Prompts")
-prompt_names = df.columns.tolist()
-selected_prompt = st.sidebar.radio(
-    "Choose a model / prompt run:",
-    prompt_names,
-    index=0,
-    format_func=lambda x: x  # (keeps original header as label)
+st.sidebar.title("📊 Dashboard")
+
+# View selector - using selectbox instead of radio
+view_mode = st.sidebar.selectbox(
+    "Choose view:",
+    ["📌 Prompts", "💰 Costs"],
+    index=0
 )
 
-# Add toggle button for images
 st.sidebar.markdown("---")
-show_images = st.sidebar.checkbox(
-    "Show images", 
-    value=True,
-    help="Uncheck to hide images and focus on text data"
-)
+
+if view_mode == "📌 Prompts":
+    # Existing prompt selector - also using selectbox
+    st.sidebar.title("📌 Prompts")
+    prompt_names = df.columns.tolist()
+    selected_prompt = st.sidebar.selectbox(
+        "Choose a model / prompt run:",
+        prompt_names,
+        index=0
+    )
+
+    # Add toggle button for images
+    st.sidebar.markdown("---")
+    show_images = st.sidebar.checkbox(
+        "Show images", 
+        value=True,
+        help="Uncheck to hide images and focus on text data"
+    )
+
+elif view_mode == "💰 Costs":
+    st.sidebar.title("💰 Cost Analysis")
+    st.sidebar.write("Monthly cost breakdown for all services")
 
 
 ###############################################################################
-# 4. MAIN PANEL – PRETTY PRINT ONE COLUMN
+# 4. MAIN PANEL – DISPLAY CONTENT BASED ON VIEW MODE
 ###############################################################################
-st.header(f"🗂️ {selected_prompt}")
 
-col_data = df[selected_prompt]
+if view_mode == "📌 Prompts":
+    # Existing prompt display logic
+    st.header(f"🗂️ {selected_prompt}")
 
-for metric, cell in col_data.items():
-    # Skip empty strings
-    if isinstance(cell, str) and cell.strip() == "":
-        continue
+    col_data = df[selected_prompt]
 
-    # Section header ──────────────────────────────────────────────────────────
-    st.markdown(f"### {metric}")
+    for metric, cell in col_data.items():
+        # Skip empty strings
+        if isinstance(cell, str) and cell.strip() == "":
+            continue
+
+        # Section header ──────────────────────────────────────────────────────────
+        st.markdown(f"### {metric}")
+
+        ###########################################################################
+        # 4-A.  IS THIS CELL POINTING TO AN IMAGE?
+        ###########################################################################
+        # ❶  If the CSV cell holds an explicit file name
+        if isinstance(cell, str) and re.search(r"\.(png|jpe?g|gif)$", cell, re.I):
+            if show_images:
+                # First try the direct path in the prompt subdirectory
+                img_path_in_prompt = os.path.join(IMAGE_DIR, selected_prompt, cell)
+                if os.path.isfile(img_path_in_prompt):
+                    st.image(img_path_in_prompt, use_container_width=True)
+                # Fallback to the old logic for absolute paths or direct IMAGE_DIR
+                elif os.path.isabs(cell):
+                    if os.path.isfile(cell):
+                        st.image(cell, use_container_width=True)
+                    else:
+                        st.warning(f"Image not found: `{cell}`")
+                else:
+                    img_path = os.path.join(IMAGE_DIR, cell)
+                    if os.path.isfile(img_path):
+                        st.image(img_path, use_container_width=True)
+                    else:
+                        st.warning(f"Image not found: `{img_path}` or `{img_path_in_prompt}`")
+            else:
+                # Show image path instead of the image
+                st.code(cell, language=None)
+
+        # ❂  If Excel stored the word "Picture" instead of the file name
+        elif isinstance(cell, str) and cell.strip().lower() == "picture":
+            if show_images:
+                # Attempt a best-guess file name: activeData/images/<prompt>/<metric>.png
+                safe_metric = re.sub(r"\W+", "_", metric).lower()
+                guess_path = os.path.join(IMAGE_DIR, selected_prompt, f"{safe_metric}.png")
+                if os.path.isfile(guess_path):
+                    st.image(guess_path, use_container_width=True)
+                else:
+                    st.info("📷 *(an image goes here – place it at "
+                            f"`{guess_path}` and it will appear)*")
+            else:
+                # Show placeholder text
+                st.write("📷 *[Image cachée]*")
+
+        # ❸  Otherwise, show the raw value (number, text, NaN, …)
+        else:
+            # For floats with many decimals, tidy them up a bit
+            if isinstance(cell, float):
+                st.write(f"{cell:.4g}")
+            else:
+                st.write(cell)
 
     ###########################################################################
-    # 4-A.  IS THIS CELL POINTING TO AN IMAGE?
+    # 5. (OPTIONAL) RAW DATA EXPANDER FOR PROMPTS
     ###########################################################################
-    # ❶  If the CSV cell holds an explicit file name
-    if isinstance(cell, str) and re.search(r"\.(png|jpe?g|gif)$", cell, re.I):
-        if show_images:
-            # First try the direct path in the prompt subdirectory
-            img_path_in_prompt = os.path.join(IMAGE_DIR, selected_prompt, cell)
-            if os.path.isfile(img_path_in_prompt):
-                st.image(img_path_in_prompt, use_container_width=True)
-            # Fallback to the old logic for absolute paths or direct IMAGE_DIR
-            elif os.path.isabs(cell):
-                if os.path.isfile(cell):
-                    st.image(cell, use_container_width=True)
-                else:
-                    st.warning(f"Image not found: `{cell}`")
-            else:
-                img_path = os.path.join(IMAGE_DIR, cell)
-                if os.path.isfile(img_path):
-                    st.image(img_path, use_container_width=True)
-                else:
-                    st.warning(f"Image not found: `{img_path}` or `{img_path_in_prompt}`")
+    with st.expander("🔎 Peek raw data for this prompt"):
+        st.dataframe(col_data.reset_index(), use_container_width=True)
+
+elif view_mode == "💰 Costs":
+    # Cost display logic
+    st.header("💰 Monthly Cost Analysis")
+    
+    try:
+        cost_df = get_cost_data()
+        
+        if not cost_df.empty:
+            st.markdown("### 📊 Monthly Cost Breakdown")
+            
+            # Display the main cost table
+            st.dataframe(
+                cost_df.style.format({'openai': '${:.2f}'}),
+                use_container_width=True
+            )
+            
+            # Summary statistics
+            col1, col2, col3, col4 = st.columns(4)
+            
+            with col1:
+                st.metric(
+                    label="Total Cost", 
+                    value=f"${cost_df['openai'].sum():.2f}"
+                )
+            
+            with col2:
+                st.metric(
+                    label="Average Monthly", 
+                    value=f"${cost_df['openai'].mean():.2f}"
+                )
+            
+            with col3:
+                st.metric(
+                    label="Highest Month", 
+                    value=f"${cost_df['openai'].max():.2f}"
+                )
+            
+            with col4:
+                st.metric(
+                    label="Lowest Month", 
+                    value=f"${cost_df['openai'].min():.2f}"
+                )
+            
+            # Cost trend chart
+            st.markdown("### 📈 Cost Trend Over Time")
+            st.line_chart(cost_df['openai'])
+            
+            # Monthly breakdown
+            st.markdown("### 📅 Detailed Monthly Breakdown")
+            
+            # Create a more detailed breakdown
+            detailed_df = cost_df.copy()
+            detailed_df['Month Name'] = pd.to_datetime(detailed_df.index + '-01').strftime('%B %Y')
+            detailed_df = detailed_df.reset_index()
+            detailed_df = detailed_df[['month', 'Month Name', 'openai']]
+            detailed_df.columns = ['Month (YYYY-MM)', 'Month Name', 'OpenAI Cost']
+            
+            st.dataframe(
+                detailed_df.style.format({'OpenAI Cost': '${:.2f}'}),
+                use_container_width=True,
+                hide_index=True
+            )
+            
         else:
-            # Show image path instead of the image
-            st.code(cell, language=None)
-
-    # ❂  If Excel stored the word "Picture" instead of the file name
-    elif isinstance(cell, str) and cell.strip().lower() == "picture":
-        if show_images:
-            # Attempt a best-guess file name: activeData/images/<prompt>/<metric>.png
-            safe_metric = re.sub(r"\W+", "_", metric).lower()
-            guess_path = os.path.join(IMAGE_DIR, selected_prompt, f"{safe_metric}.png")
-            if os.path.isfile(guess_path):
-                st.image(guess_path, use_container_width=True)
-            else:
-                st.info("📷 *(an image goes here – place it at "
-                        f"`{guess_path}` and it will appear)*")
-        else:
-            # Show placeholder text
-            st.write("📷 *[Image cachée]*")
-
-    # ❸  Otherwise, show the raw value (number, text, NaN, …)
-    else:
-        # For floats with many decimals, tidy them up a bit
-        if isinstance(cell, float):
-            st.write(f"{cell:.4g}")
-        else:
-            st.write(cell)
-
-
-###############################################################################
-# 5. (OPTIONAL) RAW DATA EXPANDER
-###############################################################################
-with st.expander("🔎 Peek raw data for this prompt"):
-    st.dataframe(col_data.reset_index(), use_container_width=True)
+            st.warning("No cost data found. Please check if the OpenAI cost CSV files are available in the `activeData/costs/openai/` directory.")
+            
+    except Exception as e:
+        st.error(f"Error loading cost data: {e}")
+        st.info("Please ensure the cost calculation module is properly configured and the CSV files are accessible.")

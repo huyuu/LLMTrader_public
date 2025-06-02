@@ -1,0 +1,88 @@
+start_time,end_time,amount_value,amount_currency,line_item,project_id,organization_id,project_name,organization_name
+1743724800,1743811200,0.02,usd,"dall-e 2, 1024x1024",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1743811200,1743897600,,,,,,,
+1743897600,1743984000,,,,,,,
+1743984000,1744070400,,,,,,,
+1744070400,1744156800,,,,,,,
+1744156800,1744243200,1.02156585,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744156800,1744243200,0.2739264,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744156800,1744243200,0.17989439999999998,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744243200,1744329600,,,,,,,
+1744329600,1744416000,1.72427205,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744329600,1744416000,0.3950208,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744329600,1744416000,0.2501304,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744416000,1744502400,6.393500400000001,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744416000,1744502400,1.1885952,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744416000,1744502400,0.9483948,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744502400,1744588800,,,,,,,
+1744588800,1744675200,,,,,,,
+1744675200,1744761600,0.0091377,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744675200,1744761600,0.0002784,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744675200,1744761600,0.0015306,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744761600,1744848000,1.8993729,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744761600,1744848000,0.09253439999999999,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744761600,1744848000,0.2569632,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744848000,1744934400,8.87214045,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744848000,1744934400,0.433872,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744848000,1744934400,1.3571034,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744934400,1745020800,1.96717005,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744934400,1745020800,0.1031616,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1744934400,1745020800,0.2933406,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745020800,1745107200,0.46454,usd,"gpt-4o-2024-08-06, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745020800,1745107200,0.06737,usd,"gpt-4o-2024-08-06, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745020800,1745107200,13.55541675,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745020800,1745107200,0.6722784,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745020800,1745107200,2.000793,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745107200,1745193600,1.9272558000000002,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745107200,1745193600,0.1093824,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745107200,1745193600,0.3107034,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745193600,1745280000,0.37506999999999996,usd,"gpt-4.1-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745193600,1745280000,0.002112,usd,"gpt-4.1-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745193600,1745280000,0.08928000000000001,usd,"gpt-4.1-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745193600,1745280000,0.0581088,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745193600,1745280000,0.00011520000000000001,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745193600,1745280000,0.01496,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745193600,1745280000,0.048938249999999996,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745193600,1745280000,0.0030432,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745193600,1745280000,0.0047268,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745280000,1745366400,0.265494,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745280000,1745366400,0.0036096,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745280000,1745366400,0.0667872,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745280000,1745366400,0.17319254999999997,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745280000,1745366400,0.006883200000000001,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745280000,1745366400,0.0124398,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745366400,1745452800,0.17489719999999997,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745366400,1745452800,0.0017280000000000002,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745366400,1745452800,0.0381712,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745366400,1745452800,0.08647830000000001,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745366400,1745452800,0.0010176,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745366400,1745452800,0.008268600000000001,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745452800,1745539200,4.8891480000000005,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745452800,1745539200,0.107456,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745452800,1745539200,1.1728543999999999,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745539200,1745625600,0.5005843999999999,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745539200,1745625600,0.0075264,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745539200,1745625600,0.11529120000000001,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745625600,1745712000,4.8221343999999995,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745625600,1745712000,0.10976000000000001,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745625600,1745712000,1.2623776,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745712000,1745798400,,,,,,,
+1745798400,1745884800,23.534696,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745798400,1745884800,0.19624960000000002,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745798400,1745884800,3.5206304,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745884800,1745971200,,,,,,,
+1745971200,1746057600,10.9296632,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745971200,1746057600,0.2009728,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1745971200,1746057600,2.3113552,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746057600,1746144000,1.4795475999999999,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746057600,1746144000,0.0122752,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746057600,1746144000,0.23827359999999997,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746144000,1746230400,47.69247920000001,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746144000,1746230400,0.9887104,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746144000,1746230400,10.657372800000001,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746230400,1746316800,10.7856648,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746230400,1746316800,0.11901439999999999,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746230400,1746316800,2.105392,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746316800,1746403200,56.4667332,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746316800,1746403200,0.5625856,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746316800,1746403200,9.1529152,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal

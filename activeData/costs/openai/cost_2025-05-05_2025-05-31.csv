@@ -1,0 +1,87 @@
+start_time,end_time,amount_value,amount_currency,line_item,project_id,organization_id,project_name,organization_name
+1746403200,1746489600,29.7209524,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746403200,1746489600,0.05504,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746403200,1746489600,9.8802944,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746403200,1746489600,13.799301149999998,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746403200,1746489600,1.0245216000000001,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746403200,1746489600,1.3559406,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746489600,1746576000,0.3946844,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746489600,1746576000,0.0018048,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746489600,1746576000,0.1361888,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746489600,1746576000,0.3513975,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746489600,1746576000,0.035952000000000005,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746489600,1746576000,0.0351594,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746576000,1746662400,0.6673696,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746576000,1746662400,0.4788752,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746576000,1746662400,31.33540155,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746576000,1746662400,1.585872,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746576000,1746662400,2.6650662,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746662400,1746748800,1.0723764,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746662400,1746748800,0.7715824000000001,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746662400,1746748800,48.427073850000006,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746662400,1746748800,3.31848,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746662400,1746748800,4.2942756,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746748800,1746835200,0.4083596,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746748800,1746835200,0.28955359999999997,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746748800,1746835200,13.571341199999999,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746748800,1746835200,0.7996512,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746748800,1746835200,1.5517332,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746835200,1746921600,0.518782,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746835200,1746921600,0.3766672,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746835200,1746921600,15.666576300000001,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746835200,1746921600,0.6541632,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746835200,1746921600,1.94214,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746921600,1747008000,0.3013208,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746921600,1747008000,0.3231216,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746921600,1747008000,13.05601695,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746921600,1747008000,0.3988704,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1746921600,1747008000,1.5349583999999998,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747008000,1747094400,0.5785768,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747008000,1747094400,0.6180064000000001,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747008000,1747094400,24.844842749999998,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747008000,1747094400,0.5472096,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747008000,1747094400,2.9422782,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747094400,1747180800,0.2676532,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747094400,1747180800,0.2848528,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747094400,1747180800,11.306113049999999,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747094400,1747180800,0.3082272,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747094400,1747180800,1.3554354000000002,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747180800,1747267200,91.54803079999999,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747180800,1747267200,0.0820224,usd,"gpt-4.1-mini-2025-04-14, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747180800,1747267200,20.7583008,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747180800,1747267200,58.27504515,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747180800,1747267200,1.801008,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747180800,1747267200,6.045051,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747267200,1747353600,0.0422328,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747267200,1747353600,0.0441344,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747267200,1747353600,2.1289425,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747267200,1747353600,0.07404480000000001,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747267200,1747353600,0.2114556,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747353600,1747440000,0.5578952,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747353600,1747440000,0.3160192,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747353600,1747440000,22.717068599999998,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747353600,1747440000,0.532224,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747353600,1747440000,2.0289294,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747440000,1747526400,1.3375824,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747440000,1747526400,0.7490368,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747440000,1747526400,54.505441499999996,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747440000,1747526400,1.3747103999999999,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747440000,1747526400,4.9720553999999995,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747526400,1747612800,0.4264432,usd,"gpt-4.1-mini-2025-04-14, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747526400,1747612800,0.2378,usd,"gpt-4.1-mini-2025-04-14, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747526400,1747612800,17.25958605,usd,"gpt-4o-mini-2024-07-18, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747526400,1747612800,0.5095008,usd,"gpt-4o-mini-2024-07-18, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747526400,1747612800,1.5527616,usd,"gpt-4o-mini-2024-07-18, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1747612800,1747699200,,,,,,,
+1747699200,1747785600,,,,,,,
+1747785600,1747872000,,,,,,,
+1747872000,1747958400,,,,,,,
+1747958400,1748044800,,,,,,,
+1748044800,1748131200,,,,,,,
+1748131200,1748217600,,,,,,,
+1748217600,1748304000,,,,,,,
+1748304000,1748390400,,,,,,,
+1748390400,1748476800,,,,,,,
+1748476800,1748563200,,,,,,,
+1748563200,1748649600,,,,,,,
+1748649600,1748736000,,,,,,,

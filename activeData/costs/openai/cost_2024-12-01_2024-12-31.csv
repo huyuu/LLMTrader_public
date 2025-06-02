@@ -1,0 +1,38 @@
+start_time,end_time,amount_value,amount_currency,line_item,project_id,organization_id,project_name,organization_name
+1733011200,1733097600,,,,,,,
+1733097600,1733184000,,,,,,,
+1733184000,1733270400,,,,,,,
+1733270400,1733356800,,,,,,,
+1733356800,1733443200,,,,,,,
+1733443200,1733529600,,,,,,,
+1733529600,1733616000,,,,,,,
+1733616000,1733702400,,,,,,,
+1733702400,1733788800,,,,,,,
+1733788800,1733875200,,,,,,,
+1733875200,1733961600,,,,,,,
+1733961600,1734048000,,,,,,,
+1734048000,1734134400,,,,,,,
+1734134400,1734220800,,,,,,,
+1734220800,1734307200,,,,,,,
+1734307200,1734393600,,,,,,,
+1734393600,1734480000,,,,,,,
+1734480000,1734566400,,,,,,,
+1734566400,1734652800,,,,,,,
+1734652800,1734739200,,,,,,,
+1734739200,1734825600,0.0509075,usd,"gpt-4o-2024-08-06, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1734739200,1734825600,0.11657000000000001,usd,"gpt-4o-2024-08-06, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1734825600,1734912000,0.0405075,usd,"gpt-4o-2024-08-06, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1734825600,1734912000,0.02962,usd,"gpt-4o-2024-08-06, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1734912000,1734998400,0.66888,usd,"gpt-4o-2024-08-06, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1734912000,1734998400,0.46417,usd,"gpt-4o-2024-08-06, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1734998400,1735084800,0.1486975,usd,"gpt-4o-2024-08-06, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1734998400,1735084800,0.15529,usd,"gpt-4o-2024-08-06, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1735084800,1735171200,,,,,,,
+1735171200,1735257600,1.2888825,usd,"gpt-4o-2024-08-06, input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1735171200,1735257600,0.03984,usd,"gpt-4o-2024-08-06, cached input",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1735171200,1735257600,0.9024500000000001,usd,"gpt-4o-2024-08-06, output",proj_uvBRUf6zFgDOQLXBdS8ce4bE,org-DifcBmJDK8sUlBTukjjX7J7H,Default project,Personal
+1735257600,1735344000,,,,,,,
+1735344000,1735430400,,,,,,,
+1735430400,1735516800,,,,,,,
+1735516800,1735603200,,,,,,,
+1735603200,1735689600,,,,,,,
