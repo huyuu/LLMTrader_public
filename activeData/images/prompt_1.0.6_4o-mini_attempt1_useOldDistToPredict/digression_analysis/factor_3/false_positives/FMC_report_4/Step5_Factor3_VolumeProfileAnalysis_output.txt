@@ -1,0 +1,3 @@
+Output:
+Factor(price_change=0.5, 
+reason=The current stock price of FMC Corporation is at $54.92, which is above the price range (54.15, 54.65] that had a significant volume of 2,021,400. This indicates that many traders are still in a 'winning' state, adding support for the stock price. Additionally, a recent trend in the volume profile shows a preference towards higher price ranges, suggesting potential further upward movement.)

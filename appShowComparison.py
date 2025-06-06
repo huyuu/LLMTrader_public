@@ -29,7 +29,9 @@ def get_hardcoded_data() -> pd.DataFrame:
                     "prompt_1.0.6_4o-mini_attempt2",
                     "prompt_1.0.6_4.1-mini_attempt1",
                     "prompt_1.2.16_4o-mini_attempt1",
-                    "prompt_2.2.1_4o-mini_attempt2"]
+                    "prompt_2.2.1_4o-mini_attempt2",
+                    "prompt_1.0.6_4o-mini_attempt1_useOldDistToPredict",
+                    ]
     data = {
         "Metric": [
             "Result Folder Name",
@@ -345,6 +347,51 @@ def get_hardcoded_data() -> pd.DataFrame:
             f"{folders_name[5]}/portfolio_value_over_time_using_kelly_fraction_equal_distributed_all_period.png",
             1.38,
             "Unusable as overall, only as seperated factors"
+        ],
+        "prompt_1.0.6_4o-mini_attempt1_useOldDistToPredict": [
+            "prompt1.0.6_gpt-4omini_attempt1_useOldDistToPredict",
+            "Historical Performance",
+            0.08,
+            "X Double Pick",
+            f"{folders_name[6]}/factor_1_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[6]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_1_largeScaleCloseLoopSim.png",
+            f"{folders_name[6]}/portfolio_value_over_time_using_kelly_fraction_using_prediction_by_factor_1.png",
+            1.28,
+            "Candle",
+            0.05,
+            "🟢 Usable in [-10, +15]",
+            f"{folders_name[6]}/factor_2_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[6]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_2_largeScaleCloseLoopSim.png",
+            f"{folders_name[6]}/portfolio_value_over_time_using_kelly_fraction_using_prediction_by_factor_2.png",
+            1.40,
+            "Volume Profile",
+            0.09,
+            "X Complete Flat in [-5, +5]",
+            f"{folders_name[6]}/factor_3_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[6]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_3_largeScaleCloseLoopSim.png",
+            f"{folders_name[6]}/portfolio_value_over_time_using_kelly_fraction_using_prediction_by_factor_3.png",
+            2.03,
+            "Market Trend",
+            0.02,
+            "🟢 Usable in [-15, +20]",
+            f"{folders_name[6]}/factor_4_predicted_vs_actual_scatter_clipped.png",
+            f"{folders_name[6]}/odds_by_prediction_win_rates_and_counts_by_group_for_factor_4_largeScaleCloseLoopSim.png",
+            f"{folders_name[6]}/portfolio_value_over_time_using_kelly_fraction_using_prediction_by_factor_4.png",
+            1.30,
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            f"{folders_name[6]}/win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim_average_actual_price_change_scatter.png",
+            f"{folders_name[6]}/odds_by_prediction_win_rates_and_counts_by_group_for_all_rows_largeScaleCloseLoopSim.png",
+            f"{folders_name[6]}/portfolio_value_over_time_using_kelly_fraction_all_period.png",
+            1.40,
+            f"{folders_name[6]}/portfolio_value_over_time_using_kelly_fraction_equal_distributed_all_period.png",
+            1.39,
+            "Usable in [-7.5, +12]"
         ]
     }
     

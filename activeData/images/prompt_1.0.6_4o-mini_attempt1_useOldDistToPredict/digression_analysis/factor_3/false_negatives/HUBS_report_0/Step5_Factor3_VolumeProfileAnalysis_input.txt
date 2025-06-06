@@ -1,0 +1,163 @@
+System Prompt:
+You are a financial expert tasked with analyzing the influence of the volume profile of a given company on its stock price.
+The volume profile is the price distribution multiplied by the volume distribution of the entire history of the stock.
+
+How this factor influences the stock price:
+
+1.Pattern of Volume Profile:Intuitively, the volume profile reflects how many people have bought the stock at a certain price. Since humans tend to maintain a "winning" state, if the current stock price is higher than the price range where most of the volume was purchased, it means most people are still in a winning state. This will make the price zone with dense volume a support level, making the stock price more likely to rise and less likely to fall.Conversely, if the current stock price is lower than the price range with the most volume in recent history, the dense volume zone will act as resistance. This is because traders holding losing positions will want to return to a "winning" state. When the stock price rises, a large number of these traders may sell to break free from their losses, making the stock price harder to rise and easier to fall. Therefore, the volume profile can be used to predict stock price trends.It is important to note that the volume profile is a dynamic indicator, and its distribution changes over time. Typically, after a major positive news event or earnings report, the stock price may rise to a new recent high. At this stage, the volume profile looks favorable (corresponding to the first scenario), as the new stock price exceeds the price range with most of the previous volume, suggesting the stock price could rise further.Subsequently, as most people become aware of the positive event and enter the market to buy, the volume profile shifts to a higher price range. At a certain point, when the stock price declines, it may enter the second scenario, where a large volume is above the current stock price, causing selling pressure and keeping the stock price at the same level.This is the basic cycle of the volume profile evolution, which is event-driven. As a financial expert, you can use this information to predict stock price trends.The key is to identify the current stage of the volume profile evolution, determine whether it is closer to the first or second scenario, and predict stock price movements accordingly:If it is closer to the first scenario, the stock price may have further upward potential,If it is closer to the second scenario, a significant rise after the earnings report is less likely to occur.
+
+2.Trend of Volume Profile:Following the judgment from 1. Pattern of Volume Profile, if the average cost of the volume distribution shows an upward trend over time, then the likelihood of a price increase is higher.
+
+User Prompt:
+The company name is HubSpot Inc. Common Stock.
+The company's symbol is HUBS.
+
+The company's volume profile is
+price_bin
+(588.045, 588.545]         0
+(588.545, 589.045]         0
+(589.045, 589.545]         0
+(589.545, 590.045]         0
+(590.045, 590.545]         0
+(590.545, 591.045]         0
+(591.045, 591.545]         0
+(591.545, 592.045]         0
+(592.045, 592.545]         0
+(592.545, 593.045]         0
+(593.045, 593.545]         0
+(593.545, 594.045]         0
+(594.045, 594.545]         0
+(594.545, 595.045]         0
+(595.045, 595.545]         0
+(595.545, 596.045]         0
+(596.045, 596.545]         0
+(596.545, 597.045]         0
+(597.045, 597.545]         0
+(597.545, 598.045]         0
+(598.045, 598.545]         0
+(598.545, 599.045]         0
+(599.045, 599.545]         0
+(599.545, 600.045]         0
+(600.045, 600.545]         0
+(600.545, 601.045]         0
+(601.045, 601.545]         0
+(601.545, 602.045]         0
+(602.045, 602.545]         0
+(602.545, 603.045]    396600
+(603.045, 603.545]         0
+(603.545, 604.045]    578500
+(604.045, 604.545]         0
+(604.545, 605.045]         0
+(605.045, 605.545]         0
+(605.545, 606.045]    307900
+(606.045, 606.545]         0
+(606.545, 607.045]         0
+(607.045, 607.545]         0
+(607.545, 608.045]         0
+(608.045, 608.545]         0
+(608.545, 609.045]         0
+(609.045, 609.545]         0
+(609.545, 610.045]    387200
+(610.045, 610.545]         0
+(610.545, 611.045]    518800
+(611.045, 611.545]         0
+(611.545, 612.045]         0
+(612.045, 612.545]    443800
+(612.545, 613.045]    436500
+(613.045, 613.545]         0
+(613.545, 614.045]         0
+(614.045, 614.545]         0
+(614.545, 615.045]         0
+(615.045, 615.545]         0
+(615.545, 616.045]         0
+(616.045, 616.545]         0
+(616.545, 617.045]         0
+(617.045, 617.545]    616300
+(617.545, 618.045]         0
+(618.045, 618.545]         0
+(618.545, 619.045]         0
+(619.045, 619.545]         0
+(619.545, 620.045]         0
+(620.045, 620.545]         0
+(620.545, 621.045]         0
+(621.045, 621.545]         0
+(621.545, 622.045]         0
+(622.045, 622.545]         0
+(622.545, 623.045]         0
+(623.045, 623.545]         0
+(623.545, 624.045]         0
+(624.045, 624.545]         0
+(624.545, 625.045]         0
+(625.045, 625.545]         0
+(625.545, 626.045]         0
+(626.045, 626.545]         0
+(626.545, 627.045]         0
+(627.045, 627.545]         0
+(627.545, 628.045]         0
+(628.045, 628.545]         0
+(628.545, 629.045]    392300
+(629.045, 629.545]         0
+(629.545, 630.045]         0
+(630.045, 630.545]         0
+(630.545, 631.045]         0
+(631.045, 631.545]         0
+(631.545, 632.045]         0
+(632.045, 632.545]         0
+(632.545, 633.045]         0
+(633.045, 633.545]         0
+(633.545, 634.045]         0
+(634.045, 634.545]         0
+(634.545, 635.045]         0
+(635.045, 635.545]         0
+(635.545, 636.045]         0
+(636.045, 636.545]         0
+(636.545, 637.045]         0
+(637.045, 637.545]         0
+(637.545, 638.045]         0
+(638.045, 638.545]         0
+(638.545, 639.045]         0
+(639.045, 639.545]         0
+(639.545, 640.045]         0
+(640.045, 640.545]         0
+(640.545, 641.045]         0
+(641.045, 641.545]         0
+(641.545, 642.045]         0
+(642.045, 642.545]         0
+(642.545, 643.045]         0
+(643.045, 643.545]         0
+(643.545, 644.045]         0
+(644.045, 644.545]         0
+(644.545, 645.045]         0
+(645.045, 645.545]         0
+(645.545, 646.045]         0
+(646.045, 646.545]         0
+(646.545, 647.045]    540600
+(647.045, 647.545]         0
+(647.545, 648.045]         0
+(648.045, 648.545]         0
+(648.545, 649.045]         0
+(649.045, 649.545]         0
+(649.545, 650.045]         0
+(650.045, 650.545]         0
+(650.545, 651.045]         0
+(651.045, 651.545]         0
+(651.545, 652.045]         0
+(652.045, 652.545]         0
+(652.545, 653.045]         0
+(653.045, 653.545]         0
+(653.545, 654.045]         0
+(654.045, 654.545]         0
+(654.545, 655.045]         0
+(655.045, 655.545]         0
+(655.545, 656.045]         0
+(656.045, 656.545]         0
+(656.545, 657.045]         0
+(657.045, 657.545]         0
+(657.545, 658.045]         0
+(658.045, 658.545]         0
+(658.545, 659.045]         0
+(659.045, 659.545]         0
+(659.545, 660.045]         0
+Name: volume, dtype: int64
+
+Current stock price is 603.9099731445312.

@@ -1,0 +1,3 @@
+Output:
+Factor(price_change=3.5, 
+reason=The technical indicators suggest a potential uptrend. The recent candlestick pattern displays signs of consolidation, while the recent trading volume is higher than its long-term moving average, indicating increased demand. Given this context, the market may react positively to upcoming earnings, leading to a price increase.)

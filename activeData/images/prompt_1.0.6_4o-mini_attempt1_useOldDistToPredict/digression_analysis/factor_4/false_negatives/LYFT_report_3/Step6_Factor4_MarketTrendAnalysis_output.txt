@@ -1,0 +1,3 @@
+Output:
+Factor(price_change=-2.5, 
+reason=Lyft Inc. operates in the ride-sharing industry, which is not aligned with current mainstream market trends focused on Renewable Energy, Electric Vehicles, or other technology sectors. Additionally, regulatory scrutiny and negative sentiment from misleading advertisements have raised concerns about Lyft's public image and future prospects, further pressuring its stock price. While partnerships may enhance user engagement, the enduring regulatory challenges and competitive nature of the industry remain significant headwinds.)

@@ -1,0 +1,3 @@
+Output:
+Factor(price_change=8.5, 
+reason=DexCom has shown strong revenue and EBITDA growth of 10.6% and 29.1%, respectively, in Q2 2024 compared to Q1 2024. The company's market position in the growing CGM industry, along with positive recent news regarding expanded access to their products and partnerships with tech firms like Apple, further supports a favorable outlook. The sustained high P/E (around 80s) indicates some market optimism despite a reduction in P/S ratios, suggesting that the high growth potential is factored in. Given the overall positive sentiment and assumed guidance that exceeds analyst expectations, a price change of around 8.5% is anticipated following the upcoming earnings report.)

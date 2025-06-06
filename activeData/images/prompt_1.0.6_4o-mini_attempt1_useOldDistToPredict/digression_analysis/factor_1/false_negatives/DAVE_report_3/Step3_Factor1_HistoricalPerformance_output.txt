@@ -1,0 +1,3 @@
+Output:
+Factor(price_change=-15.0, 
+reason=The financial performance metrics for Dave Inc. demonstrate significant decline in earnings, particularly with a drop in Net Income from $6.358 million in Q2 2024 to $0.466 million in Q3 2024, alongside negative growth in EBITDA and EPS. Additionally, the recent FTC lawsuit and regulatory challenges introduce considerable risk to consumer trust and revenue streams. The overall sentiment in the fintech industry is negative, compounded with potential struggles against competitors perceived as more transparent. As such, it is unlikely that the upcoming earnings report will exceed analysts' expectations, leading to a predicted price decline.)

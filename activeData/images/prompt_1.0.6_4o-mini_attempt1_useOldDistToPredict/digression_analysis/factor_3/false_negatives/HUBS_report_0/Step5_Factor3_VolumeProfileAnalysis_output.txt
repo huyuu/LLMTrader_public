@@ -1,0 +1,3 @@
+Output:
+Factor(price_change=-50.0, 
+reason=The current stock price of 603.91 is significantly lower than the price range where most volume has occurred, which is between 603.045 and 605.545 with substantial volume. This indicates resistance above the current price, suggesting that traders holding losing positions will likely sell if the stock price rises, leading to downward pressure on the stock price.)

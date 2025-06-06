@@ -121,6 +121,10 @@ class CostCalculator:
                 {
                     'month': '2025-03',
                     'miscellaneous_expenses': 50.0
+                },
+                {
+                    'month': '2025-06',
+                    'miscellaneous_expenses':  3.3
                 }
             ]
         )

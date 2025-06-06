@@ -1,0 +1,263 @@
+System Prompt:
+You are a financial expert tasked with analyzing the impact of a company's historical performance metrics on its stock price change (in percentage). These metrics include Revenue, Earnings Per Share (EPS), and Earnings Before Interest, Taxes, Depreciation, and Amortization (EBITDA), among others. Based on the factors and following guidance ,analyzing the financial reports from the most recently published two quarters and predict the price change (in percentage) after the release of the upcoming financial report. Additionally, an important factor influencing the stock price post-earnings report is the company's guidance among the earnings release.
+How this factor influences the stock price:
+1.Consistently Exceeding Expectations: If these indicators consistently exceed analysts' expectations, the stock price is more likely to rise. If they fall short of expectations, the stock price is more likely to decline.
+2.Growth Trends: If these indicators show positive growth, this indicates strong company performance, and the stock price may rise. Conversely, negative growth suggests weak performance, potentially leading to a drop in stock price.
+3.Rate of Change : Accelerated growth in these indicators may amplify stock price increases.Faster declines may intensify stock price drops.
+4.Valuation Reasonableness: Evaluate whether the company's valuation is reasonable by examining its Price-to-Earnings (P/E) ratio and Price-to-Sales (P/S) ratio over the past six months. A higher-than-average P/E or P/S may suggest overvaluation. However, if these ratios have been steadily increasing—indicating that the current price is much higher than the historical average—it could still be justified if the industry or the stock itself is experiencing major positive shifts or tailwinds.
+5.Guidance Above Expectations: If the guidance for the upcoming earnings report exceeds analysts' expectations, the stock price is likely to rise post-earnings release. Therefore, assess whether the upcoming earnings guidance can exceed analysts' expectations based on the financial performance of the last two quarters and recent industry news to predict the stock price post-earnings report.Additionally, search the internet for news from the past two months to evaluate whether the news is positive or negative, and use this to further assess the likelihood of exceeding guidance expectations. For example:Positive News: If the news indicates industry trends such as supply shortages or surging demand, the likelihood of the company raising its guidance and exceeding analysts' expectations increases.Negative News: Conversely, if the news reports industry oversupply, price wars, new competitors entering the market, or shortages in upstream raw materials, the likelihood of the company's guidance falling short of analysts' expectations increases.By combining the analysis of financial data and industry news, please assess whether the company's guidance to be announced during the upcoming earnings call will exceed analysts' expectations.
+
+User Prompt:
+The company name is Root Inc. Class A Common Stock.
+The company's symbol is ROOT.
+The company's overview is
+Root Inc. operates primarily in the insurance technology (InsurTech) industry, focusing on innovative solutions for personal insurance products. The company has recently made headlines with its partnerships and product launches. Notably, Root has entered into a multi-year partnership with Chip Ganassi Racing, which is expected to significantly elevate the brand's visibility and credibility, potentially leading to increased customer acquisition. Additionally, the promotion of Matt Bonakdarpour to President and Chief Technology Officer reflects a strategic leadership shift that may streamline the company's technology initiatives. However, the company is currently facing some reputational challenges due to an embezzlement case involving its former Chief Marketing Officer, which has raised concerns and could impact investor confidence. On the product front, Root has successfully launched a new biotech product aimed at scalp and hair wellness, further diversifying its portfolio. Among its competitors within the InsurTech space, Root's growth trajectory can be compared to others like Lemonade and Metromile, focusing on revenue growth rates and market presence. Root's partnerships with well-respected entities (such as a leading racing team) may position it positively in the marketplace, but the ongoing challenges from the embezzlement scandal must also be considered as a risk factor..
+
+The company's historical performance metrics are
+                                                           2023-09-30 2023-12-31
+Tax Effect Of Unusual Items                                       NaN        NaN
+Tax Rate For Calcs                                                NaN        NaN
+Net Income From Continuing Operation Net Minority Interest        NaN        NaN
+Reconciled Depreciation                                           NaN        NaN
+EBIT                                                              NaN        NaN
+Net Interest Income                                               NaN        NaN
+Interest Expense                                                  NaN        NaN
+Interest Income                                                   NaN        NaN
+Normalized Income                                                 NaN        NaN
+Net Income From Continuing And Discontinued Operation             NaN        NaN
+Total Expenses                                                    NaN        NaN
+Diluted Average Shares                                            NaN        NaN
+Basic Average Shares                                              NaN        NaN
+Diluted EPS                                                       NaN        NaN
+Basic EPS                                                      -12.72     -10.23
+Diluted NI Availto Com Stockholders                               NaN        NaN
+Net Income Common Stockholders                                    NaN        NaN
+Net Income                                                        NaN        NaN
+Net Income Including Noncontrolling Interests                     NaN        NaN
+Net Income Continuous Operations                                  NaN        NaN
+Tax Provision                                                     NaN        NaN
+Pretax Income                                                     NaN        NaN
+Other Income Expense                                              NaN        NaN
+Net Non Operating Interest Income Expense                         NaN        NaN
+Interest Expense Non Operating                                    NaN        NaN
+Other Operating Expenses                                          NaN        NaN
+Selling General And Administration                                NaN        NaN
+Selling And Marketing Expense                                     NaN        NaN
+General And Administrative Expense                                NaN        NaN
+Other Gand A                                                      NaN        NaN
+Total Revenue                                                     NaN        NaN
+Operating Revenue                                                 NaN        NaN
+Loss Adjustment Expense                                           NaN        NaN
+Net Policyholder Benefits And Claims                              NaN        NaN
+Policyholder Benefits Gross                                       NaN        NaN
+Policyholder Benefits Ceded                                       NaN        NaN
+Treasury Shares Number                                            0.0        0.0
+Ordinary Shares Number                                            NaN        NaN
+Share Issued                                                      NaN        NaN
+Total Debt                                                        NaN        NaN
+Tangible Book Value                                               NaN        NaN
+Invested Capital                                                  NaN        NaN
+Net Tangible Assets                                               NaN        NaN
+Common Stock Equity                                               NaN        NaN
+Total Capitalization                                              NaN        NaN
+Total Equity Gross Minority Interest                              NaN        NaN
+Stockholders Equity                                               NaN        NaN
+Gains Losses Not Affecting Retained Earnings                      NaN        NaN
+Other Equity Adjustments                                          NaN        NaN
+Retained Earnings                                                 NaN        NaN
+Additional Paid In Capital                                        NaN        NaN
+Capital Stock                                                     NaN        NaN
+Common Stock                                                      NaN        NaN
+Total Liabilities Net Minority Interest                           NaN        NaN
+Preferred Securities Outside Stock Equity                         NaN        NaN
+Long Term Debt And Capital Lease Obligation                       NaN        NaN
+Long Term Debt                                                    NaN        NaN
+Payables And Accrued Expenses                                     NaN        NaN
+Current Accrued Expenses                                    7900000.0  7900000.0
+Interest Payable                                            7900000.0  7900000.0
+Payables                                                          NaN        NaN
+Accounts Payable                                                  NaN        NaN
+Total Assets                                                      NaN        NaN
+Investments And Advances                                          NaN        NaN
+Net PPE                                                           NaN  2800000.0
+Prepaid Assets                                                    NaN        NaN
+Receivables                                                       NaN        NaN
+Accounts Receivable                                               NaN        NaN
+Cash Cash Equivalents And Short Term Investments                  NaN        NaN
+Other Short Term Investments                                      NaN        NaN
+Cash And Cash Equivalents                                         NaN        NaN
+Free Cash Flow                                                    NaN        NaN
+Repurchase Of Capital Stock                                       0.0 -3000000.0
+Issuance Of Debt                                                  0.0        0.0
+Capital Expenditure                                               NaN        NaN
+End Cash Position                                                 NaN        NaN
+Beginning Cash Position                                           NaN        NaN
+Changes In Cash                                                   NaN        NaN
+Financing Cash Flow                                               NaN        NaN
+Cash Flow From Continuing Financing Activities                    NaN        NaN
+Net Other Financing Charges                                       NaN        NaN
+Proceeds From Stock Option Exercised                        -300000.0  -200000.0
+Net Preferred Stock Issuance                                      0.0 -3000000.0
+Preferred Stock Payments                                          0.0 -3000000.0
+Net Issuance Payments Of Debt                                     0.0        0.0
+Long Term Debt Issuance                                           0.0        0.0
+Investing Cash Flow                                               NaN        NaN
+Cash Flow From Continuing Investing Activities                    NaN        NaN
+Net Investment Purchase And Sale                                  NaN        NaN
+Sale Of Investment                                                NaN        NaN
+Purchase Of Investment                                            NaN        NaN
+Net Intangibles Purchase And Sale                                 0.0        0.0
+Purchase Of Intangibles                                           0.0        0.0
+Net PPE Purchase And Sale                                         NaN        NaN
+Purchase Of PPE                                                   NaN        NaN
+Capital Expenditure Reported                                      NaN        NaN
+Operating Cash Flow                                               NaN        NaN
+Cash Flow From Continuing Operating Activities                    NaN        NaN
+Change In Working Capital                                         NaN        NaN
+Change In Other Current Liabilities                               NaN        NaN
+Change In Other Current Assets                                    NaN        NaN
+Change In Payables And Accrued Expense                            NaN        NaN
+Change In Payable                                                 NaN        NaN
+Change In Account Payable                                         NaN        NaN
+Change In Prepaid Assets                                          NaN        NaN
+Change In Receivables                                             NaN        NaN
+Changes In Account Receivables                                    NaN        NaN
+Other Non Cash Items                                       -5300000.0  3500000.0
+Stock Based Compensation                                          NaN        NaN
+Depreciation And Amortization                                     NaN        NaN
+Net Income From Continuing Operations                             NaN        NaN
+Gross Margin                                                     <NA>       <NA>
+ROE                                                               NaN        NaN
+Revenue YOY Growth                                                NaN        NaN
+EBITDA                                                           <NA>       <NA>
+EBITDA YOY Growth                                                <NA>       <NA>
+
+The company's P/E ratio transition is
+            pe_ratio_transition
+date                           
+2023-08-24            -0.714894
+2023-08-25            -0.758156
+2023-08-28            -0.751064
+2023-08-29            -0.792199
+2023-08-30            -0.827660
+2023-08-31            -0.811347
+2023-09-01            -0.836879
+2023-09-05            -0.835461
+2023-09-06            -0.828369
+2023-09-07            -0.821277
+2023-09-08            -0.797163
+2023-09-11            -0.817021
+2023-09-12            -0.796454
+2023-09-13            -0.765248
+2023-09-14            -0.773050
+2023-09-15            -0.748227
+2023-09-18            -0.750355
+2023-09-19            -0.746099
+2023-09-20            -0.765957
+2023-09-21            -0.736879
+2023-09-22            -0.723404
+2023-09-25            -0.702128
+2023-09-26            -0.691489
+2023-09-27            -0.678723
+2023-09-28            -0.673759
+2023-09-29            -0.674468
+2023-10-02            -0.694182
+2023-10-03            -0.665094
+2023-10-04            -0.698113
+2023-10-05            -0.704403
+2023-10-06            -0.748428
+2023-10-09            -0.768868
+2023-10-10            -0.779088
+2023-10-11            -0.819182
+2023-10-12            -0.790094
+2023-10-13            -0.757075
+2023-10-16            -0.794811
+2023-10-17            -0.800314
+2023-10-18            -0.763365
+2023-10-19            -0.740566
+2023-10-20            -0.724843
+2023-10-23            -0.721698
+2023-10-24            -0.753145
+2023-10-25            -0.715409
+2023-10-26            -0.715409
+2023-10-27            -0.679245
+2023-10-30            -0.674528
+2023-10-31            -0.710692
+2023-11-01            -0.695755
+2023-11-02            -0.809748
+2023-11-03            -0.781447
+2023-11-06            -0.789308
+2023-11-07            -0.829403
+2023-11-08            -0.796384
+2023-11-09            -0.775943
+2023-11-10            -0.772799
+2023-11-13            -0.833333
+2023-11-14            -0.738994
+2023-11-15            -0.770440
+2023-11-16            -0.744497
+2023-11-17            -0.742138
+2023-11-20            -0.762579
+2023-11-21            -0.740566
+2023-11-22            -0.741352
+2023-11-24            -0.765723
+2023-11-27            -0.723270
+2023-11-28            -0.748428
+2023-11-29            -0.758648
+2023-11-30            -0.760220
+2023-12-01            -0.829403
+2023-12-04            -0.973664
+2023-12-05            -0.933962
+2023-12-06            -0.904088
+2023-12-07            -0.805818
+2023-12-08            -0.841195
+2023-12-11            -0.811321
+2023-12-12            -0.773585
+2023-12-13            -0.776730
+2023-12-14            -0.823113
+2023-12-15            -0.827044
+2023-12-18            -0.818396
+2023-12-19            -0.833333
+2023-12-20            -0.822327
+2023-12-21            -0.847484
+2023-12-22            -0.852987
+2023-12-26            -0.871069
+2023-12-27            -0.842767
+2023-12-28            -0.829403
+2023-12-29            -0.823899
+2024-01-02            -1.023460
+2024-01-03            -1.026393
+2024-01-04            -1.021505
+2024-01-05            -1.041056
+2024-01-08            -1.086999
+2024-01-09            -1.055718
+2024-01-10            -1.034213
+2024-01-11            -0.994135
+2024-01-12            -0.956012
+2024-01-16            -0.888563
+2024-01-17            -0.913979
+2024-01-18            -0.892473
+2024-01-19            -0.870968
+2024-01-22            -0.891496
+2024-01-23            -0.879765
+2024-01-24            -0.861193
+2024-01-25            -0.860215
+2024-01-26            -0.856305
+2024-01-29            -0.844575
+2024-01-30            -0.823069
+2024-01-31            -0.791789
+2024-02-01            -0.801564
+2024-02-02            -0.788856
+2024-02-05            -0.745846
+2024-02-06            -0.745846
+2024-02-07            -0.718475
+2024-02-08            -0.722385
+2024-02-09            -0.740958
+2024-02-12            -0.825024
+2024-02-13            -0.788856
+2024-02-14            -0.852395
+2024-02-15            -0.891496
+2024-02-16            -0.870968
+2024-02-20            -0.886608
+
+The company's P/S ratio transition is
+None

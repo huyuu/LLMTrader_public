@@ -1,0 +1,3 @@
+Output:
+Factor(price_change=75.0, 
+reason=QuantumScape Corporation (QS) operates in the electric vehicle (EV) battery industry, which aligns with the current long-term trend of Electric Vehicles. The significant advancements and partnerships, particularly with PowerCo, contribute positively to investor sentiment and projected growth. Confidence in the price movement is high due to the promising trajectory of solid-state battery technology, which is essential for the evolving EV market.)
