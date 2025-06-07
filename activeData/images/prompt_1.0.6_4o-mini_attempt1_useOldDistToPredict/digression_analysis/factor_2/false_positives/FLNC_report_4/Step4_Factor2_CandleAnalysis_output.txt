@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=12.0, 
-reason=The candlestick chart shows a recent increase in price with several upward trends, including a notable rise on November 25, 2024. The 20-day moving average of the closing price is also above the 60-day moving average, indicating an ongoing uptrend. Additionally, the trading volume has spiked recently, particularly on days when price movements were positive, suggesting strong market interest. Following the earnings report, positive momentum is expected, indicating a potential price increase.)

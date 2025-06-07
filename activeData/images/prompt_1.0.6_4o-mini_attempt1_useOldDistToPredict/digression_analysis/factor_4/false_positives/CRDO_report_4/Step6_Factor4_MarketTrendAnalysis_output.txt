@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=245.0, 
-reason=Credo Technology Group Holding Ltd (CRDO) operates in the semiconductor sector, which is in line with the current market trend for Artificial Intelligence and Semiconductors. The company's impressive fiscal earnings, forward guidance, and strong demand for AI-related technologies have contributed significantly to its stock price surge.)

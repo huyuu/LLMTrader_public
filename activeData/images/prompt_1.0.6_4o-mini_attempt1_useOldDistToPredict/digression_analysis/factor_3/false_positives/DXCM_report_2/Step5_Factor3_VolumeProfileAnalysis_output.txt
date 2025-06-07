@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=1.5, 
-reason=The current stock price of DexCom Inc. (DXCM) at 111.94 is situated above the price range of 111.5 to 112.0, where there is a significant volume of 7618000 shares transacted. This suggests that many traders are in a 'winning' position. The dense volume area below 112 acts as a support level, making it likely for the stock price to rise further as it is not facing immediate resistance from the volume profile.)

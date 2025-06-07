@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=-15.0, 
-reason=Rubrik Inc. has shown a consistent decline in its financial metrics, specifically in Net Income and EBITDA over the last two quarters, indicating ongoing losses and financial struggles. Although the company’s innovative strategies and partnerships might improve future outlooks, the recent performance does not support exceeding guidance expectations. Analysts are likely to adjust their forecasts downward, impacting stock price negatively post-earnings announcement.)

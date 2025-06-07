@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=-1.5, 
-reason=The current regulatory challenges for Dave Inc. (DAVE) raised by the FTC lawsuit have negatively impacted consumer trust, leading to concerns about operational viability. The fintech sector is facing scrutiny during a time when investors may prefer companies with transparent practices, consequently making DAVE's stock price more likely to decline despite being in the fintech trend.)

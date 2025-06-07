@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=-5.0, 
-reason=Corteva Inc.'s recent trading has displayed a sharp decline with an emphasis on increasing volume during downward moves. The latest candlestick indicates bearish sentiment, and a crucial support level seems to be under threat, suggesting a potential further decline after the earnings report.)

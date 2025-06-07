@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=-1.0, 
-reason=The current stock price of 40.34 is above the price range where most of the volume was concentrated (40.0 - 40.5), indicating the presence of resistance. This resistance is likely to be felt from traders who bought in that range and may choose to sell to break even. Therefore, the stock price is likely to face downward pressure.)

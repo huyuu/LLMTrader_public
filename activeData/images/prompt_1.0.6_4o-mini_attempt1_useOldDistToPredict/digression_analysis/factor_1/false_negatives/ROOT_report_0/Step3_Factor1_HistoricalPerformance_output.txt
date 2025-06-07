@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=-10.0, 
-reason=Root Inc. has faced reputational challenges due to an embezzlement case involving its former CMO, which may impact investor confidence despite positive growth indicators like partnerships and product launches. Given the negative news related to the scandal, it's likely the company's guidance may not exceed expectations, resulting in a predicted stock price decrease.)

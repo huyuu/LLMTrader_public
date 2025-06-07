@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=100.0, 
-reason=The current stock price of 9655.67 is above the highest volume price range (9655.53, 9656.03] and based on the volume profile, this implies most traders are currently in a winning state. Consequently, the price zone with dense volume below this level will serve as support, making it likely for the stock price to rise further.)

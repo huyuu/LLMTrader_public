@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=15.0, 
-reason=The candlestick chart indicates a recent bullish trend with the stock moving steadily higher in the days leading up to the earnings report. There has been a notable increase in trading volume, which suggests higher demand and market interest. Additionally, the closing price has settled above the short-term moving averages, reinforcing the bullish momentum. Given these factors, a positive earnings surprise could further catalyze the stock price, projecting an estimated 15% increase in response to the earnings report.)

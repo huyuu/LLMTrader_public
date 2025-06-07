@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=-7.5, 
-reason=The recent candlestick patterns indicate a bearish trend, especially with adverse price movements and low trading volumes leading up to the earnings report. Additionally, the stock has shown signs of increased volatility, typical of market reactions to earnings announcements, which may lead to further declines.)

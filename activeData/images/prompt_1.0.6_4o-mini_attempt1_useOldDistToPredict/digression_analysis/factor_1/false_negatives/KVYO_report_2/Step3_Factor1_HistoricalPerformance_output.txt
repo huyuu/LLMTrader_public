@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=-10.0, 
-reason=Despite the improvement in Total Revenue and a significant reduction in Net Income losses from the previous quarter, Klaviyo's guidance is likely to fall short of analysts' expectations. The recent market news indicates heightened competition and potential oversupply in the digital marketing space which may constrain growth. Additionally, the company's negative EPS trend and high P/S ratio suggest that the stock may be overvalued, making downside risk more likely.)

@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=15.0, 
-reason=Fluence Energy Inc. has shown a strong recovery with record performance in recent quarters and positive guidance for 2025. The company has secured significant contracts, indicating robust demand, which aligns with favorable trends in the renewable energy sector. Furthermore, the positive news surrounding market expansion and growth in international operations suggests that guidance will likely exceed analyst expectations, supporting a potential rise in stock price.)

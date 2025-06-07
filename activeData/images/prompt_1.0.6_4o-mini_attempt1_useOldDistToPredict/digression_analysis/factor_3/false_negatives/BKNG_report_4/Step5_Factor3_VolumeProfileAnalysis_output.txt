@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=-50.0, 
-reason=The current stock price is below the price range where the highest volume occurred (4899.07, 4900.07] with significant resistance). This indicates that many traders are holding losing positions and are likely to sell as the price approaches or exceeds this area, putting pressure on the price to decline.)

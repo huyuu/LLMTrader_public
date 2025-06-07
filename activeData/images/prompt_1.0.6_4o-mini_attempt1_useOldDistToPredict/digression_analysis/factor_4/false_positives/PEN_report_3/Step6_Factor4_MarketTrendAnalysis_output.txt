@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=85.0, 
-reason=Penumbra Inc. operates in the medical device industry, which is not aligned with the current mainstream market trends that include Renewable Energy, Electric Vehicles, and similar sectors. Although the company has shown progress with its advancements in thrombectomy solutions and has garnered market attention, the lack of direct connection to popular market trends may limit the positive upward pressure on its stock price. Short-term movements may be influenced by specific news but overall attractiveness is overshadowed by the prevailing trends in growth sectors like renewables or AI.)

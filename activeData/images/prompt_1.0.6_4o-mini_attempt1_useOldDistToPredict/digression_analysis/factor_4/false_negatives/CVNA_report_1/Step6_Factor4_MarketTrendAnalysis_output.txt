@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=-2.5, 
-reason=Carvana operates primarily in the online auto retail industry, which is currently not aligned with prevailing market trends like Renewable Energy and Electric Vehicles. Despite positive company developments (e.g., expansion of same-day delivery and opening new vending machines), market trends are more favorable towards renewable initiatives and technologies rather than auto retail, suggesting limited stock price momentum.)

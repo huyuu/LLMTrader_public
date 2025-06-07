@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=176.0, 
-reason=Nu Holdings Ltd. benefits from a favorable fintech market trend, with its successful customer acquisition strategies making it appealing even amid a regional fintech crisis, leading to a significant share price surge.)

@@ -1,3 +1,0 @@
-Output:
-Factor(price_change=-50.0, 
-reason=The current stock price is below the volume profile's highest volume nodes (1153.38-1154.38 and 1242.88-1243.38) which serves as resistance. Significant selling pressure is likely as traders holding shares at these levels may want to sell to break even or minimize losses, which could lead to downward movement in price.)
