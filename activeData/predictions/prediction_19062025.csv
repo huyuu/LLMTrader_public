@@ -1,0 +1,5 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+ACN,Accenture plc Class A Ordinary Shares (Ireland),207932835909.0,4590782,0,True,2025-06-20,Before market open,306.38,5.69,"[5.0, 4.5, 0.5, 10.0]","[0.245, 0.19, 0.215, 0.35]",0.75,5.69,0.75,0.75,150.70736820586166,0.0
+KR,Kroger Company (The) Common Stock,43301740482.0,12251624,0,True,2025-06-20,Before market open,65.52,4.29,"[5.0, 5.5, 1.5, 5.0]","[0.26, 0.18, 0.23, 0.33]",0.8,4.29,0.8,0.89,178.4874998576115,2.0
+KMX,CarMax Inc,9822176194.0,5620296,0,True,2025-06-20,Before market open,64.33,2.09,"[10.0, -5.0, 1.5, 0.15]","[0.26, 0.18, 0.23, 0.33]",0.4,2.09,0.4,1.02,203.81634121454394,3.0
+DRI,Darden Restaurants Inc. Common Stock,26067596297.0,2671963,0,True,2025-06-20,Before market open,222.75,-3.79,"[-5.0, 3.5, 1.5, -10.0]","[0.25, 0.18, 0.22, 0.35]",0.5,-3.79,0.5,0.3,59.162952824713194,0.0

@@ -4,6 +4,8 @@ import re
 import pandas as pd
 import streamlit as st
 import sys
+import glob
+from datetime import datetime
 
 # Add the src directory to the path to import our cost calculator
 sys.path.append('src')
@@ -13,6 +15,7 @@ from calculateCostForEachMonth import CostCalculator
 # 1. CONFIG
 ###############################################################################
 IMAGE_DIR  = "activeData/images"             # updated path to match new hierarchy
+PREDICTIONS_DIR = "activeData/predictions"   # directory containing prediction CSV files
 
 
 ###############################################################################
@@ -409,6 +412,30 @@ def get_cost_data() -> pd.DataFrame:
     return calculator.calculate_costs_for_each_month()
 
 
+@st.cache_data
+def get_prediction_files() -> list:
+    """
+    Returns a list of CSV files in the predictions directory.
+    """
+    if not os.path.exists(PREDICTIONS_DIR):
+        return []
+    
+    csv_files = glob.glob(os.path.join(PREDICTIONS_DIR, "*.csv"))
+    # Return just the filename without the full path
+    return [os.path.basename(f) for f in csv_files]
+
+
+@st.cache_data
+def load_prediction_csv(filename: str) -> pd.DataFrame:
+    """
+    Load a specific prediction CSV file and return as DataFrame.
+    """
+    filepath = os.path.join(PREDICTIONS_DIR, filename)
+    if os.path.exists(filepath):
+        return pd.read_csv(filepath)
+    return pd.DataFrame()
+
+
 # Load the hardcoded data
 df = get_hardcoded_data()
 
@@ -421,7 +448,7 @@ st.sidebar.title("📊 Dashboard")
 # View selector - using selectbox instead of radio
 view_mode = st.sidebar.selectbox(
     "Choose view:",
-    ["📌 Prompts", "💰 Costs"],
+    ["📌 Prompts", "💰 Costs", "🔮 Predictions"],
     index=0
 )
 
@@ -448,6 +475,20 @@ if view_mode == "📌 Prompts":
 elif view_mode == "💰 Costs":
     st.sidebar.title("💰 Cost Analysis")
     st.sidebar.write("Monthly cost breakdown for all services")
+
+elif view_mode == "🔮 Predictions":
+    st.sidebar.title("🔮 Predictions")
+    prediction_files = get_prediction_files()
+    
+    if prediction_files:
+        selected_prediction_file = st.sidebar.selectbox(
+            "Choose a prediction file:",
+            prediction_files,
+            index=0
+        )
+    else:
+        selected_prediction_file = None
+        st.sidebar.write("No prediction files found")
 
 
 ###############################################################################
@@ -626,3 +667,129 @@ elif view_mode == "💰 Costs":
     except Exception as e:
         st.error(f"Error loading cost data: {e}")
         st.info("Please ensure the cost calculation module is properly configured and the CSV files are accessible.")
+
+elif view_mode == "🔮 Predictions":
+    # Predictions display logic
+    st.header("🔮 Trading Predictions")
+    
+    prediction_files = get_prediction_files()
+    
+    if not prediction_files:
+        st.warning("No prediction files found in the predictions directory.")
+        st.info(f"Please add CSV files to the `{PREDICTIONS_DIR}` directory.")
+    else:
+        # File overview section
+        st.markdown("### 📋 Available Prediction Files")
+        
+        # Create a summary table of all files
+        file_info = []
+        for filename in prediction_files:
+            filepath = os.path.join(PREDICTIONS_DIR, filename)
+            if os.path.exists(filepath):
+                # Get file info
+                file_stats = os.stat(filepath)
+                file_size = file_stats.st_size
+                mod_time = datetime.fromtimestamp(file_stats.st_mtime)
+                
+                # Try to get row count
+                try:
+                    df_temp = pd.read_csv(filepath)
+                    row_count = len(df_temp)
+                except:
+                    row_count = "N/A"
+                
+                file_info.append({
+                    'Filename': filename,
+                    'Size (KB)': f"{file_size/1024:.1f}",
+                    'Rows': row_count,
+                    'Last Modified': mod_time.strftime('%Y-%m-%d %H:%M')
+                })
+        
+        files_df = pd.DataFrame(file_info)
+        st.dataframe(files_df, use_container_width=True, hide_index=True)
+        
+        # File selection and download section
+        st.markdown("### 📥 Download Files")
+        
+        # Create download buttons for each file
+        for filename in prediction_files:
+            filepath = os.path.join(PREDICTIONS_DIR, filename)
+            
+            if os.path.exists(filepath):
+                # Load file content for download
+                with open(filepath, 'rb') as file:
+                    file_content = file.read()
+                
+                # Create columns for filename and download button
+                col1, col2 = st.columns([3, 1])
+                
+                with col1:
+                    st.write(f"📄 **{filename}**")
+                
+                with col2:
+                    st.download_button(
+                        label="⬇️ Download",
+                        data=file_content,
+                        file_name=filename,
+                        mime="text/csv",
+                        key=f"download_{filename}"
+                    )
+        
+        # File preview section
+        if prediction_files:
+            st.markdown("### 👀 File Preview")
+            
+            selected_file = st.selectbox(
+                "Select a file to preview:",
+                prediction_files,
+                index=0
+            )
+            
+            if selected_file:
+                try:
+                    df_preview = load_prediction_csv(selected_file)
+                    
+                    if not df_preview.empty:
+                        st.markdown(f"**Preview of {selected_file}:**")
+                        
+                        # Show basic info
+                        col1, col2, col3 = st.columns(3)
+                        with col1:
+                            st.metric("Total Rows", len(df_preview))
+                        with col2:
+                            st.metric("Total Columns", len(df_preview.columns))
+                        with col3:
+                            # Check if there are any predictions
+                            if 'symbol' in df_preview.columns:
+                                st.metric("Unique Symbols", df_preview['symbol'].nunique())
+                        
+                        # Show the data
+                        st.dataframe(df_preview, use_container_width=True)
+                        
+                        # Show column information
+                        with st.expander("📊 Column Information"):
+                            col_info = pd.DataFrame({
+                                'Column': df_preview.columns,
+                                'Data Type': df_preview.dtypes.astype(str),
+                                'Non-Null Count': df_preview.count(),
+                                'Null Count': df_preview.isnull().sum()
+                            }).reset_index(drop=True)
+                            st.dataframe(col_info, use_container_width=True, hide_index=True)
+                        
+                        # Additional download option in preview section
+                        with open(os.path.join(PREDICTIONS_DIR, selected_file), 'rb') as file:
+                            file_content = file.read()
+                        
+                        st.download_button(
+                            label=f"⬇️ Download {selected_file}",
+                            data=file_content,
+                            file_name=selected_file,
+                            mime="text/csv",
+                            key=f"preview_download_{selected_file}"
+                        )
+                        
+                    else:
+                        st.warning(f"The file {selected_file} appears to be empty or could not be loaded.")
+                        
+                except Exception as e:
+                    st.error(f"Error loading {selected_file}: {e}")
