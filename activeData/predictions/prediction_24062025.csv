@@ -1,0 +1,6 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+BB,BlackBerry Limited Common Stock,2574720000.0,14872641,0,True,2025-06-24,After market close,4.32,7.26,"[5.0, 5.5, 0.1, 15.0]","[0.26, 0.18, 0.23, 0.33]",0.7,7.26,0.7,1.13,226.38811252367813,52.0
+AVAV,AeroVironment Inc. Common Stock,5396289156.0,966838,0,True,2025-06-24,After market close,191.23,5.99,"[7.5, 6.0, -1.0, 10.0]","[0.17, 0.21, 0.25, 0.37]",0.75,5.99,0.75,0.81,162.62734098609423,0.0
+PAYX,Paychex Inc. Common Stock,54478838535.0,2337927,0,True,2025-06-25,Before market open,151.25,4.15,"[5.5, 5.0, 1.0, 5.0]","[0.17, 0.19, 0.235, 0.405]",0.75,4.15,0.75,0.94,188.42284985897905,1.0
+FDX,FedEx Corporation Common Stock,54923260202.0,2039750,0,True,2025-06-24,After market close,229.23,3.53,"[5.0, 4.5, -1.0, 5.0]","[0.245, 0.18, 0.23, 0.345]",0.65,3.53,0.65,0.88,175.71863095640634,0.0
+GIS,General Mills Inc. Common Stock,29280200553.0,6468222,0,True,2025-06-25,Before market open,53.47,-0.38,"[4.5, -4.5, 0.0, -2.5]","[0.29, 0.18, 0.18, 0.35]",0.4,-0.38,0.4,0.39,77.65441645603894,1.0
