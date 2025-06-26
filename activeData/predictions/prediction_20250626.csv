@@ -1,0 +1,3 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+NKE,Nike Inc. Common Stock,89784501324.0,12148690,0,True,2025-06-26,After market close,60.83,4.88,"[5.0, 5.0, 5.0, 5.0]","[0.25, 0.2, 0.225, 0.3]",0.8,4.88,0.8,0.97,194.71541691914678,3.0
+CNXC,Concentrix Corporation Common Stock,3460567949.0,932193,0,True,2025-06-26,After market close,54.17,4.2,"[5.0, 5.0, 1.5, 5.0]","[0.26, 0.18, 0.23, 0.33]",0.75,4.2,0.75,0.86,171.53401170284275,3.0
