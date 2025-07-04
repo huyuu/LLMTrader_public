@@ -100,11 +100,11 @@ class ConfigLoader:
 
             cls.config_cls["conids_file_path"] = os.path.join(cls.config_cls["active_data_folder_path"], "conids_for_symbols.csv")
 
-            # update real_trader_using_prediction_folder_name:
-            if cls.config_cls["real_trader_using_prediction_folder_name"] == 'tempData':
-                cls.config_cls["real_trader_using_prediction_folder_path"] = cls.config_cls["temp_data_folder_path"]
-            else:
-                cls.config_cls["real_trader_using_prediction_folder_path"] = os.path.join(cls.config_cls["archieve_data_folder_path"], cls.config_cls["real_trader_using_prediction_folder_name"])
+            # # update real_trader_using_prediction_folder_name:
+            # if cls.config_cls["real_trader_using_prediction_folder_name"] == 'tempData':
+            #     cls.config_cls["real_trader_using_prediction_folder_path"] = cls.config_cls["temp_data_folder_path"]
+            # else:
+            #     cls.config_cls["real_trader_using_prediction_folder_path"] = os.path.join(cls.config_cls["archieve_data_folder_path"], cls.config_cls["real_trader_using_prediction_folder_name"])
 
             cls.config_cls["large_scale_close_loop_sim_history_data_folder_path"] = os.path.join(cls.config_cls["archieve_data_folder_path"], cls.config_cls["large_scale_close_loop_sim_history_data_folder_name"])
 

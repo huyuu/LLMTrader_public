@@ -89,7 +89,6 @@ class RealTrader(ConfigLoader):
                 ))
 
         print(f"actual investment : {actual_investment_sum / total_asset * 100} %")
-        ConfigLoader.set_terminate_signal()
         sleep(5)
         exit(0)
             

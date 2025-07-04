@@ -57,7 +57,7 @@ class IBTwsAPIHandler(EWrapper, EClient, BrokerHandler):
         return True
 
     def run(self):
-        while not ConfigLoader.config_cls["should_terminate"].is_set():
+        while True:
             super().run()
 
     def get_balance(self):
