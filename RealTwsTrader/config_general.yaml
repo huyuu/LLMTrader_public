@@ -75,6 +75,8 @@ is_using_real_account: true
 real_trader_asset_USD: 40000 # [USD] set to 0 to use all assets in the account
 real_trader_using_prediction_file_name: "prediction_20250630.csv"
 
+
+
 # kelly fraction calculator
 large_scale_close_loop_sim_history_data_folder_name: "prompt1.0.6_gpt-4omini_attempt1_final"
 kelly_combine_region_threshold: 2.0 
