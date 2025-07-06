@@ -13,11 +13,31 @@ import shutil
 from datetime import datetime, timedelta
 import platform
 from time import sleep
+import yaml
+import pywinauto
+from pywinauto.keyboard import send_keys
 
 
 class AutomatedPredictor(ConfigLoader):
     def __init__(self):
         super().__init__()
+        self._load_tws_credentials()
+        
+    def _load_tws_credentials(self):
+        """Load TWS credentials from config (already loaded from config_confidential.yaml)"""
+        try:
+            self.tws_username = self.config.get("ib_id")
+            self.tws_password = self.config.get("ib_password")
+            
+            if not self.tws_username or not self.tws_password:
+                print(f"{self.yellow_color_code}Warning: TWS credentials not found in config{self.reset_color_code}")
+                self.tws_username = None
+                self.tws_password = None
+                
+        except Exception as e:
+            print(f"{self.yellow_color_code}Warning: Could not load TWS credentials: {e}{self.reset_color_code}")
+            self.tws_username = None
+            self.tws_password = None
         
     def run_automated_prediction(self):
         """
@@ -80,9 +100,44 @@ class AutomatedPredictor(ConfigLoader):
                 print("Waiting for TWS to launch (60 seconds)...")
                 sleep(60)
                 
+                # Auto-login if credentials are available
+                if self.tws_username and self.tws_password:
+                    print("Attempting auto-login...")
+                    self._auto_login_tws()
+                else:
+                    input("Please login manually and press Enter once connected...")
+                
         except Exception as e:
             print(f"{self.yellow_color_code}Warning: Unable to launch TWS automatically: {e}{self.reset_color_code}")
             input("Please launch TWS manually and press Enter once connected...")
+    
+    def _auto_login_tws(self):
+        """Auto-login to TWS using keyboard input"""
+        try:
+            # Wait a bit more for login dialog to appear
+            sleep(5)
+            
+            # Enter username
+            send_keys(self.tws_username)
+            sleep(1)
+            
+            # Tab to password field
+            send_keys("{TAB}")
+            sleep(1)
+            
+            # Enter password
+            send_keys(self.tws_password)
+            sleep(1)
+            
+            # Press Enter to login
+            send_keys("{ENTER}")
+            sleep(5)
+            
+            print(f"{self.green_color_code}Auto-login attempt completed{self.reset_color_code}")
+            
+        except Exception as e:
+            print(f"{self.yellow_color_code}Auto-login failed: {e}{self.reset_color_code}")
+            print("Please login manually.")
     
     def _execute_real_trader(self):
         """

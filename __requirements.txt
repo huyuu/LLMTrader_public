@@ -3,3 +3,4 @@ yaml
 pytz
 pandas
 xmltodict
+pywinauto

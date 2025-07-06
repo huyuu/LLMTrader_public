@@ -122,6 +122,10 @@ class ConfigLoader:
             if not os.path.exists(cls.config_cls["sp500_cache_folder"]):
                 os.makedirs(cls.config_cls["sp500_cache_folder"])
 
+        if os.path.exists(cls.config_cls["config_confidential_file_path"]):
+            with open(cls.config_cls["config_confidential_file_path"], "r") as file:
+                # update config_cls with the new values
+                cls.config_cls.update(yaml.safe_load(file))
 
     def update_submodule(self, submodule: str):
         """
