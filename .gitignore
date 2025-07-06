@@ -2,3 +2,4 @@ temp/
 
 src/__pycache__/
 RealTwsTrader/__pycache__/
+RealTwsTrader/ibapi/__pycache__/

@@ -26,8 +26,8 @@ class AutomatedPredictor(ConfigLoader):
     def _load_tws_credentials(self):
         """Load TWS credentials from config (already loaded from config_confidential.yaml)"""
         try:
-            self.tws_username = self.config.get("ib_id")
-            self.tws_password = self.config.get("ib_password")
+            self.tws_username = self.config["ib_id"]
+            self.tws_password = self.config["ib_password"]
             
             if not self.tws_username or not self.tws_password:
                 print(f"{self.yellow_color_code}Warning: TWS credentials not found in config{self.reset_color_code}")
@@ -96,16 +96,17 @@ class AutomatedPredictor(ConfigLoader):
                 # Wait for user to launch TWS
                 input("Press Enter once TWS is launched and connected...")
             else:
-                # Wait a bit for TWS to launch
-                print("Waiting for TWS to launch (60 seconds)...")
-                sleep(60)
-                
+                              
                 # Auto-login if credentials are available
                 if self.tws_username and self.tws_password:
                     print("Attempting auto-login...")
                     self._auto_login_tws()
                 else:
                     input("Please login manually and press Enter once connected...")
+                
+                # Wait a bit for TWS to launch
+                print("Waiting for TWS to launch (60 seconds)...")
+                sleep(60)
                 
         except Exception as e:
             print(f"{self.yellow_color_code}Warning: Unable to launch TWS automatically: {e}{self.reset_color_code}")
@@ -115,7 +116,7 @@ class AutomatedPredictor(ConfigLoader):
         """Auto-login to TWS using keyboard input"""
         try:
             # Wait a bit more for login dialog to appear
-            sleep(5)
+            sleep(10)
             
             # Enter username
             send_keys(self.tws_username)

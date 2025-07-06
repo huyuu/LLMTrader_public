@@ -11,7 +11,8 @@ from multiprocessing import Event
 class ConfigLoader:
     config_cls = None
     project_root_path = os.path.dirname(os.path.abspath(__file__))
-    config_general_file_path = f"{project_root_path}/config_general.yaml"
+    config_general_file_path = os.path.join(project_root_path, "config_general.yaml")
+    config_confidential_file_path = os.path.join(project_root_path, "config_confidential.yaml")
     # set absolute current time and date in eastern timezone
     eastern = pytz.timezone('America/New_York')  # GMT-5 timezone
     absolute_current_time_in_eastern_cls = datetime.now(eastern).replace(tzinfo=None)
@@ -122,10 +123,11 @@ class ConfigLoader:
             if not os.path.exists(cls.config_cls["sp500_cache_folder"]):
                 os.makedirs(cls.config_cls["sp500_cache_folder"])
 
-        if os.path.exists(cls.config_cls["config_confidential_file_path"]):
-            with open(cls.config_cls["config_confidential_file_path"], "r") as file:
+        if os.path.exists(cls.config_confidential_file_path):
+            with open(cls.config_confidential_file_path, "r") as file:
                 # update config_cls with the new values
-                cls.config_cls.update(yaml.safe_load(file))
+                config_confidential = yaml.safe_load(file)
+                cls.config_cls.update(config_confidential)
 
     def update_submodule(self, submodule: str):
         """
