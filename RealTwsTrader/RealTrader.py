@@ -37,7 +37,6 @@ class RealTrader(ConfigLoader):
 
         if len(entry_data) == 0:
             print("no data to enter, just cancel all orders and exit")
-            self.ib_tws_api_handler.cancel_all_open_orders()
             return
 
         # step1: get the symbols to enter today
@@ -52,6 +51,8 @@ class RealTrader(ConfigLoader):
         symbols_last_closing_price = {}
         for index, row in entry_data.iterrows():
             symbol = row["symbol"]
+            if symbol in self.config["symbols_to_avoid"]:
+                continue
             # get the current price of the symbol
             current_price = self.ib_tws_api_handler.fetch_last_closing_price_of(symbol)
             if current_price is None:

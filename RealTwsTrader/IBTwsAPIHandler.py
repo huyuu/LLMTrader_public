@@ -113,6 +113,8 @@ class IBTwsAPIHandler(EWrapper, EClient, BrokerHandler):
     
     def post_exit_positions(self, positions: list[CustomPosition]):
         for position in positions:
+            if position.symbol in self.config["symbols_to_avoid"]:
+                continue
             if position.is_long:
                 self.post_new_order(CustomOrder_Market_Sell(position.symbol, position.amount))
             else:
