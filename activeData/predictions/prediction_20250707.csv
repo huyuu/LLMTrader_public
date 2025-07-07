@@ -1,0 +1,2 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+GL,Globe Life Inc. Common Stock,10004196692.0,564077,0,True,2025-07-07,After market close,121.2,2.89,"[8.0, 5.5, -1.0, -2.0]","[0.32, 0.2, 0.19, 0.29]",0.6,2.89,0.6,0.9,180.98268038188135,1.0
