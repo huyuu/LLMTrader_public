@@ -1,0 +1,2 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+KRUS,Kura Sushi USA Inc. Class A Common Stock,1037900078.0,388426,0,True,2025-07-08,After market close,85.88,4.61,"[10.0, 5.0, -1.25, 5.0]","[0.215, 0.185, 0.235, 0.365]",0.65,4.61,0.65,0.91,181.8819825725046,2.0
