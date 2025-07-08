@@ -1,5 +1,8 @@
 temp/
 
+RealTwsTrader/config_general.yaml
+RealTwsTrader/config_confidential.yaml
+
 src/__pycache__/
 RealTwsTrader/__pycache__/
 RealTwsTrader/ibapi/__pycache__/
