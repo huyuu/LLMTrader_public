@@ -1,0 +1,3 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+DAL,Delta Air Lines Inc. Common Stock,32987295138.0,10719258,0,True,2025-07-10,Before market open,50.52,4.68,"[5.0, 7.5, 1.5, 5.0]","[0.26, 0.18, 0.22, 0.34]",0.78,4.68,0.78,1.04,207.22177219988828,4.0
+CAG,ConAgra Brands Inc. Common Stock,9857535006.0,9906517,0,True,2025-07-10,Before market open,20.65,4.06,"[5.0, 5.5, 0.5, 5.0]","[0.26, 0.18, 0.23, 0.33]",0.9,4.06,0.9,0.88,175.22848476587652,8.0
