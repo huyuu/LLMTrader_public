@@ -1,0 +1,2 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+FAST,Fastenal Company Common Stock,49973829983.0,6153265,0,True,2025-07-12,Before market open,43.56,4.88,"[7.5, 5.0, 1.0, 5.0]","[0.29, 0.2, 0.21, 0.3]",0.75,4.88,0.75,0.84,167.3545395194979,3.0
