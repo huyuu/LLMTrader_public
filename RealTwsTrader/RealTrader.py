@@ -54,7 +54,7 @@ class RealTrader(ConfigLoader):
             if symbol in self.config["symbols_to_avoid"]:
                 continue
             # get the current price of the symbol
-            current_price = self.ib_tws_api_handler.fetch_last_closing_price_of(symbol)
+            current_price = self.ib_tws_api_handler.fetch_last_traded_price_of(symbol)
             if current_price is None:
                 continue
             symbols_last_closing_price[symbol] = current_price
