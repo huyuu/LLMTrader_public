@@ -1,0 +1,7 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+DPZ,Domino's Pizza Inc Common Stock,16049151477.0,852468,0,True,2025-07-19,Before market open,468.71,5.94,"[7.5, 4.5, -1.0, 10.0]","[0.26, 0.18, 0.22, 0.34]",0.6,5.94,0.6,0.9,179.8075744592019,0.0
+RYAAY,Ryanair Holdings plc American Depositary Shares,30802793379.0,1867442,0,True,2025-07-19,Before market open,58.04,4.76,"[10.0, 5.0, 2.5, 2.0]","[0.26, 0.19, 0.215, 0.335]",0.75,4.76,0.75,0.85,169.7116429872239,2.0
+HDB,HDFC Bank Limited Common Stock,194213386086.0,2268789,0,True,2025-07-19,,76.14,3.79,"[6.5, 3.5, -1.5, 5.0]","[0.26, 0.16, 0.21, 0.37]",0.65,3.79,0.65,0.86,172.53805865177677,2.0
+CLF,Cleveland-Cliffs Inc. Common Stock,4644821746.0,23396858,0,True,2025-07-19,Before market open,9.39,2.31,"[5.0, 5.0, 0.5, 0.0]","[0.26, 0.18, 0.22, 0.34]",0.5,2.31,0.5,0.99,197.32112828155732,21.0
+ROP,Roper Technologies Inc. Common Stock,58741037151.0,460985,0,True,2025-07-19,Before market open,546.35,2.03,"[5.0, -5.0, 0.0, 5.0]","[0.245, 0.19, 0.215, 0.35]",0.5,2.03,0.5,0.94,188.44027747496781,0.0
+DX,Dynex Capital Inc. Common Stock,1325069515.0,3196313,0,True,2025-07-19,Before market open,12.58,1.5,"[5.0, 5.0, 1.0, -5.0]","[0.33, 0.2, 0.2, 0.27]",0.5,1.5,0.5,0.93,185.35743556986418,14.0
