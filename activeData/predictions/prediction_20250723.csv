@@ -1,0 +1,22 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+CBRE,CBRE Group Inc Common Stock Class A,42649861319.0,1257051,0,True,2025-07-24,Before market open,143.07,9.18,"[12.5, 5.0, -1.5, 15.0]","[0.25, 0.19, 0.2, 0.36]",0.65,9.18,0.65,1.51,301.86587076061795,2.0
+TTE,TotalEnergies SE,138360931733.0,1405968,0,True,2025-07-24,Before market open,61.93,8.63,"[10.0, 4.5, 1.5, 15.0]","[0.275, 0.18, 0.23, 0.315]",0.7,8.63,0.7,1.28,256.46012658011557,4.0
+LKQ,LKQ Corporation Common Stock,9933522534.0,2350324,0,True,2025-07-24,Before market open,38.48,8.41,"[8.5, 5.0, 1.5, 15.0]","[0.26, 0.18, 0.23, 0.33]",0.75,8.41,0.75,1.19,238.17658325637387,6.0
+BX,Blackstone Inc. Common Stock,123587773159.0,3359518,0,True,2025-07-24,Before market open,169.38,8.3,"[5.0, 5.0, 5.0, 15.0]","[0.26, 0.18, 0.23, 0.33]",0.75,8.3,0.75,1.26,252.22796280797394,1.0
+FTI,TechnipFMC plc Ordinary Share,13591420066.0,6003055,0,True,2025-07-24,Before market open,32.42,6.71,"[8.0, 5.0, 1.5, 10.0]","[0.26, 0.18, 0.22, 0.34]",0.79,6.71,0.79,1.02,203.24577174871533,6.0
+POOL,Pool Corporation Common Stock,11829615639.0,690764,0,True,2025-07-24,Before market open,314.66,6.18,"[8.5, 5.0, -1.0, 10.0]","[0.26, 0.18, 0.23, 0.33]",0.56,6.18,0.56,0.82,163.06930009448718,0.0
+LYG,Lloyds Banking Group Plc American Depositary Shares,64006133747.0,9361077,0,True,2025-07-24,Before market open,4.25,5.9,"[6.5, 5.0, 0.1, 10.0]","[0.32, 0.2, 0.2, 0.28]",0.85,5.9,0.85,0.89,177.970283680184,41.0
+MBLY,Mobileye Global Inc. Class A Common Stock,1627040974.0,5994843,0,True,2025-07-24,Before market open,16.19,5.16,"[10.0, 5.0, 0.5, 5.0]","[0.22, 0.19, 0.21, 0.38]",0.8,5.16,0.8,0.73,146.26723042088716,9.0
+STM,STMicroelectronics N.V. Common Stock,30008040381.0,12226971,0,True,2025-07-24,Before market open,33.41,4.95,"[8.5, 5.0, 1.5, 5.5]","[0.13, 0.2, 0.21, 0.46]",0.85,4.95,0.85,0.77,153.27001218792822,4.0
+FLEX,Flex Ltd. Ordinary Shares,19580404059.0,4624589,0,True,2025-07-24,Before market open,52.45,4.76,"[7.5, 5.0, 1.0, 5.0]","[0.25, 0.19, 0.215, 0.345]",0.75,4.76,0.75,0.86,171.06410237753119,3.0
+TSCO,Tractor Supply Company Common Stock,31271368988.0,4773835,0,True,2025-07-24,Before market open,58.98,4.61,"[10.0, 5.0, -1.5, 5.0]","[0.215, 0.19, 0.225, 0.37]",0.65,4.61,0.65,0.91,181.26443223518504,3.0
+TPH,Tri Pointe Homes Inc. Common Stock,3199747088.0,1167277,0,True,2025-07-24,Before market open,35.29,4.46,"[8.5, 5.0, -0.5, 5.0]","[0.215, 0.19, 0.235, 0.36]",0.72,4.46,0.72,0.97,193.2278449094244,5.0
+TECK,Teck Resources Ltd Ordinary Shares,19317420000.0,4713776,0,True,2025-07-24,Before market open,38.79,4.17,"[7.5, 4.5, -1.5, 5.0]","[0.25, 0.18, 0.21, 0.36]",0.72,4.17,0.72,0.97,194.037421895615,5.0
+TXT,Textron Inc. Common Stock,15533558266.0,1271549,0,True,2025-07-24,Before market open,86.04,4.08,"[8.0, 4.5, -2.0, 5.0]","[0.26, 0.18, 0.23, 0.33]",0.55,4.08,0.55,0.98,196.1408980462623,2.0
+R,Ryder System Inc. Common Stock,7100694434.0,502972,0,True,2025-07-24,Before market open,171.76,4.06,"[5.0, 5.0, 1.0, 5.0]","[0.245, 0.19, 0.235, 0.33]",0.75,4.06,0.75,1.0,199.11964521581444,1.0
+FCN,FTI Consulting Inc. Common Stock,5665581897.0,555603,0,True,2025-07-24,Before market open,165.24,4.06,"[5.0, 5.0, 1.0, 5.0]","[0.215, 0.19, 0.235, 0.36]",0.75,4.06,0.75,1.0,199.11962395098695,1.0
+CNP,CenterPoint Energy Inc (Holding Co) Common Stock,24647024308.0,5460757,0,True,2025-07-24,Before market open,37.76,3.65,"[5.0, 4.5, -1.0, 5.0]","[0.32, 0.19, 0.21, 0.28]",0.75,3.65,0.75,0.89,178.67937780935992,4.0
+LHX,L3Harris Technologies Inc. Common Stock,49432165071.0,1599714,0,True,2025-07-24,Before market open,264.42,3.5,"[4.5, 5.0, -1.5, 5.0]","[0.26, 0.18, 0.21, 0.35]",0.5,3.5,0.5,0.85,169.64622276203323,0.0
+LH,Labcorp Holdings Inc. Common Stock,21098259000.0,1007999,0,True,2025-07-24,Before market open,252.07,3.42,"[7.5, 5.6, -1.0, 2.0]","[0.26, 0.18, 0.22, 0.34]",0.6,3.42,0.6,0.89,177.82034970329042,0.0
+LUV,Southwest Airlines Company Common Stock,21181911749.0,10724510,0,True,2025-07-24,Before market open,37.17,-0.92,"[-5.0, 5.0, 1.0, -2.0]","[0.26, 0.18, 0.2, 0.36]",0.3,-0.92,0.3,0.0,0.0,0.0
+TRU,TransUnion Common Stock,17984318000.0,3323974,0,True,2025-07-24,Before market open,92.18,-5.0,"[5.0, -5.0, -1.5, -15.0]","[0.26, 0.19, 0.215, 0.335]",0.4,-5.0,0.4,0.43,85.6342919600393,0.0
