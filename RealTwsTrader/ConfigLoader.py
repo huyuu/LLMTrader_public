@@ -72,7 +72,7 @@ class ConfigLoader:
 
     @classmethod
     def load_config(cls):
-        with open(cls.config_general_file_path, "r") as file:
+        with open(cls.config_general_file_path, "r", encoding="utf-8") as file:
             cls.config_cls = yaml.safe_load(file)
             cls.config_cls["active_data_folder_path"] = f"{os.path.join(cls.project_root_path, 'activeData')}"
             if not os.path.exists(cls.config_cls["active_data_folder_path"]):
@@ -124,7 +124,7 @@ class ConfigLoader:
                 os.makedirs(cls.config_cls["sp500_cache_folder"])
 
         if os.path.exists(cls.config_confidential_file_path):
-            with open(cls.config_confidential_file_path, "r") as file:
+            with open(cls.config_confidential_file_path, "r", encoding="utf-8") as file:
                 # update config_cls with the new values
                 config_confidential = yaml.safe_load(file)
                 cls.config_cls.update(config_confidential)
@@ -155,7 +155,7 @@ class ConfigLoader:
     def save_to_yaml(self, data, file_path, append=False):
         # Save data to a YAML file
         mode = 'a' if append else 'w'
-        with open(file_path, mode) as file:
+        with open(file_path, mode, encoding="utf-8") as file:
             yaml.dump(data, file)
 
     @classmethod

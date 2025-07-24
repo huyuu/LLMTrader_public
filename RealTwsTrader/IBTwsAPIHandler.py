@@ -390,18 +390,18 @@ class IBTwsAPIHandler(EWrapper, EClient, BrokerHandler):
         # Convert the dictionary to YAML
         yaml_data = yaml.dump(xml_dict, default_flow_style=False)
         # Save the YAML data to a file
-        with open(os.path.join(self.config["temp_data_folder_path"], "scanner_parameters.yaml"), "w") as yaml_file:
+        with open(os.path.join(self.config["temp_data_folder_path"], "scanner_parameters.yaml"), "w", encoding="utf-8") as yaml_file:
             yaml_file.write(yaml_data)
 
         # extract the "scanCode:" field from the it and collect them, and save them to a file
         scan_codes = []
-        with open(os.path.join(self.config["temp_data_folder_path"], "scanner_parameters.yaml"), "r") as file:
+        with open(os.path.join(self.config["temp_data_folder_path"], "scanner_parameters.yaml"), "r", encoding="utf-8") as file:
             txt = file.read()
         for item in txt.split("\n"):
             if "scanCode:" in item.replace(" ", ""):
                 scan_codes.append(item.split("scanCode:")[1].strip())
 
-        with open(os.path.join(self.config["temp_data_folder_path"], "scanner_codes.yaml"), "w") as yaml_file:
+        with open(os.path.join(self.config["temp_data_folder_path"], "scanner_codes.yaml"), "w", encoding="utf-8") as yaml_file:
             yaml_file.write(yaml.dump(scan_codes))
 
     def scannerData(self, reqId, rank, contractDetails, distance, benchmark, projection, legsStr):
