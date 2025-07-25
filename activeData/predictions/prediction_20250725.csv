@@ -1,0 +1,6 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+FMX,Fomento Economico Mexicano S.A.B. de C.V. Common Stock,34009428111.0,731169,0,True,2025-07-26,Before market open,97.84,9.49,"[8.5, 5.2, 1.5, 15.0]","[0.215, 0.165, 0.185, 0.435]",0.85,9.49,0.85,1.58,315.83412916033853,3.0
+NGD,New Gold Inc.,3505902000.0,12609019,0,True,2025-07-26,Before market open,4.43,8.67,"[10.0, 5.0, 0.5, 15.0]","[0.245, 0.17, 0.235, 0.35]",0.8,8.67,0.8,1.18,235.06906550990436,53.0
+RITM,Rithm Capital Corp. Common Stock,6483397894.0,3570666,0,True,2025-07-26,Before market open,12.23,4.38,"[8.5, 3.5, -0.5, 5.0]","[0.26, 0.18, 0.23, 0.33]",0.68,4.38,0.68,0.9,180.86421290477625,14.0
+RVTY,Revvity Inc. Common Stock,12019169230.0,1700766,0,True,2025-07-26,Before market open,101.97,3.29,"[12.0, 5.0, -1.5, 1.2]","[0.185, 0.19, 0.235, 0.39]",0.75,3.29,0.75,0.85,170.42494228645623,1.0
+EPD,Enterprise Products Partners L.P. Common Stock,68949414767.0,3984194,0,True,2025-07-26,Before market open,31.79,0.97,"[5.0, 3.5, -0.5, -5.0]","[0.35, 0.19, 0.19, 0.27]",0.5,0.97,0.5,1.05,210.07802824422697,6.0
