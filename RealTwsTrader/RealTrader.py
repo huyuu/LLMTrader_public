@@ -57,6 +57,7 @@ class RealTrader(ConfigLoader):
                 continue
             # get the current price of the symbol
             current_price = self.ib_tws_api_handler.fetch_last_closing_price_of(symbol)
+            print(f"Symbol: {symbol} - Current price: {current_price}")
             if current_price is None:
                 continue
             symbols_last_closing_price[symbol] = current_price
@@ -93,6 +94,7 @@ class RealTrader(ConfigLoader):
 
         print(f"actual investment : {actual_investment_sum / total_asset * 100} %")
         sleep(5)
+        print("RealTrader finished running.")
         exit(0)
             
     

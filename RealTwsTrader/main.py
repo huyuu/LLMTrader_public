@@ -105,8 +105,8 @@ class AutomatedPredictor(ConfigLoader):
                     input("Please login manually and press Enter once connected...")
                 
                 # Wait a bit for TWS to launch
-                print("Waiting for TWS to launch (60 seconds)...")
-                sleep(60)
+                print("Waiting for TWS to launch (120 seconds)...")
+                sleep(120)
                 
         except Exception as e:
             print(f"{self.yellow_color_code}Warning: Unable to launch TWS automatically: {e}{self.reset_color_code}")
@@ -116,7 +116,7 @@ class AutomatedPredictor(ConfigLoader):
         """Auto-login to TWS using keyboard input"""
         try:
             # Wait a bit more for login dialog to appear
-            sleep(10)
+            sleep(30)
             
             # Enter username
             send_keys(self.tws_username)
