@@ -43,6 +43,13 @@ class CustomOrder_Market_Sell(CustomOrder):
     def __init__(self, symbol: str, amount: float):
         super().__init__(symbol, None, amount, "MKT", "SELL", "DAY")
 
+class CustomOrder_Market_Buy_On_Open(CustomOrder):
+    def __init__(self, symbol: str, amount: float):
+        super().__init__(symbol, None, amount, "MKT", "BUY", "OPG")
+
+class CustomOrder_Market_Sell_On_Open(CustomOrder):
+    def __init__(self, symbol: str, amount: float):
+        super().__init__(symbol, None, amount, "MKT", "SELL", "OPG")
 
 class CustomOrder_Market_On_Close_Buy(CustomOrder):
     def __init__(self, symbol: str, amount: float):

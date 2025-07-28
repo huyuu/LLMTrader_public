@@ -115,14 +115,24 @@ class IBTwsAPIHandler(EWrapper, EClient, BrokerHandler):
         for position in positions:
             if position.symbol in self.config["symbols_to_avoid"]:
                 continue
+            if position.amount == 0:
+                continue
             if position.is_long:
-                self.post_new_order(CustomOrder_Market_Sell(position.symbol, position.amount))
+                if self.hasMarketOpened():
+                    self.post_new_order(CustomOrder_Market_Sell(position.symbol, position.amount))
+                else:
+                    self.post_new_order(CustomOrder_Market_Sell_On_Open(position.symbol, position.amount))
             else:
-                self.post_new_order(CustomOrder_Market_Buy(position.symbol, position.amount))
+                if self.hasMarketOpened():
+                    self.post_new_order(CustomOrder_Market_Buy(position.symbol, position.amount))
+                else:
+                    self.post_new_order(CustomOrder_Market_Buy_On_Open(position.symbol, position.amount))
 
     def post_exit_all_positions(self):
         positions = self.fetch_positions()
+        sleep(10)
         self.post_exit_positions(positions)
+        sleep(10)
     
     def fetch_earnings_dates_for_symbol(self, symbol: str, start_date: datetime, end_date: datetime, conid: int = None) -> list:
         if conid is None:

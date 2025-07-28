@@ -70,6 +70,10 @@ class ConfigLoader:
     def config(self):
         return ConfigLoader.config_cls
 
+    @property
+    def latest_absolute_current_time_in_eastern(self):
+        return datetime.now(ConfigLoader.eastern).replace(tzinfo=None)
+
     @classmethod
     def load_config(cls):
         with open(cls.config_general_file_path, "r", encoding="utf-8") as file:
@@ -200,3 +204,16 @@ class ConfigLoader:
                 group = ids[i * amount_of_symbols_per_group:(i + 1) * amount_of_symbols_per_group]
             groups.append(group)
         return groups
+
+
+    def hasMarketOpened(self):
+        current_eastern_time = self.latest_absolute_current_time_in_eastern
+        market_open_time = datetime(
+            year=current_eastern_time.year,
+            month=current_eastern_time.month,
+            day=current_eastern_time.day,
+            hour=9,
+            minute=27,
+            second=55
+        )
+        return current_eastern_time >= market_open_time
