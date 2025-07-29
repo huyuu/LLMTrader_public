@@ -72,6 +72,7 @@ is_using_real_account: true
 
 
 # real trader
+howToExitPreviousPositions: "MOC" # should be one of MKT, MOO, MOC
 real_trader_asset_USD: 40000 # [USD] set to 0 to use all assets in the account
 real_trader_using_prediction_file_name: "prediction_20250630.csv"
 symbols_to_avoid:

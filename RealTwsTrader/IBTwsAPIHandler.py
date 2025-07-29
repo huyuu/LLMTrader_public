@@ -118,15 +118,25 @@ class IBTwsAPIHandler(EWrapper, EClient, BrokerHandler):
             if position.amount == 0:
                 continue
             if position.is_long:
-                if self.hasMarketOpened():
+                if self.config["howToExitPreviousPositions"] == "MKT":
                     self.post_new_order(CustomOrder_Market_Sell(position.symbol, position.amount))
-                else:
-                    self.post_new_order(CustomOrder_Market_Sell_On_Open(position.symbol, position.amount))
-            else:
-                if self.hasMarketOpened():
+                elif self.config["howToExitPreviousPositions"] == "MOO":
+                    if self.hasMarketOpened():
+                        self.post_new_order(CustomOrder_Market_Sell(position.symbol, position.amount))
+                    else:
+                        self.post_new_order(CustomOrder_Market_Sell_On_Open(position.symbol, position.amount))
+                elif self.config["howToExitPreviousPositions"] == "MOC":
+                    self.post_new_order(CustomOrder_Market_On_Close_Sell(position.symbol, position.amount))
+            else: # short position
+                if self.config["howToExitPreviousPositions"] == "MKT":
                     self.post_new_order(CustomOrder_Market_Buy(position.symbol, position.amount))
-                else:
-                    self.post_new_order(CustomOrder_Market_Buy_On_Open(position.symbol, position.amount))
+                elif self.config["howToExitPreviousPositions"] == "MOO":
+                    if self.hasMarketOpened():
+                        self.post_new_order(CustomOrder_Market_Buy(position.symbol, position.amount))
+                    else:
+                        self.post_new_order(CustomOrder_Market_Buy_On_Open(position.symbol, position.amount))
+                elif self.config["howToExitPreviousPositions"] == "MOC":
+                    self.post_new_order(CustomOrder_Market_On_Close_Buy(position.symbol, position.amount))
 
     def post_exit_all_positions(self):
         positions = self.fetch_positions()
