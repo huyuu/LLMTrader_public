@@ -150,7 +150,7 @@ class AutomatedPredictor(ConfigLoader):
                 raise FileNotFoundError(f"RealTrader.py not found: {script_path}")
             
             print("Executing RealTrader.py...")
-            result = subprocess.run(["python", script_path], cwd=self.project_root_path, timeout=60*5)
+            result = subprocess.run(["python", script_path], cwd=self.project_root_path, timeout=60*30)
             
             if result.returncode != 0:
                 raise subprocess.CalledProcessError(result.returncode, "RealTrader.py")
@@ -158,7 +158,7 @@ class AutomatedPredictor(ConfigLoader):
             print("RealTrader.py executed successfully")
             
         except subprocess.TimeoutExpired:
-            print(f"{self.red_color_code}Timeout: RealTrader.py took more than 10 minutes to execute{self.reset_color_code}")
+            print(f"{self.red_color_code}Timeout: RealTrader.py took more than 30 minutes to execute{self.reset_color_code}")
         except Exception as e:
             print(f"{self.red_color_code}Error executing RealTrader.py: {e}{self.reset_color_code}")
     

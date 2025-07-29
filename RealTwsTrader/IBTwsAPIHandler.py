@@ -127,6 +127,8 @@ class IBTwsAPIHandler(EWrapper, EClient, BrokerHandler):
                         self.post_new_order(CustomOrder_Market_Sell_On_Open(position.symbol, position.amount))
                 elif self.config["howToExitPreviousPositions"] == "MOC":
                     self.post_new_order(CustomOrder_Market_On_Close_Sell(position.symbol, position.amount))
+                else:
+                    raise ValueError(f"Invalid howToExitPreviousPositions: {self.config['howToExitPreviousPositions']}")
             else: # short position
                 if self.config["howToExitPreviousPositions"] == "MKT":
                     self.post_new_order(CustomOrder_Market_Buy(position.symbol, position.amount))
@@ -137,6 +139,8 @@ class IBTwsAPIHandler(EWrapper, EClient, BrokerHandler):
                         self.post_new_order(CustomOrder_Market_Buy_On_Open(position.symbol, position.amount))
                 elif self.config["howToExitPreviousPositions"] == "MOC":
                     self.post_new_order(CustomOrder_Market_On_Close_Buy(position.symbol, position.amount))
+                else:
+                    raise ValueError(f"Invalid howToExitPreviousPositions: {self.config['howToExitPreviousPositions']}")
 
     def post_exit_all_positions(self):
         positions = self.fetch_positions()
