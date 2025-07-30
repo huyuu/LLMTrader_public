@@ -106,7 +106,10 @@ class IBTwsAPIHandler(EWrapper, EClient, BrokerHandler):
     def fetch_positions(self) -> list[CustomPosition]:
         self._init_async_flags_and_results(func_name="Position")
         self.reqPositions()
+        print("Fetching positions...")
+        sleep(60)
         positions: dict[str, CustomPosition] = self._await_get_future_return(func_name="Position")
+        print(f"{len(positions)} positions fetched")
         if positions is None or len(positions) == 0:
             return []
         return list(positions.values())
