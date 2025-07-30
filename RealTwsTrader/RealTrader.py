@@ -5,13 +5,14 @@ import os
 from time import sleep
 import numpy as np
 from CustomOrder import CustomOrder, CustomOrder_Market_Buy, CustomOrder_Market_Sell, CustomOrder_Market_On_Close_Buy, CustomOrder_Market_On_Close_Sell
-
+from TradingViewHandler import TradingViewHandler
 
 class RealTrader(ConfigLoader):
     def __init__(self):
         super().__init__()
         self.ib_tws_api_handler = IBTwsAPIHandler()
         self.ib_tws_api_handler.async_run()
+        self.trading_view_handler = TradingViewHandler()
 
     def run(self):
         file_name = self.config["real_trader_using_prediction_file_name"]
@@ -56,7 +57,13 @@ class RealTrader(ConfigLoader):
             if symbol in self.config["symbols_to_avoid"]:
                 continue
             # get the current price of the symbol
-            current_price = self.ib_tws_api_handler.fetch_last_closing_price_of(symbol)
+            prices = self.trading_view_handler.fetch_history_data_of(symbol)
+            current_price = None
+            if prices is None or prices.empty:
+                current_price = self.ib_tws_api_handler.fetch_last_closing_price_of(symbol)
+            else:
+                current_price = prices.iloc[-1]["close"]
+            assert current_price is not None
             print(f"Symbol: {symbol} - Current price: {current_price}")
             if current_price is None:
                 continue
