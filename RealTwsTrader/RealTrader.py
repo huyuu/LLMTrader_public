@@ -37,8 +37,8 @@ class RealTrader(ConfigLoader):
 
         if entry_data is None or len(entry_data) == 0:
             print("no data to enter, just close all positions and exit")
-            self.ib_tws_api_handler.cancel_all_open_orders()
-            self.ib_tws_api_handler.post_exit_all_positions()
+            # self.ib_tws_api_handler.cancel_all_open_orders()
+            # self.ib_tws_api_handler.post_exit_all_positions()
             return
 
         # step1: get the symbols to enter today
