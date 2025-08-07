@@ -56,6 +56,10 @@ class RealTrader(ConfigLoader):
             symbol = row["symbol"]
             if symbol in self.config["symbols_to_avoid"]:
                 continue
+            # filter out the symbols that are not in the usable region
+            if row["kelly_fraction [%]"] > self.config["usable_region_upper_bound"] or row["kelly_fraction [%]"] < self.config["usable_region_lower_bound"]:
+                continue
+            
             # get the current price of the symbol
             prices = self.trading_view_handler.fetch_history_data_of(symbol)
             current_price = None
