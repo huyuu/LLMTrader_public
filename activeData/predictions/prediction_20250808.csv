@@ -1,0 +1,14 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+MNDY,monday.com Ltd. Ordinary Shares,12561323574.0,1164989,0,True,2025-08-09,Before market open,247.4,12.59,"[15.0, 7.5, 1.0, 20.0]","[0.21, 0.19, 0.21, 0.39]",0.75,12.59,0.75,1.94,388.38139091194887,1.0
+KT,KT Corporation Common Stock,9907067724.0,1829538,0,True,2025-08-09,,20.15,9.51,"[8.5, 3.25, 0.5, 20.0]","[0.26, 0.18, 0.23, 0.33]",0.85,9.51,0.85,1.49,297.14466127559,14.0
+AAON,AAON Inc. Common Stock,6731420597.0,1230761,0,True,2025-08-09,Before market open,82.73,8.67,"[8.5, 7.0, 0.5, 15.0]","[0.215, 0.19, 0.235, 0.36]",0.75,8.67,0.75,1.25,249.7994762073067,3.0
+USM,United States Cellular Corporation Common Stock,6341000000.0,567060,0,True,2025-08-09,Before market open,74.6,7.65,"[15.0, 7.0, -1.5, 10.0]","[0.185, 0.19, 0.235, 0.39]",0.7,7.65,0.7,1.18,236.263546694492,3.0
+MAG,MAG Silver Corporation Ordinary Shares,2363107208.0,2310449,0,True,2025-08-09,Before market open,22.84,7.28,"[15.0, 7.5, 1.5, 5.0]","[0.26, 0.18, 0.22, 0.34]",0.75,7.28,0.75,1.09,217.93705350913586,9.0
+CORZ,Core Scientific Inc. Common Stock,4273743332.0,14460912,0,True,2025-08-08,After market close,14.35,7.2,"[15.0, 15.0, -0.5, 5.0]","[0.145, 0.19, 0.21, 0.455]",0.75,7.2,0.75,1.12,224.93519979327976,15.0
+ROIV,Roivant Sciences Ltd. Common Shares,7851760109.0,4643165,0,True,2025-08-09,Before market open,11.55,7.15,"[10.5, 6.0, 1.0, 10.0]","[0.13, 0.19, 0.24, 0.44]",0.75,7.15,0.75,1.05,210.64774769749815,18.0
+RDNT,RadNet Inc. Common Stock,3941331048.0,1055063,0,True,2025-08-09,After market close,52.53,6.08,"[12.0, 5.0, -1.5, 10.0]","[0.215, 0.26, 0.265, 0.26]",0.7,6.08,0.7,0.79,158.542225239152,3.0
+TDS,Telephone and Data Systems Inc. Common Shares,4362780000.0,1068740,0,True,2025-08-09,Before market open,38.27,4.71,"[5.0, 8.5, 1.0, 5.0]","[0.26, 0.18, 0.23, 0.33]",0.7,4.71,0.7,0.87,174.03347507181599,4.0
+LEGN,Legend Biotech Corporation American Depositary Shares,6873987984.0,885002,0,True,2025-08-09,Before market open,37.43,4.36,"[10.0, -7.0, -1.5, 10.0]","[0.21, 0.19, 0.21, 0.39]",0.5,4.36,0.5,1.01,201.42833107646038,5.0
+DJT,Trump Media & Technology Group Corp. Common Stock,4746164493.0,7062629,0,True,2025-08-08,After market close,17.13,4.11,"[5.0, 4.5, 1.5, 5.0]","[0.125, 0.18, 0.23, 0.465]",0.75,4.11,0.75,0.96,191.6839671800129,11.0
+FNV,Franco-Nevada Corporation,33031474260.0,487328,0,True,2025-08-09,Before market open,171.46,3.5,"[5.0, 5.0, -2.0, 5.0]","[0.26, 0.2, 0.215, 0.325]",0.7,3.5,0.7,0.84,168.42876094357845,0.0
+DNB,Dun & Bradstreet Holdings Inc. Common Stock,4062463633.0,4198085,0,True,2025-08-09,Before market open,9.1,2.43,"[5.0, 5.0, 1.0, 0.0]","[0.26, 0.18, 0.23, 0.33]",0.7,2.43,0.7,1.01,202.96606086908622,22.0
