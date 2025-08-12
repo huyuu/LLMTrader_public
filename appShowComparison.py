@@ -415,14 +415,16 @@ def get_cost_data() -> pd.DataFrame:
 @st.cache_data
 def get_prediction_files() -> list:
     """
-    Returns a list of CSV files in the predictions directory.
+    Returns a sorted list of CSV files in the predictions directory.
+    Files are sorted by filename to display from smallest to largest.
     """
     if not os.path.exists(PREDICTIONS_DIR):
         return []
     
     csv_files = glob.glob(os.path.join(PREDICTIONS_DIR, "*.csv"))
-    # Return just the filename without the full path
-    return [os.path.basename(f) for f in csv_files]
+    # Return just the filename without the full path, sorted
+    filenames = [os.path.basename(f) for f in csv_files]
+    return sorted(filenames)
 
 
 @st.cache_data
