@@ -1,0 +1,11 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+QUBT,Quantum Computing Inc. Common Stock,2255865611.0,22948940,0,True,2025-08-14,After market close,16.01,8.99,"[15.0, 12.5, 0.5, 10.0]","[0.14, 0.19, 0.23, 0.44]",0.78,8.99,0.78,1.68,335.5324618635765,20.0
+AMAT,Applied Materials Inc. Common Stock,152498736177.0,5919870,0,True,2025-08-14,After market close,190.03,6.07,"[8.0, 5.0, -2.0, 10.0]","[0.23, 0.19, 0.21, 0.37]",0.51,6.07,0.51,0.77,153.74482275270495,0.0
+EVLV,Evolv Technologies Holdings Inc. Class A Common Stock,1228331950.0,4181447,0,True,2025-08-14,After market close,7.49,5.96,"[10.0, 10.0, 1.5, 5.0]","[0.17, 0.19, 0.24, 0.4]",0.79,5.96,0.79,0.87,174.51998598681718,23.0
+QFIN,Qfin Holdings Inc. American Depositary Shares,4692156000.0,1411117,0,True,2025-08-14,After market close,34.86,5.87,"[10.0, 8.5, 0.75, 5.0]","[0.22, 0.19, 0.21, 0.38]",0.79,5.87,0.79,0.89,178.2489448155172,5.0
+NU,Nu Holdings Ltd. Class A Ordinary Shares,59606807377.0,37971696,0,True,2025-08-14,After market close,12.37,5.82,"[7.5, 2.5, 0.5, 10.0]","[0.13, 0.21, 0.24, 0.42]",0.75,5.82,0.75,0.87,173.61594878245404,14.0
+TMC,TMC the metals company Inc. Common Stock,1970291851.0,6121608,0,True,2025-08-14,After market close,5.44,5.3,"[15.0, 8.0, 1.5, 0.15]","[0.22, 0.2, 0.23, 0.35]",0.75,5.3,0.75,0.74,148.70334946127903,27.0
+GLOB,Globant S.A. Common Shares,3509109606.0,1704932,0,True,2025-08-14,After market close,79.67,4.54,"[10.0, 10.0, 0.2, 0.15]","[0.245, 0.2, 0.235, 0.32]",0.8,4.54,0.8,0.87,174.1298545793938,2.0
+FLO,Flowers Foods Inc. Common Stock,3538679333.0,2493869,0,True,2025-08-15,Before market open,16.76,2.31,"[5.0, 5.2, 0.0, 0.05]","[0.25, 0.2, 0.225, 0.3]",0.65,2.31,0.65,1.01,202.03682369708727,12.0
+CELC,Celcuity Inc. Common Stock,1983061168.0,978377,0,True,2025-08-14,After market close,52.37,2.22,"[15.0, 10.0, -5.0, 0.15]","[0.095, 0.19, 0.235, 0.48]",0.55,2.22,0.55,0.96,192.16551763941294,3.0
+BAP,Credicorp Ltd. Common Stock,23536118390.0,467686,0,True,2025-08-14,,249.37,2.08,"[5.0, 4.5, -1.0, 0.5]","[0.25, 0.2, 0.225, 0.3]",0.6,2.08,0.6,1.04,208.29611041190506,0.0
