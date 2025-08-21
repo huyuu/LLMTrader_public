@@ -1,0 +1,7 @@
+symbol,company_name,market_cap,latest_volume,cycle,isPurePrediction,release_date,whenInTheDay,start_price,prediction [%],factor_price_change_list,weight_distribution_list,confidence,prediction 0 [%],confidence 0,kelly_fraction [%],investment_if_total_asset_is_20000 [USD],investment_stock_amount_if_total_asset_is_20000 [USD]
+WDAY,Workday Inc. Class A Common Stock,60739830000.0,3974552,0,True,2025-08-21,After market close,227.49,7.96,"[5.0, 5.0, 1.0, 15.0]","[0.185, 0.19, 0.235, 0.39]",0.82,7.96,0.82,1.35,270.27450529093215,1.0
+BJ,BJ's Wholesale Club Holdings Inc. Common Stock,14174322675.0,2565749,0,True,2025-08-22,Before market open,107.34,5.4,"[15.0, 6.5, 1.5, 0.07]","[0.26, 0.18, 0.2, 0.36]",0.9,5.4,0.9,0.74,148.3826125030406,1.0
+ROST,Ross Stores Inc. Common Stock,47866770748.0,4965294,0,True,2025-08-21,After market close,146.35,4.86,"[8.0, 5.0, 1.0, 5.0]","[0.26, 0.18, 0.23, 0.33]",0.85,4.86,0.85,0.78,156.7289118640561,1.0
+INTU,Intuit Inc. Common Stock,195025795050.0,2094457,0,True,2025-08-21,After market close,699.15,3.46,"[8.0, 5.0, 1.5, 0.1]","[0.26, 0.2, 0.23, 0.31]",0.85,3.46,0.85,0.85,169.63014715359432,0.0
+ZM,Zoom Communications Inc. Class A Common Stock,21831836548.0,4552249,0,True,2025-08-21,After market close,72.16,2.66,"[7.5, 3.5, -2.5, 2.5]","[0.215, 0.185, 0.22, 0.38]",0.6,2.66,0.6,1.01,202.4752679740585,2.0
+UI,Ubiquiti Inc. Common Stock,23868635452.0,167675,0,True,2025-08-22,Before market open,394.58,1.39,"[6.5, -10.0, -1.0, 5.0]","[0.245, 0.175, 0.225, 0.355]",0.5,1.39,0.5,0.99,197.5111624147121,0.0
